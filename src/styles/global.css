@@ -1,0 +1,52 @@
+.time-line-container>div:last-child .education__time>.education__line {
+    display: none;
+}
+
+@font-face {
+    font-family: 'CustomFont';
+    src: url('/public/Neirizi\ Regular.ttf') format('truetype');
+}
+
+.tooltip {
+    position: relative;
+    display: math;
+    cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+    /* visibility: hidden; */
+    width: 450px;
+    background-color: rgba(85, 85, 85, 0.8);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 105%;
+    right: 100%;
+    margin-right: -201px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    /* Posisikan panah di bawah elemen */
+    left: 70%;
+    margin-left: -5px;
+    /* Sesuaikan dengan setengah lebar panah */
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+    /* Atur warna border untuk panah */
+    transform: translateX(-70%);
+    /* Geser panah ke tengah */
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
