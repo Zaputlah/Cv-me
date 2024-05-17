@@ -11,6 +11,7 @@ tags: ["Fitrah",
 "Hindari hasad-kesombongan.",
 "Almanhaj","Zaputlah","Mei","2 Mei"]
 ---
+
 **Semua Anak itu Terlahir Fitrah**
 
 <p style="text-align: justify;">Kita diciptakan oleh Allâh Azza wa Jalla dikaruniai dengan fitrah. Fitrah tersebut adalah menjadi hamba Allâh, maka fitrah yang dimaksud adalah agama Allâh. Sebagaimana dijelaskan dalam firman Allâh Azza wa Jalla :</p>
