@@ -1,6 +1,6 @@
 ---
 title: "Meniup Minuman Panas"
-description: "Meniup-niup minuman yang panas adalah tindakan yang dianjurkan untuk dihindari dalam Islam. Nabi Muhammad SAW melarang meniup minuman atau makanan panas untuk menjaga kebersihan dan kesehatan, berdasarkan hadis yang menyatakan, \"Janganlah salah seorang di antara kalian bernafas di dalam bejana (minuman).(HR. Bukhari dan Muslim)."
+description: "Meniup-niup minuman yang panas adalah tindakan yang dianjurkan untuk dihindari dalam Islam. Nabi Muhammad shallallahu ‘alaihi wa sallam melarang meniup minuman atau makanan panas untuk menjaga kebersihan dan kesehatan, berdasarkan hadis yang menyatakan, \"Janganlah salah seorang di antara kalian bernafas di dalam bejana (minuman).(HR. Bukhari dan Muslim)."
 pubDate: "May 17 2024"
 heroImage: "/meniuppanas.jpeg"
 tags: ["AdabIslam","SunnahNabi","Kesehatan","AdabMakanMinum","EtikaIslam","Hadis","Kebersihan","IslamicEtiquette","Rasulullah","HidupSehat","TipsSehat","IslamicPractices","LaranganNabi","EtikaMakanMinum","KebersihanDalamIslam",
@@ -39,3 +39,5 @@ Imam Nawawi rahimahullah membawakan dua hadits di atas pada kitab adab makan pad
 Syaikh Muhammad bin Sholeh Al ‘Utsaimin mengatakan bahwa ketika seseorang meniup-niup, maka yang keluar adalah udara yang kotor. Oleh karenanya, Nabi shallallahu ‘alaihi wa sallam melarang melakukan seperti itu.</p>
 
 <p style="text-align: justify;">Kemudian <strong>Nabi shallallahu ‘alaihi wa sallam</strong> juga mengatakan bahwa jika ada yang tidak dapat minum dengan satu tarikan nafas, maka ia bisa minum lalu bernafas setelah itu di luar wadah, lalu minum kembali. Kata Syaikh Ibnu ‘Utsaimin, sebagian ulama menyatakan ketika butuh tidak mengapa meniup minuman yang sedang panas biar cepat dingin. Mereka memberikan keringanan dalam hal ini. Akan tetap kata Syaikh Ibnu ‘Utsaimin, tetap berpendapat bahwa minuman panas tidak ditiup seperti itu. Sebenarnya bisa melakukan solusi untuk mendinginkan minuman, yaitu dengan menuangkan minuman yang panas ke wadah lainnya, lalu membalikkannya kembali. Ini di antara cara yang tidak dilarang dalam mendinginkan minuman. Demikian maksud penjelasan Syaikh Muhammad bin Sholeh Al ‘Utsaimin dalam Syarh Riyadhis Sholihin, 4: 245.</p>
+
+sumber : https://rumaysho.com/

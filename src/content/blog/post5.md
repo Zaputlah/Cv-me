@@ -1,6 +1,6 @@
 ---
 title: "Traktir"
-description: "Traktir atau menjamu tamu adalah salah satu perbuatan yang sangat dianjurkan dalam ajaran Islam, mengikuti contoh dan sunnah Nabi Muhammad SAW. Menurut sunnah, traktir bukan hanya tentang memberikan makanan atau minuman, tetapi juga merupakan bentuk kebaikan, kemurahan hati, dan upaya untuk mempererat tali silaturahmi."
+description: "Traktir atau menjamu tamu adalah salah satu perbuatan yang sangat dianjurkan dalam ajaran Islam, mengikuti contoh dan sunnah Nabi Muhammad shallallahu ‘alaihi wa sallam."
 pubDate: "May 17 2024"
 heroImage: "/traktir.jpeg"
 tags: ["SunnahNabi","Traktir","MenjamuTamu",

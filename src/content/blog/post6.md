@@ -1,6 +1,6 @@
 ---
 title: "Mengibaskan Tempat Tidur"
-description: "Mengibaskan tempat tidur adalah praktik dalam Islam yang mengharuskan seseorang membersihkan tempat tidurnya sebelum tidur. Ini dilakukan dengan menyapu atau mengibaskan pakaian di atas tempat tidur untuk menjaga kebersihan, kesehatan, dan kenyamanan. Tindakan sederhana ini mencerminkan kepedulian terhadap kebersihan diri dan lingkungan sekitar, serta merupakan tindakan ibadah yang dianjurkan berdasarkan ajaran Al-Quran dan Sunnah Nabi Muhammad shallallahu ‘alaihi wa sallam."
+description: "Mengibaskan tempat tidur adalah praktik dalam Islam yang mengharuskan seseorang membersihkan tempat tidurnya sebelum tidur. Ini dilakukan dengan menyapu atau mengibaskan pakaian di atas tempat tidur untuk menjaga kebersihan, kesehatan, dan kenyamanan."
 pubDate: "May 17 2024"
 heroImage: "/mengibaskantempattidur.jpeg"
 tags: ["SunnahNabi","Kebersihan","AdabTidur","HidupSehat","IslamicEtiquette","AjaranIslam","Kesehatan","Hadis","Rasulullah","KebersihanDalamIslam","TipsSehat","KesehatanTidur","TataCaraTidur","HidupBersih","IslamicPractices",
