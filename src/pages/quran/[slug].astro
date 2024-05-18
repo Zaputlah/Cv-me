@@ -1,0 +1,34 @@
+---
+import { CollectionEntry, getCollection } from "astro:content";
+import { QuranSchema } from "../../content/config";
+import JusLayout from "../../layouts/JusLayout.astro";
+import createSlug from "../../lib/createSlug";
+
+export async function getStaticPaths() {
+  const jusEntries = await getCollection("quran");
+  return jusEntries.map((entry) => ({
+    params: { slug: createSlug(entry.data.title, entry.slug) },
+    props: { entry },
+  }));
+}
+
+interface Props {
+  entry: CollectionEntry<"quran">;
+}
+
+const { entry } = Astro.props;
+const jus: QuranSchema = entry.data;
+const { Content } = await entry.render();
+---
+
+<JusLayout
+  title={jus.title}
+  description={jus.description}
+  pubDate={jus.pubDate}
+  heroImage={jus.heroImage}
+  updatedDate={jus.updatedDate}
+  badge={jus.badge}
+  tags={jus.tags}
+>
+  <Content />
+</JusLayout>

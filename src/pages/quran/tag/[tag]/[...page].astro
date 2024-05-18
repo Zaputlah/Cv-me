@@ -5,14 +5,14 @@ import { getCollection } from "astro:content";
 import createSlug from "../../../../lib/createSlug";
 
 export async function getStaticPaths({ paginate }) {
-  const all_posts = await getCollection("blog");
-  const all_tags = all_posts.flatMap((post) => {
-    return post.data.tags || [];
+  const all_posts = await getCollection("quran");
+  const all_tags = all_posts.flatMap((jus) => {
+    return jus.data.tags || [];
   });
 
   return all_tags.flatMap((tag) => {
-    const filtred_posts = all_posts.filter((post) => {
-      return post.data.tags?.includes(tag);
+    const filtred_posts = all_posts.filter((jus) => {
+      return jus.data.tags?.includes(tag);
     });
     return paginate(filtred_posts, {
       params: { tag },
@@ -25,28 +25,28 @@ const { page } = Astro.props;
 const params = Astro.params;
 ---
 
-<BaseLayout title={"Blog - " + params.tag} sideBarActiveItemID="blog">
+<BaseLayout title={"Quran - " + params.tag} sideBarActiveItemID="quran">
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Blog - {params.tag}</div>
+    <div class="text-3xl w-full font-bold">Quran - {params.tag}</div>
   </div>
   {
     page.data.length === 0 ? (
       <div class="bg-base-200 border-l-4 border-secondary w-full p-4 min-w-full">
         <p class="font-bold">Sorry!</p>
-        <p>There are no blog posts to show at the moment. Check back later!</p>
+        <p>There are no quran posts to show at the moment. Check back later!</p>
       </div>
     ) : (
       <ul>
-        {page.data.map((post) => (
+        {page.data.map((jus) => (
           <>
             <HorizontalCard
-              title={post.data.title}
-              img={post.data.heroImage}
-              desc={post.data.description}
-              url={"/blog/" + createSlug(post.data.title, post.slug)}
+              title={jus.data.title}
+              img={jus.data.heroImage}
+              desc={jus.data.description}
+              url={"/Quran/" + createSlug(jus.data.title, jus.slug)}
               target="_self"
-              badge={post.data.badge}
-              tags={post.data.tags}
+              badge={jus.data.badge}
+              tags={jus.data.tags}
             />
             <div class="divider my-0" />
           </>

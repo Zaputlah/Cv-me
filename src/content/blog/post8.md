@@ -1,7 +1,7 @@
 ---
 title: "Istirahatlah ketika lelah"
 description: "Kegiatan apapun yang di lakukan secara berlebihan itu akan bisa menimbulkan rasa jenuh, oleh sebab itu lakukanlah kegiatan tersebut sewajarnya jangan terlalu berlebih. jangan terlalu semangat dan jangan terlalu menggampangkan lakukan sewajarnya saja. ketika lelah dalam melakukan kegiatan tersebut istirahatlah jangan terlalu memaksakan. "
-pubDate: "May 17 2024"
+pubDate: "May 18 2024"
 heroImage: "/istirahat.jpeg"
 tags: ["Futur","Iman","Motivasi","SemangatBeribadah","KelesuanIman","IslamicMotivation","MeningkatkanIman","TipsIbadah","IslamicReminder","SpiritualBoost","RenunganIman","PerbaikiIbadah","KesehatanRuhani","HatiYangKuat","BerserahDiri",
 "Zaputlah","Mei", "18 Mei"]

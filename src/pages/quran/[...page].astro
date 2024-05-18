@@ -5,37 +5,37 @@ import { getCollection } from "astro:content";
 import createSlug from "../../lib/createSlug";
 
 export async function getStaticPaths({ paginate }) {
-  const posts = await getCollection("blog");
-  posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
-  return paginate(posts, { pageSize: 10 });
+  const justes = await getCollection("quran");
+  justes.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+  return paginate(justes, { pageSize: 10 });
 }
 
 const { page } = Astro.props;
 ---
 
-<BaseLayout title="Blog" sideBarActiveItemID="blog">
+<BaseLayout title="Quran" sideBarActiveItemID="quran">
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Blog</div>
+    <div class="text-3xl w-full font-bold">Al-Qur'an</div>
   </div>
 
   {
     page.data.length === 0 ? (
       <div class="bg-base-200 border-l-4 border-secondary w-full p-4 min-w-full">
         <p class="font-bold">Sorry!</p>
-        <p>There are no blog posts to show at the moment. Check back later!</p>
+        <p>There are no quran jus to show at the moment. Check back later!</p>
       </div>
     ) : (
       <ul>
-        {page.data.map((post) => (
+        {page.data.map((jus) => (
           <>
             <HorizontalCard
-              title={post.data.title}
-              img={post.data.heroImage}
-              desc={post.data.description}
-              url={"/blog/" + createSlug(post.data.title, post.slug)}
+              title={jus.data.title}
+              img={jus.data.heroImage}
+              desc={jus.data.description}
+              url={"/quran/" + createSlug(jus.data.title, jus.slug)}
               target="_self"
-              badge={post.data.badge}
-              tags={post.data.tags}
+              badge={jus.data.badge}
+              tags={jus.data.tags}
             />
             <div class="divider my-0" />
           </>
@@ -58,7 +58,7 @@ const { page } = Astro.props;
           >
             <path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z" />
           </svg>{" "}
-          Recent posts
+          Recent jus
         </a>
       ) : (
         <div />
@@ -67,7 +67,7 @@ const { page } = Astro.props;
     {
       page.url.next ? (
         <a href={page.url.next} class="btn btn-ghost my-10 mx-5">
-          Older Posts{" "}
+          Older justes{" "}
           <svg
             class="h-6 w-6 fill-current md:h-8 md:w-8"
             xmlns="http://www.w3.org/2000/svg"
