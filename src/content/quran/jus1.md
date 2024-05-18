@@ -1,7 +1,7 @@
 ---
 title: "Al Baqarah"
 description: "Surah Al-Baqarah adalah surah kedua dan terpanjang dalam Al-Qur'an dengan 286 ayat. Diturunkan di Madinah, surah ini mencakup berbagai topik seperti keimanan, hukum syariah, kisah-kisah umat terdahulu, dan etika kehidupan. Nama \"Al-Baqarah\" berarti \"sapi betina,\" merujuk pada kisah dalam surah ini. Ayat Kursi (ayat 255) adalah ayat yang terkenal menggambarkan keagungan Allah."
-pubDate: "May 01 2024"
+pubDate: "May 18 2024"
 heroImage: "/Al-baqarah.png"
 tags: ["Al Baqarah",
 "Al-Quran",
