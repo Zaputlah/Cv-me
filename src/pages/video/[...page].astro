@@ -1,52 +1,41 @@
 ---
-import BaseLayout from "@layouts/BaseLayout.astro";
-import HorizontalCard from "@components/HorizontalCard.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import HorizontalCard from "../../components/HorizontalCard.astro";
 import { getCollection } from "astro:content";
-import createSlug from "../../../../lib/createSlug";
+import createSlug from "../../lib/createSlug";
 
 export async function getStaticPaths({ paginate }) {
-  const all_posts = await getCollection("quran");
-  const all_tags = all_posts.flatMap((jus) => {
-    return jus.data.tags || [];
-  });
-
-  return all_tags.flatMap((tag) => {
-    const filtred_posts = all_posts.filter((jus) => {
-      return jus.data.tags?.includes(tag);
-    });
-    return paginate(filtred_posts, {
-      params: { tag },
-      pageSize: 10,
-    });
-  });
+  const videos = await getCollection("video");
+  videos.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+  return paginate(videos, { pageSize: 10 });
 }
 
 const { page } = Astro.props;
-const params = Astro.params;
 ---
 
-<BaseLayout title={"quran - " + params.tag} sideBarActiveItemID="quran">
+<BaseLayout title="Video" sideBarActiveItemID="video">
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Quran - {params.tag}</div>
+    <div class="text-3xl w-full font-bold">Video</div>
   </div>
+
   {
     page.data.length === 0 ? (
       <div class="bg-base-200 border-l-4 border-secondary w-full p-4 min-w-full">
         <p class="font-bold">Sorry!</p>
-        <p>There are no quran posts to show at the moment. Check back later!</p>
+        <p>There are no video posts to show at the moment. Check back later!</p>
       </div>
     ) : (
       <ul>
-        {page.data.map((jus) => (
+        {page.data.map((video) => (
           <>
             <HorizontalCard
-              title={jus.data.title}
-              img={jus.data.heroImage}
-              desc={jus.data.description}
-              url={"/quran/" + createSlug(jus.data.title, jus.slug)}
+              title={video.data.title}
+              src={video.data.heroImage}
+              desc={video.data.description}
+              url={"/video/" + createSlug(video.data.title, video.slug)}
               target="_self"
-              badge={jus.data.badge}
-              tags={jus.data.tags}
+              badge={video.data.badge}
+              tags={video.data.tags}
             />
             <div class="divider my-0" />
           </>
