@@ -1,0 +1,10 @@
+name: Dummy Check
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: ✅ Lulus Check
+        run: echo "Check sukses"
