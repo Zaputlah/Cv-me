@@ -1,0 +1,100 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { ustadzList } from "../../data/ustadzList.js";
+
+const { id } = Astro.params;
+
+export async function getStaticPaths() {
+  return ustadzList.map((ustadz) => ({
+    params: { id: ustadz.id },
+    props: { ustadz },
+  }));
+}
+
+const { ustadz } = Astro.props;
+
+let groupedVideos = [];
+
+// Ambil semua playlist video berdasarkan ustadz.playlistId
+if (Array.isArray(ustadz?.playlistId)) {
+  for (const playlist of ustadz.playlistId) {
+    try {
+      const res = await fetch(`https://v1.nocodeapi.com/zaputlah/yt/OMxOfxHePCGByEOJ/playlistItems?playlistId=${playlist.id}&maxResults=50`);
+      const data = await res.json();
+
+      const videos = data.items?.map((item) => ({
+        videoId: item.snippet.resourceId.videoId,
+        title: item.snippet.title,
+        thumbnail: item.snippet.thumbnails.medium.url,
+      })) || [];
+
+      groupedVideos.push({
+        title: playlist.title,
+        videos,
+      });
+
+    } catch (err) {
+      console.error(`Gagal fetch playlist ${playlist.title}:`, err);
+    }
+  }
+}
+---
+
+<BaseLayout title={ustadz?.name ?? "Ustadz Tidak Ditemukan"} sideBarActiveItemID="ceramah">
+  <div class="p-4 max-w-3xl mx-auto">
+    {ustadz ? (
+      <>
+        <h1 class="text-4xl font-bold mb-4">{ustadz.name}</h1>
+        <p class="mb-6 text-gray-700">{ustadz.description}</p>
+
+        <details class="mt-6" open>
+          <summary class="cursor-pointer font-semibold text-2xl mb-4 list-none">
+            Video Ceramah
+          </summary>
+
+          {groupedVideos.length > 0 ? (
+            <div class="space-y-6 mt-4">
+              {groupedVideos.map((group) => (
+                <details class="border rounded-lg shadow-sm" open>
+                  <summary class="bg-gray-100 px-4 py-3 font-bold text-lg cursor-pointer">
+                    {group.title}
+                  </summary>
+                  
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 p-4">
+                    {group.videos.map((video) => (
+                      <details
+                        key={video.videoId}
+                        class="rounded-lg shadow border bg-white transition-all duration-300 overflow-hidden"
+                      >
+                        <summary class="cursor-pointer px-4 py-3 font-semibold hover:bg-gray-100">
+                          {video.title}
+                        </summary>
+                        <div class="p-4">
+                          <div class="aspect-w-16 aspect-h-9">
+                            <iframe
+                              class="w-full h-full"
+                              src={`https://www.youtube.com/embed/${video.videoId}`}
+                              title={video.title}
+                              frameborder="0"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allowfullscreen
+                              loading="lazy"
+                            ></iframe>
+                          </div>
+                        </div>
+                      </details>
+                    ))}
+                  </div>
+                </details>
+              ))}
+            </div>
+          ) : (
+            <p class="text-gray-600">Tidak ada video tersedia.</p>
+          )}
+        </details>
+      </>
+    ) : (
+      <h1 class="text-center text-2xl mt-10">Ustadz Tidak Ditemukan</h1>
+    )}
+  </div>
+</BaseLayout>

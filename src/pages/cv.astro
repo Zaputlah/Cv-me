@@ -4,178 +4,155 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 ---
 
 <BaseLayout title="Resume" sideBarActiveItemID="cv">
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Profile</div>
-  </div>
 
-  <div class="mb-10 text-justify">
-    Saya seorang <b>Junior programmer</b> dengan pengalaman dalam berbagai bahasa
-    pemrograman seperti JavaScript dan PHP. Saya telah mencoba berbagai framework
-    seperti <b>
-      React JS, Vue JS, Nuxt JS, Astro JS, CodeIgniter, dan Laravel.
-    </b>
-  </div>
+  <!-- PROFILE -->
+  <section class="mb-10 p-6 rounded-2xl bg-gradient-to-r from-blue-50 to-white shadow">
+    <h2 class="text-3xl font-bold mb-3">👤 Profile</h2>
+    <p class="text-justify leading-relaxed">
+      Saya seorang <b>Junior Programmer</b> yang antusias dalam pengembangan aplikasi
+      menggunakan berbagai teknologi seperti JavaScript dan PHP.
+      Telah berpengalaman menggunakan framework modern seperti
+      <b>React.js, Vue.js, Nuxt.js, Astro.js, CodeIgniter, dan Laravel</b>.
+    </p>
+  </section>
 
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Education</div>
-  </div>
+  <!-- EDUCATION -->
+  <section class="mb-10 p-6 rounded-2xl bg-gradient-to-r from-purple-50 to-white shadow">
+    <h2 class="text-3xl font-bold mb-6">🎓 Education</h2>
+    <div class="grid gap-4">
+      <TimeLineElement title="D3 Manajemen Informatika" subtitle="Universitas Bina Sarana Informatika" />
+      <TimeLineElement title="S1 Sistem Informasi" subtitle="STMIK Nusa Mandiri" />
+    </div>
+  </section>
 
-  <div class="time-line-container grid gap-4 mb-10">
-    <TimeLineElement
-      title="D3 Manajement Informatika"
-      subtitle="Universitas Bina Sarana Informatika"
-    />
-    <TimeLineElement
-      title="S1 Sistem Informasi"
-      subtitle="STMIK Nusa Mandiri"
-    />
-  </div>
+  <!-- EXPERIENCE -->
+  <section class="mb-10 p-6 rounded-2xl bg-gradient-to-r from-yellow-50 to-white shadow">
+    <h2 class="text-3xl font-bold mb-6">💼 Experience</h2>
+    <div class="grid gap-6">
+      <TimeLineElement title="PT Rafesh" subtitle="Magang Mahasiswa">
+        <b class="block mb-1">Job Desk:</b>
+        <ul class="list-disc list-inside space-y-1">
+          <li>Menginput data keluar masuk barang menggunakan Excel</li>
+          <li>Mencatat persediaan barang</li>
+          <li>Membantu mendesain produk</li>
+        </ul>
+        <b class="block mt-3 mb-1">Tools & Technologies:</b>
+        <ul class="list-disc list-inside space-y-1">
+          <li>Ms. Excel, Ms. Word, Photoshop, Kertas & Pulpen</li>
+        </ul>
+      </TimeLineElement>
 
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Experience</div>
-  </div>
+      <TimeLineElement title="PT Xeranta Matra Solusi" subtitle="Software Developer">
+        <ul class="list-disc list-inside space-y-1">
+          <li>Maintenance website</li>
+          <li>Mendesain tampilan surat</li>
+          <li>Bug troubleshooting</li>
+        </ul>
+        <b class="block mt-3 mb-1">Tools & Technologies:</b>
+        <ul class="list-disc list-inside space-y-1">
+          <li>Eclipse, Navicat, iReport</li>
+          <li>Java, Spring Boot, Bootstrap, CSS, Html, JavaScript</li>
+        </ul>
+      </TimeLineElement>
 
-  <div class="time-line-container mb-10">
-    <TimeLineElement title="PT Rafesh" subtitle="Mahasiswa Magang">
-      Jobdesk
-      <li>Menginput keluar masuknya barang dengan excel</li>
-      <li>Mencatat persediaan barang</li>
-      <li>Membantu dalam mendesign barang</li>
-      <br />
-      Tools
-      <li>Ms.Excel</li>
-      <li>Ms.Word</li>
-      <li>Pulpen</li>
-      <li>Photoshop</li>
-      <li>Kertas</li>
-      <br />
-    </TimeLineElement>
-    <TimeLineElement
-      title="Pt Xeranta matra solusi"
-      subtitle="Software Developer"
-    >
-      <li>Maintenance website</li>
-      <li>Mendesign tampilan surat</li>
-      <li>Troubleshoting of bug</li>
-      <br />
-      Tools
-      <li>Eclipse</li>
-      <li>Navicat</li>
-      <li>Java</li>
-      <li>Springboots</li>
-      <li>Boostrap</li>
-      <li>Css</li>
-      <li>Beyonce compare</li>
-      <li>Ireport</li>
-      <br />
-    </TimeLineElement>
-    <TimeLineElement title="Freelance" subtitle="IT Suport">
-      <li>Konfigurasi jaringan</li>
-      <li>Membantu ketika ada masalah di pc</li>
-      <li>Melakukan instal ulang</li>
-      <br />
-    </TimeLineElement>
-    <TimeLineElement
-      title="PT Metropolitan Retailmart"
-      subtitle="Msr Developer"
-    >
-      <li>Membuat notifikasi email</li>
-      <li>Membuat game</li>
-      <li>Troubleshoting of bug</li>
-      <li>Mengechek data di solr</li>
-      <br />
-      Tools
-      <li>Visual studio code</li>
-      <li>Golang</li>
-      <li>Php</li>
-      <li>Codeigniter</li>
+      <TimeLineElement title="Freelance" subtitle="IT Support">
+        <ul class="list-disc list-inside space-y-1">
+          <li>Konfigurasi jaringan</li>
+          <li>Menangani masalah PC</li>
+          <li>Instal ulang sistem operasi</li>
+        </ul>
+      </TimeLineElement>
+
+      <TimeLineElement title="PT Metropolitan Retailmart" subtitle="MSR Developer">
+        <ul class="list-disc list-inside space-y-1">
+          <li>Membuat notifikasi email</li>
+          <li>Membuat game sederhana</li>
+          <li>Bug troubleshooting</li>
+          <li>Memeriksa data di Solr</li>
+        </ul>
+        <b class="block mt-3 mb-1">Tools & Technologies:</b>
+        <ul class="list-disc list-inside space-y-1">
+          <li>VS Code, Postman, Solr, Git</li>
+          <li>Golang, PHP, CodeIgniter, JavaScript, HTML5, Bootstrap, Razor</li>
+        </ul>
+      </TimeLineElement>
+
+      <TimeLineElement title="PT Summit Global Teknologi" subtitle="Frontend Engineer">
+        <ul class="list-disc list-inside space-y-1">
+          <li>Membuat landing page produk Infinix Series 40</li>
+          <li>Translasi halaman ke berbagai bahasa</li>
+          <li>Mengembangkan Chatbot AI</li>
+        </ul>
+        <b class="block mt-3 mb-1">Tools & Technologies:</b>
+        <ul class="list-disc list-inside space-y-1">
+          <li>IntelliJ IDEA, Figma, Adobe XD, Git</li>
+          <li>ChatGPT, Claude.ai, Magic Scroll </li>
+          <li>IntelliJ IDEA, Vue.js, Nuxt, HTML5, CSS</li>
+        </ul>
+      </TimeLineElement>
+
+      <TimeLineElement title="PT Optimasmartindo Industri" subtitle="Staff IT">
+        <ul class="list-disc list-inside space-y-1">
+          <li>Memperbaiki PC bermasalah</li>
+          <li>Konfigurasi jaringan</li>
+          <li>Desain produk</li>
+          <li>Bantu tim marketing membuat konten</li>
+          <li>Instal ulang & smart city project</li>
+          <li>Kelola sosial media & CCTV</li>
+        </ul>
+        <b class="block mt-3 mb-1">Tools & Technologies:</b>
+        <ul class="list-disc list-inside space-y-1">
+          <li>Canva, TikTok, Shopee, Tokopedia, Instagram, YouTube</li>
+          <li>C#, Ms. Office, Bootstrap</li>
+          <li>CCTV</li>
+        </ul>
+      </TimeLineElement>
+      <TimeLineElement title="Bpjs Kesehatan" subtitle="Programmer fullstack">
+        <ul class="list-disc list-inside space-y-1">
+          <li>Mengembangkan project Monev yanser</li>
+          <li>Membuat microservice Aplicares, Ihc, Antrol dengan LINQ</li>
+          <li>Mengembangkan Project PPID dengan di buatkan versi Mobilenya</li>
+        </ul>
+        <b class="block mt-3 mb-1">Tools & Technologies:</b>
+        <ul class="list-disc list-inside space-y-1">
+          <li>VS Code, Visual Studio, Postman, Git, Bitbucket</li>
+          <li>Java, JavaScript, AngularJS, SpringBoot, .NET, SQL Server, Bootstrap, CSS, HTML</li>
+        </ul>
+      </TimeLineElement>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section class="mb-10 p-6 rounded-2xl bg-gradient-to-r from-green-50 to-white shadow">
+    <h2 class="text-3xl font-bold mb-4">📜 Certifications</h2>
+    <ul class="list-disc list-inside space-y-2">
+      <li>Desain Grafis</li>
+      <li>CCNA (Cisco Certified Network Associate)</li>
+      <li>3-in-1: Networking, Python, Automation</li>
+      <li>Fullstack Web Development</li>
+      <li>UI/UX Design</li>
+    </ul>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="mb-10 p-6 rounded-2xl bg-gradient-to-r from-cyan-50 to-white shadow">
+    <h2 class="text-3xl font-bold mb-4">🛠️ Skills</h2>
+    <ul class="list-disc md:columns-5 columns-2 list-inside space-y-1">
       <li>JavaScript</li>
-      <li>Css</li>
-      <li>Html5</li>
-      <li>Boostrap</li>
-      <li>Razor</li>
-      <li>Postman</li>
-      <li>Solr</li>
-      <li>Git</li>
-      <br />
-    </TimeLineElement>
-    <TimeLineElement
-      title="PT Summit Global Teknology"
-      subtitle="Frontend Engineer"
-    >
-      <li>Membuat landingpage usp hp infinix series 40</li>
-      <li>Mentranslate landingpage ke berbagai bahasa</li>
-      <li>Mengenerate chatbot.ai</li>
-      <br />
-      Tools
-      <li>IntelliJ IDEA</li>
-      <li>Vue js</li>
-      <li>Nuxt</li>
-      <li>Html5</li>
-      <li>Css</li>
-      <li>Claude.ai</li>
-      <li>Magic scroll</li>
-      <li>Figma</li>
-      <li>Adobe XD</li>
-      <li>ChatGpt</li>
-      <li>Git</li>
-      <br />
-    </TimeLineElement>
-    <TimeLineElement title="PT Optimasmartindo industri " subtitle="Staff IT">
-      <li>Memperbaiki ketika PC bermasalah</li>
-      <li>Konfigurasi jaringan</li>
-      <li>Mendesign product barang</li>
-      <li>
-        Membantu divisi marketing membuat content dan meningkatkan penjualan
-      </li>
-      <li>Instal ulang</li>
-      <li>Mengembangkan project smart city</li>
-      <li>Menghandle sosial media</li>
-      <li>Menghandle Cctv</li>
-      <br />
-      Tools
-      <li>Tiktok</li>
-      <li>Shopee</li>
-      <li>Tokopedia</li>
-      <li>Canva</li>
-      <li>Tiktok</li>
-      <li>C#</li>
-      <li>Ms.Office</li>
-      <li>Boostrap</li>
-      <li>Cctv</li>
-      <li>Instagram</li>
-      <li>Youtube</li>
-      <br />
-    </TimeLineElement>
-  </div>
+      <li>PHP</li>
+      <li>HTML5</li>
+      <li>CSS</li>
+      <li>CodeIgniter</li>
+      <li>Laravel</li>
+      <li>Tailwind</li>
+      <li>Nuxt.js</li>
+      <li>Astro.js</li>
+      <li>Vue.js</li>
+      <li>React.js</li>
+      <li>Java</li>
+      <li>Flutter</li>
+      <li>.NET</li>
+    </ul>
+  </section>
 
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Certifications</div>
-  </div>
-
-  <ul class="list-disc mx-6 mb-10 grid gap-2">
-    <li>Desain Grafis</li>
-    <li>Ccna</li>
-    <li>3 in 1 (Netwoking, python, automation)</li>
-    <li>Fullstack web</li>
-    <li>UI/UX</li>
-  </ul>
-
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Skills</div>
-  </div>
-
-  <ul class="list-disc md:columns-5 columns-2 mx-6">
-    <li>JavaScript</li>
-    <li>Php</li>
-    <li>HTML</li>
-    <li>Css</li>
-    <li>Codeigniter</li>
-    <li>Laravel</li>
-    <li>Tailwind</li>
-    <li>Nuxt js</li>
-    <li>Astro js</li>
-    <li>Vue js</li>
-    <li>React js</li>
-  </ul>
 </BaseLayout>
