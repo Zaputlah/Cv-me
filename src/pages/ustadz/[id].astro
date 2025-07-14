@@ -11,6 +11,7 @@ export async function getStaticPaths() {
   }));
 }
 ---
+
 <BaseLayout title={ustadz?.name ?? "Ustadz Tidak Ditemukan"} sideBarActiveItemID="ceramah">
   <div class="p-4 max-w-3xl mx-auto">
     {ustadz ? (
@@ -28,9 +29,26 @@ export async function getStaticPaths() {
           </div>
         </details>
 
+        <!-- Modal Container -->
+        <div id="video-modal" style="position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); display:none; align-items:center; justify-content:center; z-index:1000;">
+          <div style="position:relative; width:90%; max-width:800px; background:#000; border-radius:12px; overflow:hidden;">
+            <button id="close-modal" style="position:absolute; top:8px; right:12px; font-size:24px; background:none; border:none; color:white; cursor:pointer;">×</button>
+            <iframe id="modal-iframe" width="100%" style="aspect-ratio:16/9;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+        </div>
+
         <script type="module">
           const container = document.getElementById("videos-container");
           const playlists = JSON.parse(container.dataset.playlists || "[]");
+
+          const modal = document.getElementById("video-modal");
+          const iframe = document.getElementById("modal-iframe");
+          const closeBtn = document.getElementById("close-modal");
+
+          closeBtn.onclick = () => {
+            modal.style.display = "none";
+            iframe.src = "";
+          };
 
           async function fetchVideos() {
             let allGroups = [];
@@ -76,29 +94,28 @@ export async function getStaticPaths() {
                 content.innerHTML = "<p class='text-red-500'>Gagal memuat video.</p>";
               } else {
                 for (const video of group.videos) {
-                  const detail = document.createElement("details");
-                  detail.className = "rounded-lg shadow border bg-white";
+                  const card = document.createElement("div");
+                  card.className = "rounded-lg shadow border bg-white overflow-hidden cursor-pointer transition hover:shadow-md";
 
-                  const sum = document.createElement("summary");
-                  sum.className = "cursor-pointer px-4 py-3 font-semibold hover:bg-gray-100";
-                  sum.textContent = video.title;
+                  const img = document.createElement("img");
+                  img.src = video.thumbnail;
+                  img.alt = video.title;
+                  img.className = "w-full aspect-video object-cover";
 
-                  const iframeWrap = document.createElement("div");
-                  iframeWrap.className = "p-4";
+                  const caption = document.createElement("div");
+                  caption.className = "px-4 py-3 font-medium text-gray-800 text-sm";
+                  caption.textContent = video.title;
 
-                  const iframe = document.createElement("iframe");
-                  iframe.className = "w-full aspect-video";
-                  iframe.src = `https://www.youtube.com/embed/${video.videoId}`;
-                  iframe.title = video.title;
-                  iframe.frameBorder = "0";
-                  iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
-                  iframe.allowFullscreen = true;
-                  iframe.loading = "lazy";
+                  card.appendChild(img);
+                  card.appendChild(caption);
 
-                  iframeWrap.appendChild(iframe);
-                  detail.appendChild(sum);
-                  detail.appendChild(iframeWrap);
-                  content.appendChild(detail);
+                  // Tampilkan modal saat diklik
+                  card.onclick = () => {
+                    iframe.src = `https://www.youtube.com/embed/${video.videoId}?autoplay=1`;
+                    modal.style.display = "flex";
+                  };
+
+                  content.appendChild(card);
                 }
               }
 
