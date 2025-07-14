@@ -3,43 +3,14 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import { ustadzList } from "../../data/ustadzList.js";
 
 const { id } = Astro.params;
+const ustadz = ustadzList.find((u) => u.id === id);
 
 export async function getStaticPaths() {
   return ustadzList.map((ustadz) => ({
     params: { id: ustadz.id },
-    props: { ustadz },
   }));
 }
-
-const { ustadz } = Astro.props;
-
-let groupedVideos = [];
-
-// Ambil semua playlist video berdasarkan ustadz.playlistId
-if (Array.isArray(ustadz?.playlistId)) {
-  for (const playlist of ustadz.playlistId) {
-    try {
-      const res = await fetch(`https://v1.nocodeapi.com/zaputlah/yt/OMxOfxHePCGByEOJ/playlistItems?playlistId=${playlist.id}&maxResults=50`);
-      const data = await res.json();
-
-      const videos = data.items?.map((item) => ({
-        videoId: item.snippet.resourceId.videoId,
-        title: item.snippet.title,
-        thumbnail: item.snippet.thumbnails.medium.url,
-      })) || [];
-
-      groupedVideos.push({
-        title: playlist.title,
-        videos,
-      });
-
-    } catch (err) {
-      console.error(`Gagal fetch playlist ${playlist.title}:`, err);
-    }
-  }
-}
 ---
-
 <BaseLayout title={ustadz?.name ?? "Ustadz Tidak Ditemukan"} sideBarActiveItemID="ceramah">
   <div class="p-4 max-w-3xl mx-auto">
     {ustadz ? (
@@ -52,46 +23,92 @@ if (Array.isArray(ustadz?.playlistId)) {
             Video Ceramah
           </summary>
 
-          {groupedVideos.length > 0 ? (
-            <div class="space-y-6 mt-4">
-              {groupedVideos.map((group) => (
-                <details class="border rounded-lg shadow-sm" open>
-                  <summary class="bg-gray-100 px-4 py-3 font-bold text-lg cursor-pointer">
-                    {group.title}
-                  </summary>
-                  
-                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 p-4">
-                    {group.videos.map((video) => (
-                      <details
-                        key={video.videoId}
-                        class="rounded-lg shadow border bg-white transition-all duration-300 overflow-hidden"
-                      >
-                        <summary class="cursor-pointer px-4 py-3 font-semibold hover:bg-gray-100">
-                          {video.title}
-                        </summary>
-                        <div class="p-4">
-                          <div class="aspect-w-16 aspect-h-9">
-                            <iframe
-                              class="w-full h-full"
-                              src={`https://www.youtube.com/embed/${video.videoId}`}
-                              title={video.title}
-                              frameborder="0"
-                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                              allowfullscreen
-                              loading="lazy"
-                            ></iframe>
-                          </div>
-                        </div>
-                      </details>
-                    ))}
-                  </div>
-                </details>
-              ))}
-            </div>
-          ) : (
-            <p class="text-gray-600">Tidak ada video tersedia.</p>
-          )}
+          <div id="videos-container" data-playlists={JSON.stringify(ustadz.playlistId)}>
+            <p class="text-gray-500">Sedang memuat video...</p>
+          </div>
         </details>
+
+        <script type="module">
+          const container = document.getElementById("videos-container");
+          const playlists = JSON.parse(container.dataset.playlists || "[]");
+
+          async function fetchVideos() {
+            let allGroups = [];
+
+            for (const playlist of playlists) {
+              try {
+                const res = await fetch(`https://v1.nocodeapi.com/zaputlah/yt/OMxOfxHePCGByEOJ/playlistItems?playlistId=${playlist.id}&maxResults=50`);
+                const data = await res.json();
+
+                const videos = (data.items || []).map(item => ({
+                  videoId: item.snippet.resourceId.videoId,
+                  title: item.snippet.title,
+                  thumbnail: item.snippet.thumbnails.medium.url,
+                }));
+
+                allGroups.push({ title: playlist.title, videos });
+              } catch (err) {
+                allGroups.push({ title: playlist.title, videos: [], error: true });
+              }
+            }
+
+            container.innerHTML = "";
+
+            if (allGroups.length === 0) {
+              container.innerHTML = "<p class='text-gray-600'>Tidak ada video.</p>";
+              return;
+            }
+
+            for (const group of allGroups) {
+              const details = document.createElement("details");
+              details.className = "border rounded-lg shadow-sm mb-4";
+              details.open = true;
+
+              const summary = document.createElement("summary");
+              summary.className = "bg-gray-100 px-4 py-3 font-bold text-lg cursor-pointer";
+              summary.textContent = group.title;
+              details.appendChild(summary);
+
+              const content = document.createElement("div");
+              content.className = "grid grid-cols-1 sm:grid-cols-2 gap-4 p-4";
+
+              if (group.error) {
+                content.innerHTML = "<p class='text-red-500'>Gagal memuat video.</p>";
+              } else {
+                for (const video of group.videos) {
+                  const detail = document.createElement("details");
+                  detail.className = "rounded-lg shadow border bg-white";
+
+                  const sum = document.createElement("summary");
+                  sum.className = "cursor-pointer px-4 py-3 font-semibold hover:bg-gray-100";
+                  sum.textContent = video.title;
+
+                  const iframeWrap = document.createElement("div");
+                  iframeWrap.className = "p-4";
+
+                  const iframe = document.createElement("iframe");
+                  iframe.className = "w-full aspect-video";
+                  iframe.src = `https://www.youtube.com/embed/${video.videoId}`;
+                  iframe.title = video.title;
+                  iframe.frameBorder = "0";
+                  iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+                  iframe.allowFullscreen = true;
+                  iframe.loading = "lazy";
+
+                  iframeWrap.appendChild(iframe);
+                  detail.appendChild(sum);
+                  detail.appendChild(iframeWrap);
+                  content.appendChild(detail);
+                }
+              }
+
+              details.appendChild(content);
+              container.appendChild(details);
+            }
+          }
+
+          fetchVideos();
+        </script>
       </>
     ) : (
       <h1 class="text-center text-2xl mt-10">Ustadz Tidak Ditemukan</h1>
