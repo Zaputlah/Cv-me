@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "nama": "Abu Bakar Ash-Shiddiq",
+    "kelebihan": [
+      "Sahabat pertama yang masuk Islam dari kalangan dewasa",
+      "Mendampingi Rasulullah saat hijrah ke Madinah",
+      "Khalifah pertama setelah wafatnya Rasulullah",
+      "Dikenal karena kejujuran dan keteguhannya dalam iman"
+    ]
+  },
+  {
+    "id": 2,
+    "nama": "Umar bin Khattab",
+    "kelebihan": [
+      "Khalifah kedua yang memperluas wilayah Islam secara signifikan",
+      "Dikenal karena keadilan dan ketegasan",
+      "Masuk Islam setelah mendengar bacaan Al-Qur’an",
+      "Penuh wibawa dan ditakuti oleh musuh Islam"
+    ]
+  },
+  {
+    "id": 3,
+    "nama": "Utsman bin Affan",
+    "kelebihan": [
+      "Khalifah ketiga yang menggandakan mushaf Al-Qur'an dan menyebarkannya",
+      "Dermawan yang membiayai pasukan Perang Tabuk",
+      "Menikah dengan dua putri Nabi secara berurutan (Dzun Nurain)",
+      "Pemalu dan penuh kesopanan"
+    ]
+  },
+  {
+    "id": 4,
+    "nama": "Ali bin Abi Thalib",
+    "kelebihan": [
+      "Khalifah keempat dan juga sepupu sekaligus menantu Nabi",
+      "Pejuang tangguh dan sangat cerdas",
+      "Dikenal karena ilmu dan keberaniannya",
+      "Termasuk orang pertama yang masuk Islam dari kalangan anak-anak"
+    ]
+  },
+  {
+    "id": 5,
+    "nama": "Bilal bin Rabah",
+    "kelebihan": [
+      "Muadzin pertama dalam Islam",
+      "Memiliki suara merdu dan penuh penghayatan",
+      "Tegar menghadapi siksaan karena keimanannya",
+      "Disayangi Rasulullah karena kesetiaannya"
+    ]
+  },
+  {
+    "id": 6,
+    "nama": "Khalid bin Walid",
+    "kelebihan": [
+      "Dikenal sebagai 'Pedang Allah yang Terhunus'",
+      "Komandan militer yang tidak pernah kalah dalam pertempuran",
+      "Ahli strategi perang yang luar biasa",
+      "Masuk Islam setelah Perjanjian Hudaibiyah"
+    ]
+  },
+  {
+    "id": 7,
+    "nama": "Saad bin Abi Waqqas",
+    "kelebihan": [
+      "Termasuk 10 sahabat yang dijamin masuk surga",
+      "Doanya selalu dikabulkan",
+      "Pemanah ulung dalam peperangan",
+      "Panglima dalam penaklukan Persia"
+    ]
+  },
+  {
+    "id": 8,
+    "nama": "Abdurrahman bin Auf",
+    "kelebihan": [
+      "Sahabat yang sangat dermawan",
+      "Pebisnis sukses yang selalu membantu perjuangan Islam",
+      "Termasuk 10 sahabat yang dijamin masuk surga",
+      "Selalu mendahulukan orang lain dalam kebaikan"
+    ]
+  },
+  {
+    "id": 9,
+    "nama": "Abu Ubaidah bin Al-Jarrah",
+    "kelebihan": [
+      "Termasuk 10 sahabat yang dijamin masuk surga",
+      "Dikenal sebagai penjaga amanah umat (Aminul Ummah)",
+      "Pemimpin pasukan Islam dalam banyak pertempuran penting",
+      "Teladan dalam kejujuran, kesederhanaan, dan kepemimpinan"
+    ]
+  },
+  {
+    "id": 10,
+    "nama": "Zubair bin Awwam",
+    "kelebihan": [
+      "Sepupu Rasulullah dan termasuk 10 sahabat yang dijamin masuk surga",
+      "Pejuang gagah berani dalam setiap peperangan",
+      "Salah satu pelindung Nabi saat Perang Uhud",
+      "Termasuk sahabat pertama yang masuk Islam"
+    ]
+  },
+  {
+    "id": 11,
+    "nama": "Thalhah bin Ubaidillah",
+    "kelebihan": [
+      "Termasuk 10 sahabat yang dijamin masuk surga",
+      "Melindungi Nabi saat Perang Uhud hingga tubuhnya terluka parah",
+      "Dikenal sangat dermawan dan suka membantu sesama",
+      "Ahli dalam berdagang namun tetap zuhud"
+    ]
+  },
+  {
+    "id": 12,
+    "nama": "Salman Al-Farisi",
+    "kelebihan": [
+      "Ahli strategi yang mengusulkan penggalian parit pada Perang Khandaq",
+      "Pencari kebenaran yang berpindah agama sebelum menemukan Islam",
+      "Dicintai Nabi karena ketakwaannya",
+      "Contoh dari perjuangan mencari iman sejati"
+    ]
+  },
+  {
+    "id": 13,
+    "nama": "Hudzaifah bin Al-Yaman",
+    "kelebihan": [
+      "Sahabat kepercayaan Nabi dalam menjaga rahasia-rahasia penting",
+      "Dikenal sebagai penjaga rahasia munafik",
+      "Memiliki kecerdasan luar biasa dalam memahami situasi sosial-politik",
+      "Pejuang dalam berbagai pertempuran besar"
+    ]
+  },
+  {
+    "id": 14,
+    "nama": "Abu Hurairah",
+    "kelebihan": [
+      "Periwayat hadits terbanyak dalam Islam",
+      "Sangat dekat dengan Rasulullah dan senantiasa bersama beliau",
+      "Memiliki hafalan yang sangat kuat",
+      "Bersahabat dengan Nabi dalam berbagai kesempatan dakwah"
+    ]
+  },
+  {
+    "id": 15,
+    "nama": "Muadz bin Jabal",
+    "kelebihan": [
+      "Dikenal sebagai sahabat yang paling tahu tentang halal dan haram",
+      "Utusan Nabi ke Yaman sebagai guru dan pemimpin",
+      "Ahli ilmu dan sangat cerdas",
+      "Dicintai Nabi dan didoakan khusus oleh beliau"
+    ]
+  },
+  {
+    "id": 16,
+    "nama": "Anas bin Malik",
+    "kelebihan": [
+      "Pelayan pribadi Rasulullah selama 10 tahun",
+      "Periwayat hadits yang terpercaya",
+      "Didoakan oleh Rasul agar diberi umur panjang dan banyak keturunan",
+      "Dekat dengan keluarga Nabi"
+    ]
+  },
+  {
+    "id": 17,
+    "nama": "Usamah bin Zaid",
+    "kelebihan": [
+      "Pemuda yang ditunjuk Nabi sebagai panglima pasukan ke Syam",
+      "Putra Zaid bin Haritsah, sangat disayangi oleh Nabi",
+      "Teladan bagi generasi muda Islam",
+      "Memiliki akhlak yang mulia dan pemberani"
+    ]
+  },
+  {
+    "id": 18,
+    "nama": "Sa’id bin Zaid",
+    "kelebihan": [
+      "Termasuk dalam 10 sahabat yang dijamin masuk surga",
+      "Sahabat yang sangat setia dan gigih dalam membela Islam",
+      "Menikah dengan Fatimah binti Al-Khattab, saudari Umar bin Khattab",
+      "Berperan penting dalam Perang Yarmuk"
+    ]
+  },
+  {
+    "id": 19,
+    "nama": "Ammar bin Yasir",
+    "kelebihan": [
+      "Sahabat yang sabar dalam menghadapi penyiksaan karena keimanannya",
+      "Dijamin masuk surga oleh Nabi",
+      "Pejuang pemberani yang ikut dalam banyak pertempuran",
+      "Keluarganya adalah keluarga syuhada pertama dalam Islam"
+    ]
+  },
+  {
+    "id": 20,
+    "nama": "Abdullah bin Mas'ud",
+    "kelebihan": [
+      "Ahli dalam bacaan dan penafsiran Al-Qur’an",
+      "Sahabat awal yang masuk Islam dan dekat dengan Nabi",
+      "Dikenal sangat sederhana dan rendah hati",
+      "Periwayat hadits dan guru generasi tabi’in"
+    ]
+  }
+]
