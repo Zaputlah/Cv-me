@@ -1,43 +1,40 @@
 ---
-title: "Meniup Minuman Panas"
-description: "Meniup-niup minuman yang panas adalah tindakan yang dianjurkan untuk dihindari dalam Islam. Nabi Muhammad shallallahu ‘alaihi wa sallam melarang meniup minuman atau makanan panas untuk menjaga kebersihan dan kesehatan, berdasarkan hadis yang menyatakan, \"Janganlah salah seorang di antara kalian bernafas di dalam bejana (minuman).(HR. Bukhari dan Muslim)."
+title: "Blowing on Hot Drinks"
+description: "Blowing on hot drinks is an act that is recommended to avoid in Islam. Prophet Muhammad ﷺ prohibited blowing on food or drinks to maintain cleanliness and health, based on the hadith which states, 'Do not breathe into a container (of drink).' (HR. Bukhari and Muslim)"
 pubDate: "May 17 2024"
 heroImage: "/meniuppanas.jpeg"
-tags: ["AdabIslam","SunnahNabi","Kesehatan","AdabMakanMinum","EtikaIslam","Hadis","Kebersihan","IslamicEtiquette","Rasulullah","HidupSehat","TipsSehat","IslamicPractices","LaranganNabi","EtikaMakanMinum","KebersihanDalamIslam",
-"Zaputlah","Mei", "17 Mei"]
+tags: ["IslamicEtiquette","SunnahOfTheProphet","Health","EatingDrinkingEtiquette","IslamicEthics","Hadith","Cleanliness","ProphetMuhammad","HealthyLiving","HealthTips","IslamicPractices","PropheticProhibitions","DrinkingEtiquette","CleanlinessInIslam",
+"Zaputlah","May","17 May"]
 ---
 
-**Meniup-Niup Minuman yang Panas**
+**Blowing on Hot Drinks**
 
-<p style="text-align: justify;">Salah satu adab makan adalah dilarang bernafas di dalam wadah dan juga dilarang meniup-niup saat minum. Adab ini kadang tidak diperhatikan oleh kita karena ingin buru-buru segera menikmati minuman yang sedang panas. Padahal menunggu sebentar atau tanpa meniup-niup, itu lebih selamat bahkan lebih sehat. Karena perlu diketahui bahwa saat meniup-niup seperti itu, sejatinya yang keluar adalah udara yang tidak bersih. Dengan alasan inilah <strong>Nabi shallallahu ‘alaihi wa sallam</strong> melarangnya.</p>
+<p style="text-align: justify;">One of the etiquettes of eating and drinking is that it is forbidden to breathe into a container or to blow on food or drink. This etiquette is sometimes overlooked because people want to quickly enjoy their hot drink. However, waiting a little or drinking without blowing is safer and healthier. It should be understood that when one blows on a drink, the air expelled is not clean. For this reason, <strong>Prophet Muhammad ﷺ</strong> prohibited this practice.</p>
 
-<p style="text-align: justify;">Dari Abu Sa’id Al Khudri, ia berkata,</p>
+<p style="text-align: justify;">From Abu Sa’id Al-Khudri, he said,</p>
 
 <p style="font-family: 'Neirizi Regular', sans-serif; font-size: 25px; direction: rtl;">
 أَنَّ النَّبِىَّ -صلى الله عليه وسلم- نَهَى عَنِ النَّفْخِ فِى الشُّرْبِ. فَقَالَ رَجُلٌ الْقَذَاةُ أَرَاهَا فِى الإِنَاءِ قَالَ « أَهْرِقْهَا ». قَالَ فَإِنِّى لاَ أَرْوَى مِنْ نَفَسٍ وَاحِدٍ قَالَ « فَأَبِنِ الْقَدَحَ إِذًا عَنْ فِيكَ »
 </p>
 
-<p style="text-align: justify;"><strong>“Nabi shallallahu ‘alaihi wa sallam</strong> melarang meniup-niup saat minum. Seseorang berkata, “Bagaimana jika ada kotoran yang aku lihat di dalam wadah air itu?” Beliau bersabda, “Tumpahkan saja.” Ia berkata, “Aku tidak dapat minum dengan satu kali tarikan nafas.” Beliau bersabda, “Kalau begitu, jauhkanlah wadah air (tempat mimum) itu dari mulutmu.” (HR. Tirmidzi no. 1887 dan Ahmad 3: 26. Al Hafizh Abu Thohir mengatakan bahwa sanad hadits ini shahih. Abu Isa Tirmidzi mengatakan bahwa hadits ini hasan shahih).
-</p>
+<p style="text-align: justify;"><strong>“The Prophet ﷺ</strong> prohibited blowing on a drink. Someone asked, 'What if there is dirt that I see in the container?' He said, 'Just pour it out.' He said, 'I cannot drink it in one breath.' He said, 'Then keep the container away from your mouth.'” (HR. Tirmidhi no. 1887 and Ahmad 3:26. Al-Hafizh Abu Thohir said the chain of narration is authentic. Abu Isa Tirmidhi said this hadith is hasan sahih).</p>
 
-<p style="text-align: justify;">Dari Ibnu ‘Abbas radhiyallahu ‘anhuma, ia berkata,</p>
+<p style="text-align: justify;">From Ibn ‘Abbas radhiyallahu ‘anhuma, he said,</p>
 
 <p style="font-family: 'Neirizi Regular', sans-serif; font-size: 25px; direction: rtl;">
 نَهَى رَسُولُ اللَّهِ -صلى الله عليه وسلم- أَنْ يُتَنَفَّسَ فِى الإِنَاءِ أَوْ يُنْفَخَ فِيهِ
 </p>
 
-<p style="text-align: justify;"><strong>“Nabi shallallahu ‘alaihi wa sallam</strong> melarang dari bernafas di dalam wadah air (bejana) atau meniupnya.” (HR. Tirmidzi no. 1888, Abu Daud no. 3728, dan Ibnu Majah no. 3429. Al Hafizh Abu Thohir mengatakan bahwa sanad hadits ini shahih).
-Imam Nawawi rahimahullah membawakan dua hadits di atas pada kitab adab makan pada Bab “Makruhnya meniup-niup saat minum.”</p>
+<p style="text-align: justify;"><strong>“The Prophet ﷺ</strong> prohibited breathing into a container (of drink) or blowing on it.” (HR. Tirmidhi no. 1888, Abu Dawud no. 3728, Ibn Majah no. 3429. Al-Hafizh Abu Thohir said this hadith is authentic). Imam Nawawi rahimahullah included both hadiths in his book on the etiquettes of eating under the chapter “It is disliked to blow on drinks.”</p>
 
-<p style="text-align: justify;">Di atas disebutkan mengenai bernafas di dalam wadah, itu pun terlarang. Artinya saat minum dilarang mengambil nafas dalam wadah. Yang dibolehkan adalah bernafas di luar wadah. Sedangkan meniup-niup saat minum -sebagaimana kata Ibnu Hajar- itu lebih parah dari sekedar bernafas di dalam wadah. Ibnu Hajar dalam Fathul Bari berkata,</p>
+<p style="text-align: justify;">As mentioned, breathing into a container is prohibited. This means taking a breath inside the container while drinking is forbidden. What is allowed is breathing outside the container. Meanwhile, blowing on a drink—as Ibn Hajar explained—is considered worse than merely breathing into it. Ibn Hajar in <em>Fathul Bari</em> stated,</p>
 
 <p style="font-family: 'Neirizi Regular', sans-serif; font-size: 25px; direction: rtl;">
 وَالنَّفْخ فِي هَذِهِ الْأَحْوَال كُلّهَا أَشَدُّ مِنْ التَّنَفُّس
 </p>
 
-<p style="text-align: justify;">“Meniup-niup minuman dalam kondisi ini lebih parah dari sekedar bernafas di dalam wadah.”
-Syaikh Muhammad bin Sholeh Al ‘Utsaimin mengatakan bahwa ketika seseorang meniup-niup, maka yang keluar adalah udara yang kotor. Oleh karenanya, Nabi shallallahu ‘alaihi wa sallam melarang melakukan seperti itu.</p>
+<p style="text-align: justify;">“Blowing on a drink in these conditions is more severe than simply breathing into the container.” Sheikh Muhammad bin Sholeh Al ‘Utsaimin explained that when someone blows on a drink, the air released is dirty, which is why the Prophet ﷺ prohibited it.</p>
 
-<p style="text-align: justify;">Kemudian <strong>Nabi shallallahu ‘alaihi wa sallam</strong> juga mengatakan bahwa jika ada yang tidak dapat minum dengan satu tarikan nafas, maka ia bisa minum lalu bernafas setelah itu di luar wadah, lalu minum kembali. Kata Syaikh Ibnu ‘Utsaimin, sebagian ulama menyatakan ketika butuh tidak mengapa meniup minuman yang sedang panas biar cepat dingin. Mereka memberikan keringanan dalam hal ini. Akan tetap kata Syaikh Ibnu ‘Utsaimin, tetap berpendapat bahwa minuman panas tidak ditiup seperti itu. Sebenarnya bisa melakukan solusi untuk mendinginkan minuman, yaitu dengan menuangkan minuman yang panas ke wadah lainnya, lalu membalikkannya kembali. Ini di antara cara yang tidak dilarang dalam mendinginkan minuman. Demikian maksud penjelasan Syaikh Muhammad bin Sholeh Al ‘Utsaimin dalam Syarh Riyadhis Sholihin, 4: 245.</p>
+<p style="text-align: justify;">The Prophet ﷺ also said that if someone cannot drink in one breath, they may drink, then breathe outside the container, and then drink again. Sheikh Ibn ‘Utsaimin noted that some scholars allow blowing on a hot drink if necessary to cool it quickly. However, Sheikh Ibn ‘Utsaimin maintained that it is preferable not to blow on hot drinks. An alternative solution to cool a hot drink without blowing is to pour it into another container and then pour it back. This method is permissible and avoids the prohibited action. (Explanation from Syarh Riyadhis Sholihin, 4:245)</p>
 
-sumber : https://rumaysho.com/
+Source: [https://rumaysho.com/](https://rumaysho.com/)

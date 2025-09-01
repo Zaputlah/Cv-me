@@ -1,40 +1,40 @@
 ---
-title: "Mengibaskan Tempat Tidur"
-description: "Mengibaskan tempat tidur adalah praktik dalam Islam yang mengharuskan seseorang membersihkan tempat tidurnya sebelum tidur. Ini dilakukan dengan menyapu atau mengibaskan pakaian di atas tempat tidur untuk menjaga kebersihan, kesehatan, dan kenyamanan."
+title: "Shaking the Bed"
+description: "Shaking the bed is a practice in Islam that encourages a person to clean their bed before sleeping. This is done by sweeping or shaking clothes over the bed to maintain cleanliness, health, and comfort."
 pubDate: "May 17 2024"
 heroImage: "/mengibaskantempattidur.jpeg"
-tags: ["SunnahNabi","Kebersihan","AdabTidur","HidupSehat","IslamicEtiquette","AjaranIslam","Kesehatan","Hadis","Rasulullah","KebersihanDalamIslam","TipsSehat","KesehatanTidur","TataCaraTidur","HidupBersih","IslamicPractices",
-"Zaputlah","Mei", "17 Mei"]
+tags: ["SunnahOfTheProphet", "Cleanliness", "SleepEtiquette", "HealthyLiving", "IslamicEtiquette", "IslamicTeachings", "Health", "Hadith", "ProphetMuhammad", "CleanlinessInIslam", "HealthTips", "SleepHealth", "SleepPractices", "CleanLiving", "IslamicPractices",
+"Zaputlah", "May", "17 May"]
 ---
 
-### Mengibaskan Tempat Tidur Menurut Ajaran Islam
+### Shaking the Bed According to Islamic Teachings
 
-<p style="text-align: justify;">Tempat tidur adalah salah satu tempat yang penting dalam kehidupan sehari-hari. Islam sebagai agama yang sempurna memberikan pedoman yang jelas tentang tata cara hidup, termasuk dalam hal menjaga kebersihan dan kenyamanan tempat tidur. Berikut ini adalah pembahasan tentang mengibaskan tempat tidur menurut ajaran <strong>Nabi Muhammad shallallahu ‘alaihi wa sallam</strong> dan Al-Quran.</p>
+<p style="text-align: justify;">The bed is one of the important places in daily life. Islam, as a complete way of life, provides clear guidance on proper living, including maintaining cleanliness and comfort in one’s bed. Below is a discussion on shaking the bed according to the teachings of <strong>Prophet Muhammad ﷺ</strong> and the Quran.</p>
 
-#### 1. Pedoman dari Al-Quran
+#### 1. Guidance from the Quran
 
-<p style="text-align: justify;">Dalam Al-Quran, Allah Subhanahu wa ta'ala menegaskan pentingnya menjaga kebersihan dan kenyamanan dalam hidup sehari-hari. Ayat-ayat seperti QS. Al-Baqarah: 222 mengajarkan umat Islam untuk menjaga kebersihan dan kesehatan diri, termasuk menjaga kebersihan tempat tidur.</p>
+<p style="text-align: justify;">In the Quran, Allah Subhanahu wa Ta’ala emphasizes the importance of cleanliness and comfort in daily life. Verses such as QS. Al-Baqarah: 222 teach Muslims to maintain personal hygiene and health, including keeping the bed clean.</p>
 
-#### 2. Sunnah Nabi Muhammad shallallahu ‘alaihi wa sallam
+#### 2. Sunnah of Prophet Muhammad ﷺ
 
-<p style="text-align: justify;"><strong>Rasulullah shallallahu ‘alaihi wa sallam</strong> memberikan contoh teladan dalam segala aspek kehidupan, termasuk dalam menjaga kebersihan tempat tidur. Hadis riwayat Abu Hurairah menyatakan bahwa <strong>Nabi Muhammad shallallahu ‘alaihi wa sallam</strong> bersabda,</p>
+<p style="text-align: justify;"><strong>Prophet Muhammad ﷺ</strong> provided exemplary guidance in all aspects of life, including maintaining a clean bed. A hadith narrated by Abu Hurairah states that the Prophet ﷺ said:</p>
 
 <p style="font-family: 'Neirizi Regular', sans-serif; font-size: 25px; direction: rtl;">
 إِذَا جَاءَ أَحَدُكُمْ إِلَى فِرَاشِهِ فَلْيَأْخُذْ دَاخِلَةَ إِزَارِهِ فَلْيَنْفُضْ بِهَا فِرَاشَهُ وَلْيُسَمِّ اللهَ فَإِنَّهُ لاَ يَعْلَمُ مَا خَلَفَهُ بَعْدَهُ
 </p>
 
-<p style="text-align: justify;">"Jika salah seorang di antara kalian tidur di tempat tidurnya, hendaklah dia mengibaskan tempat tidurnya dengan pakaian atau menyapunya dengan tangan kanannya, karena dia tidak mengetahui apa yang telah terjadi setelah dia meninggalkannya." (HR. Bukhari)</p>
+<p style="text-align: justify;">"When one of you goes to his bed, let him shake his bed with his garment or sweep it with his right hand, and say Bismillah, for he does not know what may have come upon it after him." (HR. Bukhari)</p>
 
-#### 3. Pentingnya Mengibaskan Tempat Tidur
+#### 3. Importance of Shaking the Bed
 
-<p style="text-align: justify;">Mengibaskan tempat tidur adalah tindakan sederhana namun bermakna besar dalam Islam. Hal ini mencerminkan kepedulian terhadap kebersihan, kesehatan, dan kenyamanan, serta menjaga diri dari kemungkinan terkena penyakit atau kotoran yang terdapat di tempat tidur.</p>
+<p style="text-align: justify;">Shaking the bed is a simple yet meaningful act in Islam. It reflects concern for cleanliness, health, and comfort, and protects oneself from possible diseases or dirt that may be present on the bed.</p>
 
-<p style="text-align: justify;">Mengibaskan tempat tidur juga merupakan bentuk rasa syukur kepada Allah Subhanahu wa ta'ala atas nikmat tidur yang diberikan-Nya kepada kita. Dengan menjaga kebersihan tempat tidur, kita juga menjaga diri dari kemungkinan terkena penyakit dan menjaga kehormatan diri serta menjaga kebersihan lingkungan sekitar.</p>
+<p style="text-align: justify;">Shaking the bed is also a way of expressing gratitude to Allah Subhanahu wa Ta’ala for the blessing of sleep. By keeping the bed clean, we safeguard our health, maintain personal dignity, and preserve a clean surrounding environment.</p>
 
-#### 4. Tindakan Praktis
+#### 4. Practical Steps
 
-<p style="text-align: justify;">Mengibaskan tempat tidur bisa dilakukan dengan cara menyapu atau mengibaskan pakaian di atas tempat tidur sebelum tidur. Hal ini membantu membersihkan tempat tidur dari kotoran atau debu yang mungkin menempel, sehingga menciptakan lingkungan tidur yang bersih dan nyaman.</p>
+<p style="text-align: justify;">Shaking the bed can be done by sweeping or shaking clothes over the bed before sleeping. This helps remove dirt or dust that may have settled, creating a clean and comfortable sleeping environment.</p>
 
-#### 5. Kesimpulan
+#### 5. Conclusion
 
-<p style="text-align: justify;">Mengibaskan tempat tidur merupakan praktik sederhana namun bermakna besar dalam Islam. Dengan mengikuti ajaran Al-Quran dan Sunnah <strong>Nabi Muhammad shallallahu ‘alaihi wa sallam</strong>, kita dapat menjaga kebersihan dan kenyamanan tempat tidur, serta menjaga diri dari kemungkinan terkena penyakit. Dengan demikian, praktik ini menjadi bagian dari ibadah sehari-hari yang dapat mendekatkan kita kepada Allah Subhanahu wa ta'ala.</p>
+<p style="text-align: justify;">Shaking the bed is a simple but highly meaningful practice in Islam. By following the guidance of the Quran and the Sunnah of <strong>Prophet Muhammad ﷺ</strong>, we can maintain the cleanliness and comfort of our beds while protecting ourselves from possible illnesses. In this way, this practice becomes a part of daily worship that draws us closer to Allah Subhanahu wa Ta’ala.</p>

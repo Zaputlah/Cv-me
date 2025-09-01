@@ -1,83 +1,81 @@
 ---
-title: "Traktir"
-description: "Traktir atau menjamu tamu adalah salah satu perbuatan yang sangat dianjurkan dalam ajaran Islam, mengikuti contoh dan sunnah Nabi Muhammad shallallahu ‘alaihi wa sallam."
+title: "Hosting Guests"
+description: "Hosting or treating guests is highly encouraged in Islam, following the example and Sunnah of Prophet Muhammad ﷺ."
 pubDate: "May 17 2024"
 heroImage: "/traktir.jpeg"
-tags: ["SunnahNabi","Traktir","MenjamuTamu",
-"AjaranIslam",
-"Silaturahmi",
-"AkhlakMulia",
-"Keramahan",
-"Kebaikan",
-"IslamicEtiquette",
-"IbadahSosial",
-"Generosity",
-"Brotherhood",
-"RamahTamahan",
+tags: ["SunnahOfTheProphet", "HostingGuests", "TreatingGuests",
 "IslamicTeachings",
+"Brotherhood",
+"GoodManners",
+"Hospitality",
+"Generosity",
+"IslamicEtiquette",
+"SocialWorship",
+"Kindness",
+"RamahTamahan",
+"IslamicGuidance",
 "Muhammad",
-"Zaputlah","Mei", "17 Mei"]
+"Zaputlah", "May", "17 May"]
 ---
 
-### Traktir dan Manfaatnya dalam Islam Menurut Al-Quran dan Sunnah Nabi Muhammad SAW
+### Hosting Guests and Its Benefits in Islam According to the Quran and the Sunnah of Prophet Muhammad ﷺ
 
-<p style="text-align: justify;">Traktir atau menjamu tamu adalah salah satu tindakan mulia yang sangat dianjurkan dalam ajaran Islam. Tindakan ini tidak hanya menunjukkan kemurahan hati dan kebaikan, tetapi juga berperan penting dalam memperkuat ikatan sosial dan meningkatkan rasa persaudaraan di antara sesama Muslim. Dalam artikel ini, kita akan membahas konsep traktir serta manfaatnya menurut Al-Quran dan Sunnah <strong>Nabi Muhammad shallallahu ‘alaihi wa sallam.</strong></p>
+<p style="text-align: justify;">Hosting or treating guests is a noble act highly encouraged in Islam. This action not only demonstrates generosity and kindness but also plays an important role in strengthening social bonds and enhancing the sense of brotherhood among Muslims. In this article, we will discuss the concept of hosting guests and its benefits according to the Quran and the Sunnah of <strong>Prophet Muhammad ﷺ.</strong></p>
 
-#### Traktir dalam Islam
+#### Hosting Guests in Islam
 
-<p style="text-align: justify;">Menjamu tamu atau traktir memiliki posisi yang istimewa dalam Islam. Hal ini dapat dilihat dari banyaknya hadis yang menekankan pentingnya memuliakan tamu. Salah satu hadis yang paling dikenal adalah:</p>
+<p style="text-align: justify;">Hosting guests holds a special position in Islam. This is evident from numerous hadiths emphasizing the importance of honoring guests. One of the most well-known hadiths is:</p>
 
 <p style="font-family: 'Neirizi Regular', sans-serif; font-size: 25px; direction: rtl;">
 عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللهُ تَعَالَى عَنْهُ أَنَّ رَسُوْلَ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ قَالَ: مَنْ كَانَ يُؤْمِنُ بِاللهِ وَاليَوْمِ الآخِرِ فَلْيَقُلْ خَيْراً أَوْ لِيَصْمُتْ، وَمَنْ كَانَ يُؤْمِنُ بِاللهِ وَاليَوْمِ الآخِرِ فَلْيُكْرِمْ جَارَهُ، وَمَنْ كَانَ يُؤْمِنُ بِاللهِ وَاليَوْمِ الآخِرِ فَلْيُكْرِمْ ضَيْفَهُ.
 رَوَاهُ البُخَارِيُّ وَمُسْلِمٌ.</p>
 
-<p style="text-align: justify;">Dari Abu Hurairah radhiyallahu ‘anhu, <strong>Rasulullah shallallahu ‘alaihi wa</strong> sallam bersabda, “Siapa saja yang beriman kepada Allah dan hari akhir, hendaklah ia berkata baik atau diam. Siapa saja yang beriman kepada Allah dan hari akhir, hendaklah ia memuliakan tetangganya. Siapa saja yang beriman kepada Allah dan hari akhir, hendaklah ia memuliakan tamunya.”
-(HR. Bukhari dan Muslim) [HR. Bukhari, no. 6018, 6019, 6136, 6475 dan Muslim, no. 47]</p>
+<p style="text-align: justify;">From Abu Hurairah (RA), the <strong>Prophet ﷺ said:</strong> “Whoever believes in Allah and the Last Day should speak good or remain silent. Whoever believes in Allah and the Last Day should honor his neighbor. Whoever believes in Allah and the Last Day should honor his guest.” <i>(HR. Bukhari and Muslim) [Bukhari: 6018, 6019, 6136, 6475; Muslim: 47]</i></p>
 
-<p style="text-align: justify;">Hadis ini menegaskan bahwa memuliakan tamu adalah bagian dari keimanan seorang Muslim. <strong>Rasulullah shallallahu ‘alaihi wa sallam</strong>selalu menunjukkan contoh terbaik dalam hal ini. Beliau selalu berusaha memberikan yang terbaik kepada tamunya, baik itu dalam bentuk makanan, minuman, maupun sikap ramah dan penuh kasih sayang.</p>
+<p style="text-align: justify;">This hadith emphasizes that honoring guests is part of a Muslim’s faith. <strong>Prophet Muhammad ﷺ</strong> always demonstrated the best example in this regard, striving to provide the best for his guests—food, drink, and a kind, caring attitude.</p>
 
-#### Manfaat Mentraktir Menurut Al-Quran dan Sunnah
+#### Benefits of Hosting Guests According to the Quran and Sunnah
 
-1. **Memperkuat Tali Silaturahmi**
+1. **Strengthening Social Bonds**
 
-<p style="text-align: justify;">Menjamu tamu atau mentraktir adalah cara yang efektif untuk memperkuat hubungan sosial dan mempererat tali silaturahmi. Dalam Al-Quran, Allah Subhanahu wa ta'ala berfirman:</p>
+<p style="text-align: justify;">Hosting or treating guests is an effective way to strengthen social relations and maintain family and community ties. Allah Subhanahu wa Ta’ala says in the Quran:</p>
 
 <p style="font-family: 'Neirizi Regular', sans-serif; font-size: 25px; direction: rtl;">
-    وَاٰتِ ذَا الْقُرْبٰى حَقَّهٗ وَالْمِسْكِيْنَ وَابْنَ السَّبِيْلِ وَلَا تُبَذِّرْ تَبْذِيْرًا</p>
-    
-<p style="text-align: justify;">"Dan berikanlah kepada keluarga-keluarga yang dekat haknya, kepada orang miskin dan orang yang dalam perjalanan; dan janganlah kamu menghambur-hamburkan (hartamu) secara boros" (QS. Al-Isra: 26).</p>
+وَاٰتِ ذَا الْقُرْبٰى حَقَّهٗ وَالْمِسْكِيْنَ وَابْنَ السَّبِيْلِ وَلَا تُبَذِّرْ تَبْذِيْرًا</p>
 
-<p style="text-align: justify;">Ayat ini menekankan pentingnya berbagi dan memperhatikan hak orang lain, termasuk tamu. Dengan menjamu tamu, kita memperlihatkan perhatian dan kasih sayang, yang pada gilirannya memperkuat ikatan persaudaraan.</p>
+<p style="text-align: justify;">"And give the relatives their due, and [also] the poor and the traveler, and do not spend wastefully." (QS. Al-Isra: 26)</p>
 
-2. **Menunjukkan Akhlak Mulia**
+<p style="text-align: justify;">This verse emphasizes the importance of sharing and considering others’ rights, including guests. By hosting guests, we show care and compassion, thereby strengthening bonds of brotherhood.</p>
 
-<p style="text-align: justify;">Dari ‘Abdullah bin ‘Amr radhiyallahu ‘anhuma, ia berkata,</p>
+2. **Demonstrating Noble Character**
+
+<p style="text-align: justify;">From ‘Abdullah bin ‘Amr (RA), it is reported:</p>
 
 <p style="font-family: 'Neirizi Regular', sans-serif; font-size: 25px; direction: rtl;">
 أَنَّ رَجُلاً سَأَلَ النَّبِىَّ – صلى الله عليه وسلم – أَىُّ الإِسْلاَمِ خَيْرٌ قَالَ تُطْعِمُ الطَّعَامَ ، وَتَقْرَأُ السَّلاَمَ عَلَى مَنْ عَرَفْتَ وَمَنْ لَمْ تَعْرِفْ</p>
-    
-<p style="text-align: justify;">“Ada seseorang yang bertanya kepada Nabi <strong>shallallahu ‘alaihi wa sallam,</strong> ‘Islam yang bagaimana yang paling baik?’ Beliau bersabda, ‘Memberi makan (pada yang butuh), juga mengucapkan salam pada orang yang engkau kenal dan tidak engkau kenal.” (HR. Bukhari, no. 12 dan Muslim, no. 39)</p>
 
-3. **Mendapatkan kamar khusus dan istimewa di surga.**
+<p style="text-align: justify;">“A man asked the Prophet ﷺ, ‘Which form of Islam is best?’ He said, ‘Feeding others, and greeting those you know and those you do not know.’” (HR. Bukhari: 12; Muslim: 39)</p>
 
-<p style="text-align: justify;">Ini sebagaimana disebutkan dalam hadis riwayat Imam Al-Tirmidzi dari Sayidina Ali, dia berkata bahwa Nabi shallallahu ‘alaihi wa sallam. bersabda;</p>
+3. **Receiving Special Chambers in Paradise**
+
+<p style="text-align: justify;">As narrated by Imam Al-Tirmidhi from Sayyidina Ali, the Prophet ﷺ said:</p>
 
 <p style="font-family: 'Neirizi Regular', sans-serif; font-size: 25px; direction: rtl;">
 إِنَّ فِى الْجَنَّةِ غُرَفًا تُرَى ظُهُورُهَا مِنْ بُطُونِهَا وَبُطُونُهَا مِنْ ظُهُورِهَا. فَقَامَ أَعْرَابِىٌّ فَقَالَ لِمَنْ هِىَ يَا رَسُولَ اللَّهِ قَالَ لِمَنْ أَطَابَ الْكَلاَمَ وَأَطْعَمَ الطَّعَامَ وَأَدَامَ الصِّيَامَ وَصَلَّى لِلَّهِ بِاللَّيْلِ وَالنَّاسُ نِيَامٌ</p>
 
-<p style="text-align: justify;">“Sesungguhnya di surga terdapat kamar-kamar yang mana bagian luarnya terlihat dari bagian dalam dan bagian dalamnya terlihat dari bagian luarnya.” Lantas seorang arab baduwi berdiri sambil berkata, “Bagi siapakah kamar-kamar itu diperuntukkan wahai Rasululullah?” Nabi <strong>shallallahu ‘alaihi wa sallam</strong> menjawab, “Untuk orang yang berkata benar, yang memberi makan, dan yang senantiasa berpuasa dan shalat pada malam hari di waktu manusia pada tidur.” (HR. Tirmidzi, no. 1984. Syaikh Al-Albani mengatakan bahwa hadits ini hasan)</p>
+<p style="text-align: justify;">“Indeed, in Paradise there are chambers whose outside is visible from the inside and inside is visible from the outside.” A Bedouin asked, “Who are these chambers for, O Messenger of Allah?” The Prophet ﷺ replied, “For those who speak truthfully, feed others, keep fasting, and pray at night while people sleep.” (HR. Tirmidhi: 1984, Hasan according to Al-Albani)</p>
 
-4. **Mendapatkan jaminan surga.**
+4. **Guarantee of Paradise**
 
-<p style="text-align: justify;"> Ini sebagaimana disebutkan dalam hadis riwayat Imam Muslim dari Abu Hurairah, dia berkata bahwa Nabi <strong>shallallahu ‘alaihi wa sallam.</strong> bersabda;</p>
+<p style="text-align: justify;">As narrated by Imam Muslim from Abu Hurairah, the Prophet ﷺ said:</p>
 
 <p style="font-family: 'Neirizi Regular', sans-serif; font-size: 25px; direction: rtl;">
 مَنْ أَصْبَحَ مِنْكُمْ الْيَوْمَ صَائِمًا قَالَ أَبُو بَكْرٍ أَنَا قَالَ فَمَنْ تَبِعَ مِنْكُمْ الْيَوْمَ جَنَازَةً قَالَ أَبُو بَكْرٍ أَنَا قَالَ فَمَنْ أَطْعَمَ مِنْكُمْ الْيَوْمَ مِسْكِينًا قَالَ أَبُو بَكْرٍ أَنَا قَالَ فَمَنْ عَادَ مِنْكُمْ الْيَوْمَ مَرِيضًا قَالَ أَبُو بَكْرٍ أَنَا فَقَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ مَا اجْتَمَعْنَ فِي امْرِئٍ إِلَّا دَخَلَ الْجَنَّةَ</p>
 
-<p style="text-align: justify;">Siapakah di antara kalian yang pada hari ini berpuasa? Abu Bakar berkata; Aku. Beliau bertanya lagi; Siapakah di antara kalian yang hari ini sudah mengiringi jenazah? Maka Abu Bakar berkata lagi; Aku. Beliau kembali bertanya; Siapakah di antara kalian yang hari ini memberi makan orang miskin? Maka Abu Bakar mengatakan; Aku. Lalu beliau bertanya lagi; Siapakah di antara kalian yang hari ini sudah mengunjungi orang sakit. Abu Bakar kembali mengatakan; Aku. Maka <strong>Rasulullah shallallahu ‘alaihi wa sallam</strong> pun bersabda; Tidaklah ciri-ciri itu terkumpul pada diri seseorang melainkan dia pasti akan masuk surga.</p>
+<p style="text-align: justify;">Who among you today has fasted? Abu Bakr said, “I have.” Who among you today has followed a funeral? Abu Bakr said, “I have.” Who among you today has fed the poor? Abu Bakr said, “I have.” Who among you today has visited a sick person? Abu Bakr said, “I have.” The Prophet ﷺ said, “Whoever has combined these deeds, surely he will enter Paradise.”</p>
 
-#### Kesimpulan
+#### Conclusion
 
-<p style="text-align: justify;">Traktir atau menjamu tamu adalah salah satu tindakan mulia yang sangat dianjurkan dalam Islam. Menurut Al-Quran dan Sunnah Nabi Muhammad <strong>shallallahu ‘alaihi wa sallam,</strong> tindakan ini tidak hanya memperkuat tali silaturahmi dan meningkatkan rasa persaudaraan, tetapi juga mendatangkan pahala yang besar. Dengan memahami dan mengamalkan ajaran ini, kita dapat menciptakan masyarakat yang harmonis dan penuh kasih sayang, sekaligus mendapatkan berkah dan ridha Allah Subhanahu wa ta'ala.</p>
+<p style="text-align: justify;">Hosting or treating guests is a noble act highly encouraged in Islam. According to the Quran and Sunnah of Prophet Muhammad ﷺ, this practice not only strengthens social bonds and enhances brotherhood but also brings great reward. By understanding and practicing this teaching, we can create a harmonious and compassionate society while receiving Allah’s blessings and pleasure.</p>
 
-<p style="text-align: justify;">Melalui tindakan sederhana seperti mentraktir, kita dapat menunjukkan akhlak mulia, meningkatkan kesejahteraan sosial, dan memperkuat iman kita. Mari kita terus berupaya untuk memuliakan tamu dan berbagi kebaikan dengan sesama, sesuai dengan ajaran Islam yang penuh kasih dan rahmat.</p>
+<p style="text-align: justify;">Through simple actions such as hosting or treating guests, we can demonstrate noble character, enhance social welfare, and strengthen our faith. Let us continue to honor guests and share kindness with others, in accordance with the compassionate and merciful teachings of Islam.</p>

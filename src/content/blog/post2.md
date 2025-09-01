@@ -1,29 +1,29 @@
 ---
-title: "Diriku Hanya Manusia Biasa"
-description: "Diriku Hanya Manusia Biasa
-Ketika merenungkan kehidupan dan keutamaan manusia, seringkali kita terjebak dalam kecenderungan untuk mengangkat diri kita sendiri, lupa bahwa pada hakikatnya kita semua hanyalah manusia biasa. Tidak peduli seberapa besar pencapaian atau kedudukan kita di mata dunia, kita tidak pernah terlepas dari keterbatasan dan kesalahan.
+title: "I Am Only an Ordinary Human"
+description: "I Am Only an Ordinary Human
+When reflecting on life and the virtues of humanity, we often fall into the tendency of elevating ourselves, forgetting that in essence we are all just ordinary human beings. No matter how great our achievements or our status in the eyes of the world, we can never escape from limitations and mistakes.
 "
 pubDate: "May 01 2024"
 heroImage: "/diriku.jpeg"
-tags: ["Manusia Biasa",
-"Rendah Hati",
+tags: ["Ordinary Human",
+"Humility",
 "Al-Quran",
-"Kesalahan",
-"Bertaubat",
-"Kesadaran Diri",
-"Ketenangan Hati",
-"Zaputlah","Mei","1 Mei"]
+"Mistakes",
+"Repentance",
+"Self-Awareness",
+"Inner Peace",
+"Zaputlah","May","1 May"]
 ---
 
-**Diriku Hanya Manusia Biasa**
+**I Am Only an Ordinary Human**
 
-<p style="text-align: justify;">Ketika merenungkan kehidupan dan keutamaan manusia, seringkali kita terjebak dalam kecenderungan untuk mengangkat diri kita sendiri, lupa bahwa pada hakikatnya kita semua hanyalah manusia biasa. Tidak peduli seberapa besar pencapaian atau kedudukan kita di mata dunia, kita tidak pernah terlepas dari keterbatasan dan kesalahan.</p>
+<p style="text-align: justify;">When reflecting on life and human virtues, we often fall into the tendency of elevating ourselves, forgetting that in reality we are all just ordinary human beings. No matter how great our achievements or our position in the eyes of the world, we are never free from limitations and mistakes.</p>
 
-<p style="text-align: justify;">Al-Quran dan hadis <strong>Rasulullah shallallahu ‘alaihi wa sallam</strong> mengingatkan kita akan kenyataan ini, menawarkan pandangan yang jernih tentang hakikat manusia dan pentingnya tetap rendah hati di hadapan Allah.</p>
+<p style="text-align: justify;">The Qur’an and the hadiths of the <strong>Messenger of Allah (peace and blessings be upon him)</strong> remind us of this reality, offering a clear perspective on human nature and the importance of remaining humble before Allah.</p>
 
-### 1. Keterbatasan Manusia dalam Al-Quran
+### 1. Human Limitations in the Qur’an
 
-<p style="text-align: justify;">Dalam Al-Quran, Allah Subhanahu wa ta'ala mengingatkan kita tentang sifat manusia yang lemah dan rentan terhadap kesalahan. Firman-Nya:</p>
+<p style="text-align: justify;">In the Qur’an, Allah the Exalted reminds us of the weakness of mankind and its tendency toward mistakes. Allah says:</p>
 
 <p style="font-family: 'Neirizi Regular', sans-serif; font-size: 25px; direction: rtl;">
 ذٰلِكَ الْيَوْمُ الْحَقُّۚ فَمَنْ شَاۤءَ اتَّخَذَ اِلٰى رَبِّهٖ مَاٰبًا
@@ -31,15 +31,15 @@ tags: ["Manusia Biasa",
 
 <p style="text-align: justify;">
 
-*"Dan manusia itu hanyalah bersusah payah (mendapatkan apa yang dikehendaki)nya."* <i>(QS. An-Naba: 39)</i></p>
+*"And man [himself] is in constant toil [to achieve what he desires]."* <i>(QS. An-Naba: 39)</i></p>
 
-<p style="text-align: justify;">Ayat ini menyiratkan bahwa manusia pada dasarnya diciptakan dengan sifat yang rentan terhadap kesulitan dan kesalahan. Meskipun manusia memiliki potensi dan kemampuan, namun dalam menghadapi berbagai rintangan dan ujian hidup, ia sering kali merasa lemah dan tidak berdaya.</p>
+<p style="text-align: justify;">This verse implies that human beings are essentially created with a nature that is prone to hardship and error. Even though people possess potential and abilities, when faced with trials and challenges of life, they often feel weak and powerless.</p>
 
-### 2. Kehadiran Kesalahan dalam Hadis
+### 2. The Presence of Mistakes in the Hadith
 
-<p style="text-align: justify;">Hadis-hadis <strong>Nabi Muhammad shallallahu ‘alaihi wa sallam</strong> juga menggarisbawahi sifat keterbatasan manusia. Beliau sendiri, sebagai utusan Allah yang paling mulia, memberikan contoh kesederhanaan dan keterbukaan tentang kelemahan manusia.</p>
+<p style="text-align: justify;">The hadiths of <strong>Prophet Muhammad (peace and blessings be upon him)</strong> also emphasize the limitations of human beings. The Prophet himself, as the most noble messenger of Allah, gave an example of simplicity and openness about human weakness.</p>
 
-<p style="text-align: justify;">Salah satu hadis yang mencerminkan hal ini adalah:</p>
+<p style="text-align: justify;">One hadith that reflects this is:</p>
 
 
 <p style="font-family: 'Neirizi Regular', sans-serif; font-size: 25px; direction: rtl;">
@@ -47,15 +47,15 @@ tags: ["Manusia Biasa",
 </p>
 <p style="text-align: justify;">
 
-*"Setiap anak Adam itu berbuat kesalahan, dan sebaik-baik orang yang berbuat kesalahan adalah yang bertaubat."* (HR. Tirmidzi)</p>
+*"Every son of Adam commits mistakes, and the best of those who make mistakes are those who repent."* (HR. Tirmidhi)</p>
 
-<p style="text-align: justify;">Dalam hadis ini, <strong>Nabi Muhammad shallallahu ‘alaihi wa sallam</strong> menyampaikan pesan bahwa kesalahan adalah bagian dari kehidupan manusia. Namun, keutamaan seorang individu bukanlah terletak pada kesempurnaan atau kebebasan dari kesalahan, melainkan pada kemampuannya untuk mengakui kesalahannya dan bertaubat kepada Allah.</p>
+<p style="text-align: justify;">In this hadith, <strong>Prophet Muhammad (peace and blessings be upon him)</strong> conveyed that mistakes are part of human life. However, the virtue of a person does not lie in perfection or freedom from mistakes, but in the ability to admit errors and repent sincerely to Allah.</p>
 
-### 3. Rendah Hati dan Kesadaran Diri
+### 3. Humility and Self-Awareness
 
-<p style="text-align: justify;">Kunci untuk mengatasi keterbatasan dan kesalahan manusia terletak pada sikap rendah hati dan kesadaran diri. Meskipun kita mungkin memiliki kelebihan dan bakat tertentu, mengakui bahwa kita hanyalah makhluk yang rentan dan bergantung sepenuhnya pada Allah adalah langkah pertama menuju pemahaman yang lebih dalam tentang diri kita sendiri.</p>
+<p style="text-align: justify;">The key to overcoming human limitations and mistakes lies in humility and self-awareness. Even though we may have talents or strengths, acknowledging that we are fragile beings who depend entirely on Allah is the first step towards a deeper understanding of ourselves.</p>
 
-<p style="text-align: justify;">Allah Subhanahu wa ta'ala berfirman dalam Al-Quran:</p>
+<p style="text-align: justify;">Allah the Exalted says in the Qur’an:</p>
 
 <p style="font-family: 'Neirizi Regular', sans-serif; font-size: 25px; direction: rtl;">
 اَلَّذِيْنَ يَجْتَنِبُوْنَ كَبٰۤىِٕرَ الْاِثْمِ وَالْفَوَاحِشَ اِلَّا اللَّمَمَۙ اِنَّ رَبَّكَ وَاسِعُ الْمَغْفِرَةِۗ هُوَ اَعْلَمُ بِكُمْ اِذْ اَنْشَاَكُمْ مِّنَ الْاَرْضِ وَاِذْ اَنْتُمْ اَجِنَّةٌ فِيْ بُطُوْنِ اُمَّهٰتِكُمْۗ فَلَا تُزَكُّوْٓا اَنْفُسَكُمْۗ هُوَ اَعْلَمُ بِمَنِ اتَّقٰىࣖ
@@ -63,10 +63,10 @@ tags: ["Manusia Biasa",
 
 <p style="text-align: justify;">
 
-*"Karena itu, janganlah kamu mengagungkan dirimu; Dia lebih mengetahui orang yang bertakwa."* (QS. An-Najm: 32)</p>
+*"So do not claim yourselves to be pure; He is most knowing of who fears Him."* (QS. An-Najm: 32)</p>
 
-<p style="text-align: justify;">Pentingnya menjaga hati yang rendah dan menghormati keberadaan Allah tidak boleh diremehkan. Rasa rendah hati ini membawa kita lebih dekat kepada-Nya dan membantu kita menghindari sikap sombong dan angkuh.</p>
+<p style="text-align: justify;">The importance of keeping a humble heart and acknowledging Allah’s greatness should never be underestimated. This humility brings us closer to Him and helps us avoid arrogance and pride.</p>
 
-### Kesimpulan
+### Conclusion
 
-<p style="text-align: justify;">Dalam Al-Quran dan hadis-hadis <strong>Rasulullah shallallahu ‘alaihi wa sallam</strong>, kita diberi pemahaman yang dalam tentang sifat manusia dan kewajiban kita untuk tetap rendah hati di hadapan Allah. Meskipun kita mungkin memiliki prestasi atau kelebihan tertentu, kita tidak boleh lupa bahwa kita hanyalah manusia biasa yang rentan terhadap kesalahan. Oleh karena itu, langkah pertama menuju kebaikan adalah mengakui keterbatasan kita dan senantiasa berserah diri kepada Allah.</p>
+<p style="text-align: justify;">Through the Qur’an and the hadiths of the <strong>Messenger of Allah (peace and blessings be upon him)</strong>, we are given a deep understanding of human nature and our duty to remain humble before Allah. Even if we may have certain accomplishments or advantages, we must never forget that we are merely ordinary human beings prone to mistakes. Therefore, the first step toward goodness is to recognize our limitations and always submit ourselves sincerely to Allah.</p>
