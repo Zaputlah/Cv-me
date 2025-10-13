@@ -1,0 +1,34 @@
+---
+import { CollectionEntry, getCollection } from "astro:content";
+import { VideoSchema } from "../../content/config";
+import VideoLayout from "../../layouts/VideoLayout.astro";
+import createSlug from "../../lib/createSlug";
+
+export async function getStaticPaths() {
+  const videoEntries = await getCollection("video");
+  return videoEntries.map((entry) => ({
+    params: { slug: createSlug(entry.data.title, entry.slug) },
+    props: { entry },
+  }));
+}
+
+interface Props {
+  entry: CollectionEntry<"video">;
+}
+
+const { entry } = Astro.props;
+const video: VideoSchema = entry.data;
+const { Content } = await entry.render();
+---
+
+<VideoLayout
+  title={video.title}
+  description={video.description}
+  pubDate={video.pubDate}
+  heroImage={video.heroImage}
+  updatedDate={video.updatedDate}
+  badge={video.badge}
+  tags={video.tags}
+>
+  <Content />
+</VideoLayout>

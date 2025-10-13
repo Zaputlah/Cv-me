@@ -1,0 +1,125 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TimeLineElement from "../components/cv/TimeLine.astro";
+---
+
+<BaseLayout title="Resume" sideBarActiveItemID="cv">
+
+  <!-- PROFILE -->
+  <section class="mb-10 p-6 rounded-2xl bg-gradient-to-r from-blue-50 to-white shadow">
+    <h2 class="text-3xl font-bold mb-3">👤 Profile</h2>
+    <p class="text-justify leading-relaxed">
+      Software Developer with extensive experience in building web and enterprise
+    applications as a Web Developer, Software Developer, Java Developer, and
+    Full Stack Developer. Skilled in both frontend and backend development with
+    strong expertise in <b>Java, PHP, AngularJS, Spring Boot, and CodeIgniter</b>, 
+    and hands-on experience with <b>Flutter</b> and <b>.NET</b>. Proficient in 
+    designing scalable and secure systems, API integration, and database management 
+    using <b>MySQL, SQL Server, and Navicat</b>. Experienced in deploying and managing 
+    applications on <b>WildFly</b> server. Adept at version control and collaboration 
+    using <b>Git, GitHub, Bitbucket, and GitLab</b>, and familiar with both 
+    <b>Agile</b> and <b>Waterfall</b> methodologies. Committed to clean code practices, 
+    CI/CD pipelines, and delivering high-quality, maintainable software solutions.
+    </p>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="mb-10 p-6 rounded-2xl bg-gradient-to-r from-purple-50 to-white shadow">
+    <h2 class="text-3xl font-bold mb-6">🎓 Education</h2>
+    <div class="grid gap-4">
+      <TimeLineElement title="D3 Manajemen Informatika" subtitle="Universitas Bina Sarana Informatika" />
+      <TimeLineElement title="S1 Sistem Informasi" subtitle="STMIK Nusa Mandiri" />
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="mb-10 p-6 rounded-2xl bg-gradient-to-r from-yellow-50 to-white shadow">
+    <h2 class="text-3xl font-bold mb-6">💼 Experience</h2>
+    <div class="grid gap-6">
+      <TimeLineElement title="PT Rafesh" subtitle="Magang Mahasiswa">
+        <b class="block mt-3 mb-1">Tools & Technologies:</b>
+        <ul class="list-disc list-inside space-y-1">
+          <li>Ms. Excel, Ms. Word, Photoshop, Kertas & Pulpen</li>
+        </ul>
+      </TimeLineElement>
+
+      <TimeLineElement title="PT Hasjrat Multifinance" subtitle="Web Developer">
+        <b class="block mt-3 mb-1">Tools & Technologies:</b>
+        <ul class="list-disc list-inside space-y-1">
+          <li>Eclipse, Navicat, iReport</li>
+          <li>Java, Spring Boot, Bootstrap, CSS, Html, JavaScript</li>
+        </ul>
+      </TimeLineElement>
+
+      <TimeLineElement title="Freelance" subtitle="IT Support">
+      </TimeLineElement>
+
+      <TimeLineElement title="PT Metropolitan Retailmart" subtitle="MSR Developer">
+        <b class="block mt-3 mb-1">Tools & Technologies:</b>
+        <ul class="list-disc list-inside space-y-1">
+          <li>VS Code, Postman, Solr, Git</li>
+          <li>Golang, PHP, CodeIgniter, JavaScript, HTML5, Bootstrap, Razor</li>
+        </ul>
+      </TimeLineElement>
+
+      <TimeLineElement title="PT Summit Global Teknologi" subtitle="Frontend Engineer">
+        <b class="block mt-3 mb-1">Tools & Technologies:</b>
+        <ul class="list-disc list-inside space-y-1">
+          <li>IntelliJ IDEA, Figma, Adobe XD, Git</li>
+          <li>ChatGPT, Claude.ai, Magic Scroll </li>
+          <li>IntelliJ IDEA, Vue.js, Nuxt, HTML5, CSS</li>
+        </ul>
+      </TimeLineElement>
+
+      <TimeLineElement title="PT Optimasmartindo Industri" subtitle="Staff IT">
+        <b class="block mt-3 mb-1">Tools & Technologies:</b>
+        <ul class="list-disc list-inside space-y-1">
+          <li>Canva, TikTok, Shopee, Tokopedia, Instagram, YouTube</li>
+          <li>C#, Ms. Office, Bootstrap</li>
+          <li>CCTV</li>
+        </ul>
+      </TimeLineElement>
+      <TimeLineElement title="Bpjs Kesehatan" subtitle="Programmer fullstack">
+        <b class="block mt-3 mb-1">Tools & Technologies:</b>
+        <ul class="list-disc list-inside space-y-1">
+          <li>VS Code, Visual Studio, Postman, Git, Bitbucket</li>
+          <li>Java, JavaScript, AngularJS, SpringBoot, .NET, SQL Server, Bootstrap, CSS, HTML</li>
+        </ul>
+      </TimeLineElement>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section class="mb-10 p-6 rounded-2xl bg-gradient-to-r from-green-50 to-white shadow">
+    <h2 class="text-3xl font-bold mb-4">📜 Certifications</h2>
+    <ul class="list-disc list-inside space-y-2">
+      <li>Desain Grafis</li>
+      <li>CCNA (Cisco Certified Network Associate)</li>
+      <li>3-in-1: Networking, Python, Automation</li>
+      <li>Fullstack Web Development</li>
+      <li>UI/UX Design</li>
+    </ul>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="mb-10 p-6 rounded-2xl bg-gradient-to-r from-cyan-50 to-white shadow">
+    <h2 class="text-3xl font-bold mb-4">🛠️ Skills</h2>
+    <ul class="list-disc md:columns-5 columns-2 list-inside space-y-1">
+      <li>JavaScript</li>
+      <li>PHP</li>
+      <li>HTML5</li>
+      <li>CSS</li>
+      <li>CodeIgniter</li>
+      <li>Laravel</li>
+      <li>Tailwind</li>
+      <li>Nuxt.js</li>
+      <li>Astro.js</li>
+      <li>Vue.js</li>
+      <li>React.js</li>
+      <li>Java</li>
+      <li>Flutter</li>
+      <li>.NET</li>
+    </ul>
+  </section>
+
+</BaseLayout>

@@ -1,13 +1,10 @@
-import { defineConfig } from 'astro/config'; 
-import mdx from '@astrojs/mdx'; 
-import sitemap from '@astrojs/sitemap'; 
+import { defineConfig } from 'astro/config';
 import tailwind from "@astrojs/tailwind";
+import sitemap from "@astrojs/sitemap";
+import vercel from "@astrojs/vercel"; // ❌ hapus '/server'
 
-export default defineConfig
-({ 
-  // site: 'https://astrofy-template.netlify.app', 
-   output: "server", 
-   integrations: [mdx(), sitemap(), tailwind()], 
-   devOptions: { toolbar: false }
-   
-  });
+export default defineConfig({
+  integrations: [tailwind(), sitemap()],
+  output: "server",
+  adapter: vercel(),
+});
