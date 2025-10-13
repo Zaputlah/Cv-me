@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@astrojs/rss": "^3.0.0",
+    "@astrojs/vercel": "^8.2.9",
     "@google/generative-ai": "^0.24.1",
     "daisyui": "^4.4.10",
     "dayjs": "^1.11.9",
@@ -28,8 +29,10 @@
     "@astrojs/mdx": "4.3.7",
     "@astrojs/sitemap": "^3.6.0",
     "@astrojs/tailwind": "^6.0.2",
-    "@astrojs/vercel": "^8.2.9",
     "@tailwindcss/typography": "^0.5.10",
     "astro": "^5.14.4"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }
