@@ -1,8 +1,8 @@
 /* empty css                                         */
 import { c as createComponent, d as createAstro, r as renderComponent, a as renderTemplate, m as maybeRenderHead, e as renderSlot, b as addAttribute } from '../../chunks/astro/server_DJ5VsFU4.mjs';
 import 'kleur/colors';
-import { g as getCollection } from '../../chunks/_astro_content_BjQhqExE.mjs';
-import { $ as $$BaseLayout } from '../../chunks/BaseLayout_BseMOw_E.mjs';
+import { g as getCollection } from '../../chunks/_astro_content_udLUpVe5.mjs';
+import { $ as $$BaseLayout } from '../../chunks/BaseLayout_C8pmW2BQ.mjs';
 import dayjs from 'dayjs';
 import localizedFormat from 'dayjs/plugin/localizedFormat.js';
 import { c as createSlug } from '../../chunks/createSlug_D-iatWqU.mjs';

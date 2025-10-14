@@ -1,7 +1,7 @@
 /* empty css                                         */
 import { c as createComponent, d as createAstro, r as renderComponent, a as renderTemplate, m as maybeRenderHead, F as Fragment, b as addAttribute } from '../../chunks/astro/server_DJ5VsFU4.mjs';
 import 'kleur/colors';
-import { $ as $$BaseLayout } from '../../chunks/BaseLayout_BseMOw_E.mjs';
+import { $ as $$BaseLayout } from '../../chunks/BaseLayout_C8pmW2BQ.mjs';
 import { u as ustadzList } from '../../chunks/ustadzList_n-Xsrgjv.mjs';
 export { renderers } from '../../renderers.mjs';
 

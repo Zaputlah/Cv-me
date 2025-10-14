@@ -1,8 +1,8 @@
 /* empty css                                      */
 import { c as createComponent, r as renderComponent, a as renderTemplate, m as maybeRenderHead } from '../chunks/astro/server_DJ5VsFU4.mjs';
 import 'kleur/colors';
-import { $ as $$BaseLayout } from '../chunks/BaseLayout_BseMOw_E.mjs';
-import { $ as $$HorizontalCard } from '../chunks/HorizontalCard_CqyJCUkc.mjs';
+import { $ as $$BaseLayout } from '../chunks/BaseLayout_C8pmW2BQ.mjs';
+import { $ as $$HorizontalCard } from '../chunks/HorizontalCard_C6SMnulO.mjs';
 export { renderers } from '../renderers.mjs';
 
 const $$Projects = createComponent(($$result, $$props, $$slots) => {

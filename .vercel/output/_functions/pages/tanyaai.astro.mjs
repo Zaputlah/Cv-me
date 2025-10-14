@@ -1,7 +1,7 @@
 /* empty css                                      */
 import { c as createComponent, r as renderComponent, a as renderTemplate, m as maybeRenderHead, f as renderScript } from '../chunks/astro/server_DJ5VsFU4.mjs';
 import 'kleur/colors';
-import { $ as $$BaseLayout } from '../chunks/BaseLayout_BseMOw_E.mjs';
+import { $ as $$BaseLayout } from '../chunks/BaseLayout_C8pmW2BQ.mjs';
 export { renderers } from '../renderers.mjs';
 
 const $$TanyaAI = createComponent(async ($$result, $$props, $$slots) => {

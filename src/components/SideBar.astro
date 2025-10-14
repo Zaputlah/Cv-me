@@ -5,16 +5,25 @@ import SideBarMenu from "./SideBarMenu.astro";
 const { sideBarActiveItemID } = Astro.props;
 ---
 
-<div class="drawer-side z-40">
+<!-- Gunakan Alpine.js untuk handle popup -->
+<script is:inline>
+  document.addEventListener("alpine:init", () => {
+    Alpine.store("profile", { showModal: false });
+  });
+</script>
+
+<div class="drawer-side z-40" x-data>
   <label for="my-drawer" class="drawer-overlay"></label>
   <aside
     class="px-2 pt-2 h-auto min-h-full w-[19rem] bg-base-200 text-base-content flex flex-col 
          border-r border-gray-300 shadow-md rounded-r-lg"
   >
+    <!-- Profile Avatar -->
     <div class="w-fit mx-auto mt-5 mb-6">
-      <a href="/">
+      <a href="javascript:void(0)" @click="$store.profile.showModal = true">
         <div
-          class="avatar transition ease-in-out hover:scale-[102%] block m-auto"
+          class="avatar transition ease-in-out hover:scale-[102%] block m-auto cursor-pointer"
+          title="Klik untuk perbesar foto"
         >
           <div class="w-[8.5rem] ring-2 ring-blue rounded-full overflow-hidden">
             <Image
@@ -29,7 +38,30 @@ const { sideBarActiveItemID } = Astro.props;
         </div>
       </a>
     </div>
+
     <SideBarMenu sideBarActiveItemID={sideBarActiveItemID} />
     <SideBarFooter />
   </aside>
+
+  <!-- Popup Modal -->
+  <template x-if="$store.profile.showModal">
+    <div
+      class="fixed inset-0 flex items-center justify-center bg-black/70 z-50"
+      @click.self="$store.profile.showModal = false"
+    >
+      <div class="bg-white p-4 rounded-2xl shadow-lg">
+        <button
+          class="absolute top-4 right-4 text-gray-600 hover:text-gray-800"
+          @click="$store.profile.showModal = false"
+        >
+          ✕
+        </button>
+        <img
+          src="/zaputlah.jpeg"
+          alt="Foto Profil"
+          class="max-w-[90vw] max-h-[85vh] rounded-xl shadow-md"
+        />
+      </div>
+    </div>
+  </template>
 </div>
