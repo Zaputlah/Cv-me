@@ -1,54 +1,44 @@
 import type { APIRoute } from "astro";
 import mammoth from "mammoth";
-import { createRequire } from "module";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-// RATE LIMITING
+// === RATE LIMITING CONFIGURATION ===
 const MAX_REQUESTS_PER_HOUR = 5;
 const COOLDOWN_WINDOW_MS = 60 * 60 * 1000;
 const requestCounts = new Map<string, { count: number; resetTime: number }>();
 
-// TOKEN LIMITS
+// === TOKEN OPTIMIZATION ===
 const MAX_TEXT_LENGTH = 10000;
 const MAX_JOB_DESCRIPTION = 2000;
 
-// MODULES
-const require = createRequire(import.meta.url);
-let pdfExtract: any;
-let pdfParse: any;
-
-// PILIH LIBRARY BERDASARKAN ENV
-if (import.meta.env.MODE === "development") {
-  // local
-  pdfExtract = require("pdf-extraction");
-} else {
-  // production
-  pdfParse = require("pdf-parse");
-}
-
-// INIT GEMINI
+// === INIT GEMINI CLIENT ===
 const apiKey = import.meta.env.GEMINI_API_KEY;
-if (!apiKey) console.warn("⚠️ GEMINI_API_KEY not set!");
+if (!apiKey) {
+  console.warn("⚠️ GEMINI_API_KEY not set!");
+}
 const genAI = new GoogleGenerativeAI(apiKey);
 
 export const POST: APIRoute = async ({ request }) => {
   try {
     const formData = await request.formData();
 
-    // HONEYPOT
+    // --- Honeypot check ---
     const botField = formData.get("bot-field");
-    if (botField)
+    if (botField) {
       return new Response(JSON.stringify({ error: "Bot detected" }), {
         status: 403,
       });
+    }
 
-    // RATE LIMITING
+    // --- Rate limiting ---
     const userIp = request.headers.get("x-forwarded-for") || "unknown";
     let countEntry = requestCounts.get(userIp);
     const now = Date.now();
 
-    if (countEntry && countEntry.resetTime < now)
+    if (countEntry && countEntry.resetTime < now) {
       countEntry = { count: 0, resetTime: now + COOLDOWN_WINDOW_MS };
+    }
+
     if (countEntry && countEntry.count >= MAX_REQUESTS_PER_HOUR) {
       const minutesLeft = Math.ceil((countEntry.resetTime - now) / 60000);
       return new Response(
@@ -59,29 +49,36 @@ export const POST: APIRoute = async ({ request }) => {
       );
     }
 
-    requestCounts.set(userIp, {
+    const newCountEntry = {
       count: (countEntry?.count || 0) + 1,
       resetTime: countEntry?.resetTime || now + COOLDOWN_WINDOW_MS,
-    });
+    };
+    requestCounts.set(userIp, newCountEntry);
 
-    // AMBIL FILE & JOB DESC
+    // --- Extract file ---
     const file = formData.get("cvFile") as File | null;
     let jobDescription = formData.get("jobDescription") as string;
-    if (!file || !jobDescription)
+
+    if (!file || !jobDescription) {
       return new Response(
         JSON.stringify({ error: "CV dan Job Description wajib diisi" }),
         { status: 400 }
       );
+    }
 
     let cvText = "";
     const buffer = Buffer.from(await file.arrayBuffer());
 
     if (file.name.endsWith(".pdf")) {
-      if (import.meta.env.MODE === "development") {
-        const data = await pdfExtract(buffer);
+      if (process.env.VERCEL_ENV === "production") {
+        // Production: gunakan pdf-parse
+        const pdfParse = (await import("pdf-parse")).default;
+        const data = await pdfParse(buffer);
         cvText = data.text;
       } else {
-        const data = await pdfParse(buffer);
+        // Local: gunakan pdf-extraction
+        const pdfExtract = (await import("pdf-extraction")).default;
+        const data = await pdfExtract(buffer);
         cvText = data.text;
       }
     } else if (file.name.endsWith(".docx")) {
@@ -94,18 +91,19 @@ export const POST: APIRoute = async ({ request }) => {
       );
     }
 
-    // TOKEN LIMIT
+    // --- Token truncation ---
     if (cvText.length > MAX_TEXT_LENGTH)
       cvText = cvText.slice(0, MAX_TEXT_LENGTH);
     if (jobDescription.length > MAX_JOB_DESCRIPTION)
       jobDescription = jobDescription.slice(0, MAX_JOB_DESCRIPTION);
 
-    // PROMPT GEMINI
+    // --- Prompt for Gemini ---
     const prompt = `
 Anda adalah Senior Recruiter. Analisis CV dan bandingkan dengan Job Description.
 Output ringkas, format list, max 250 kata.
 
-CV:\n\n${cvText}\n\nJD:\n${jobDescription}\n\n
+CV:\n\n${cvText}\n\n
+JD:\n${jobDescription}\n\n
 
 1. Ringkasan Profil (max 3 kalimat)
 2. Kecocokan (3 skill/experience)
@@ -113,7 +111,7 @@ CV:\n\n${cvText}\n\nJD:\n${jobDescription}\n\n
 4. Skor Kecocokan [0-100]% (1 kalimat justification)
 `;
 
-    // GEMINI API CALL
+    // --- Gemini API call ---
     let resultText = "";
     try {
       const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
