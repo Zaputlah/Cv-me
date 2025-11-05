@@ -1,6 +1,6 @@
 import type { APIRoute } from "astro";
 import mammoth from "mammoth";
-import { createRequire } from "module";
+import pdfParse from "pdf-parse";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 // === RATE LIMITING CONFIGURATION ===
@@ -11,10 +11,6 @@ const requestCounts = new Map<string, { count: number; resetTime: number }>();
 // === TOKEN OPTIMIZATION ===
 const MAX_TEXT_LENGTH = 10000;
 const MAX_JOB_DESCRIPTION = 2000;
-
-// === PDF EXTRACT LIB ===
-const require = createRequire(import.meta.url);
-const pdfExtract = require("pdf-extraction");
 
 // === INIT GEMINI CLIENT ===
 const apiKey = import.meta.env.GEMINI_API_KEY;
@@ -54,15 +50,14 @@ export const POST: APIRoute = async ({ request }) => {
       );
     }
 
-    const newCountEntry = {
+    requestCounts.set(userIp, {
       count: (countEntry?.count || 0) + 1,
       resetTime: countEntry?.resetTime || now + COOLDOWN_WINDOW_MS,
-    };
-    requestCounts.set(userIp, newCountEntry);
+    });
 
     // --- Extract file ---
     const file = formData.get("cvFile") as File | null;
-    let jobDescription = formData.get("jobDescription") as string;
+    let jobDescription = (formData.get("jobDescription") as string) || "";
 
     if (!file || !jobDescription) {
       return new Response(
@@ -75,7 +70,7 @@ export const POST: APIRoute = async ({ request }) => {
     const buffer = Buffer.from(await file.arrayBuffer());
 
     if (file.name.endsWith(".pdf")) {
-      const data = await pdfExtract(buffer);
+      const data = await pdfParse(buffer);
       cvText = data.text;
     } else if (file.name.endsWith(".docx")) {
       const result = await mammoth.extractRawText({ buffer });
