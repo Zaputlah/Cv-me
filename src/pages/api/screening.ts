@@ -20,11 +20,6 @@ const pdfExtract = require("pdf-extraction");
 
 // ✅ init Gemini client
 const genAI = new GoogleGenerativeAI(import.meta.env.GEMINI_API_KEY);
-console.log(
-  "GEMINI_API_KEY:",
-  import.meta.env.GEMINI_API_KEY ? "Set" : "Not Set"
-);
-
 
 export const POST: APIRoute = async ({ request }) => {
   try {
@@ -67,8 +62,9 @@ export const POST: APIRoute = async ({ request }) => {
       resetTime: countEntry?.resetTime || now + COOLDOWN_WINDOW_MS,
     };
     requestCounts.set(userIp, newCountEntry);
-    console.log(`Rate Limit Status: ${userIp} - ${newCountEntry.count}/${MAX_REQUESTS_PER_HOUR}`);
-
+    console.log(
+      `Rate Limit Status: ${userIp} - ${newCountEntry.count}/${MAX_REQUESTS_PER_HOUR}`
+    );
 
     // --- 3. PROSES DATA DAN EKSTRAKSI ---
     const file = formData.get("cvFile") as File | null;
@@ -101,16 +97,16 @@ export const POST: APIRoute = async ({ request }) => {
 
     // --- 4. OPTIMASI TOKEN INPUT (TRUNCATION) ---
     if (cvText.length > MAX_TEXT_LENGTH) {
-        cvText = cvText.slice(0, MAX_TEXT_LENGTH);
-        console.warn("⚠️ CV text truncated.");
+      cvText = cvText.slice(0, MAX_TEXT_LENGTH);
+      console.warn("⚠️ CV text truncated.");
     }
 
     if (jobDescription.length > MAX_JOB_DESCRIPTION) {
-        jobDescription = jobDescription.slice(0, MAX_JOB_DESCRIPTION);
-        console.warn("⚠️ Job Description truncated.");
+      jobDescription = jobDescription.slice(0, MAX_JOB_DESCRIPTION);
+      console.warn("⚠️ Job Description truncated.");
     }
-    
-    console.log("✅ CV Extracted Text:", cvText.slice(0, 100) + '...');
+
+    console.log("✅ CV Extracted Text:", cvText.slice(0, 100) + "...");
 
     // --- 5. PEMBUATAN PROMPT (OPTIMASI OUTPUT) ---
     const prompt = `
@@ -129,18 +125,20 @@ export const POST: APIRoute = async ({ request }) => {
 
     // --- 6. PANGGILAN GEMINI API ---
     const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" }); // Gunakan Flash untuk efisiensi
-    
+
     const result = await model.generateContent(prompt);
 
     const resultText = result.response.text();
 
-    return new Response(
-      JSON.stringify({ result: resultText }),
-      { status: 200, headers: { "Content-Type": "application/json" } }
-    );
+    return new Response(JSON.stringify({ result: resultText }), {
+      status: 200,
+      headers: { "Content-Type": "application/json" },
+    });
   } catch (err: any) {
     // Tangani error lain, seperti masalah koneksi atau parsing file
     console.error("❌ Screening Error:", err);
-    return new Response(JSON.stringify({ error: "Internal Server Error." }), { status: 500 });
+    return new Response(JSON.stringify({ error: "Internal Server Error." }), {
+      status: 500,
+    });
   }
 };
