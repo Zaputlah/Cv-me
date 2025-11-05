@@ -20,6 +20,11 @@ const pdfExtract = require("pdf-extraction");
 
 // ✅ init Gemini client
 const genAI = new GoogleGenerativeAI(import.meta.env.GEMINI_API_KEY);
+console.log(
+  "GEMINI_API_KEY:",
+  import.meta.env.GEMINI_API_KEY ? "Set" : "Not Set"
+);
+
 
 export const POST: APIRoute = async ({ request }) => {
   try {
