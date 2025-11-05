@@ -12,29 +12,24 @@ const requestCounts = new Map<string, { count: number; resetTime: number }>();
 const MAX_TEXT_LENGTH = 10000;
 const MAX_JOB_DESCRIPTION = 2000;
 
-// === PDF EXTRACT LIBS BASED ON ENV ===
+// === IMPORT PDF LIB BASED ON ENV ===
 const require = createRequire(import.meta.url);
-let extractPdf: (buffer: Buffer) => Promise<{ text: string }>;
+let pdfParser: any;
 
 if (process.env.NODE_ENV === "development") {
-  // Localhost: gunakan pdf-extraction
-  const pdfExtract = require("pdf-extraction");
-  extractPdf = async (buffer: Buffer) => {
-    const data = await pdfExtract(buffer);
-    return { text: data.text };
-  };
+  // Local dev
+  pdfParser = require("pdf-extraction");
 } else {
-  // Production: gunakan pdf-parse
-  const pdfParse = require("pdf-parse");
-  extractPdf = async (buffer: Buffer) => {
-    const data = await pdfParse(buffer);
-    return { text: data.text };
-  };
+  // Prod / Vercel
+  // @ts-ignore
+  pdfParser = require("pdf-parse");
 }
 
 // === INIT GEMINI CLIENT ===
 const apiKey = import.meta.env.GEMINI_API_KEY;
-if (!apiKey) console.warn("⚠️ GEMINI_API_KEY not set!");
+if (!apiKey) {
+  console.warn("⚠️ GEMINI_API_KEY not set!");
+}
 const genAI = new GoogleGenerativeAI(apiKey);
 
 export const POST: APIRoute = async ({ request }) => {
@@ -43,15 +38,16 @@ export const POST: APIRoute = async ({ request }) => {
 
     // --- Honeypot check ---
     const botField = formData.get("bot-field");
-    if (botField)
+    if (botField) {
       return new Response(JSON.stringify({ error: "Bot detected" }), {
         status: 403,
       });
+    }
 
     // --- Rate limiting ---
     const userIp = request.headers.get("x-forwarded-for") || "unknown";
-    const now = Date.now();
     let countEntry = requestCounts.get(userIp);
+    const now = Date.now();
 
     if (countEntry && countEntry.resetTime < now) {
       countEntry = { count: 0, resetTime: now + COOLDOWN_WINDOW_MS };
@@ -67,28 +63,37 @@ export const POST: APIRoute = async ({ request }) => {
       );
     }
 
-    requestCounts.set(userIp, {
+    const newCountEntry = {
       count: (countEntry?.count || 0) + 1,
       resetTime: countEntry?.resetTime || now + COOLDOWN_WINDOW_MS,
-    });
+    };
+    requestCounts.set(userIp, newCountEntry);
 
     // --- Extract file ---
     const file = formData.get("cvFile") as File | null;
     let jobDescription = formData.get("jobDescription") as string;
 
-    if (!file || !jobDescription)
+    if (!file || !jobDescription) {
       return new Response(
         JSON.stringify({ error: "CV dan Job Description wajib diisi" }),
         { status: 400 }
       );
+    }
 
     const buffer = Buffer.from(await file.arrayBuffer());
     let cvText = "";
 
-    if (file.name.endsWith(".pdf") || file.name.endsWith(".PDF")) {
-      const data = await extractPdf(buffer);
-      cvText = data.text;
-    } else if (file.name.endsWith(".docx") || file.name.endsWith(".DOCX")) {
+    if (file.name.endsWith(".pdf")) {
+      if (process.env.NODE_ENV === "development") {
+        // local: pdf-extraction
+        const data = await pdfParser(buffer);
+        cvText = data.text;
+      } else {
+        // prod: pdf-parse
+        const data = await pdfParser(buffer);
+        cvText = data.text;
+      }
+    } else if (file.name.endsWith(".docx")) {
       const result = await mammoth.extractRawText({ buffer });
       cvText = result.value;
     } else {
