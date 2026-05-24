@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 
+export const prerender = true;
+
 const res = await fetch("https://equran.id/api/v2/surat");
 const suratData = await res.json();
 const surats = suratData.data ?? [];

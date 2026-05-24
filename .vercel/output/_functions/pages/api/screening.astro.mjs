@@ -16,9 +16,15 @@ if (process.env.NODE_ENV === "development") {
   pdfParser = require("pdf-parse");
 }
 const apiKey = "AIzaSyDffYOVGEpjqkOgNzCl4tJjip-2lnvaFr8";
-const genAI = new GoogleGenerativeAI(apiKey);
+const genAI = new GoogleGenerativeAI(apiKey) ;
 const POST = async ({ request }) => {
   try {
+    if (!genAI) {
+      return new Response(
+        JSON.stringify({ error: "GEMINI_API_KEY belum diset di Vercel." }),
+        { status: 500, headers: { "Content-Type": "application/json" } }
+      );
+    }
     const formData = await request.formData();
     const botField = formData.get("bot-field");
     if (botField) {

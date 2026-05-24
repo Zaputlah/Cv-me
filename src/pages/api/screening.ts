@@ -30,10 +30,17 @@ const apiKey = import.meta.env.GEMINI_API_KEY;
 if (!apiKey) {
   console.warn("⚠️ GEMINI_API_KEY not set!");
 }
-const genAI = new GoogleGenerativeAI(apiKey);
+const genAI = apiKey ? new GoogleGenerativeAI(apiKey) : null;
 
 export const POST: APIRoute = async ({ request }) => {
   try {
+    if (!genAI) {
+      return new Response(
+        JSON.stringify({ error: "GEMINI_API_KEY belum diset di Vercel." }),
+        { status: 500, headers: { "Content-Type": "application/json" } }
+      );
+    }
+
     const formData = await request.formData();
 
     // --- Honeypot check ---

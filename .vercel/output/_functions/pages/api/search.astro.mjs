@@ -4,7 +4,8 @@ export { renderers } from '../../renderers.mjs';
 const MAX_REQUESTS_PER_HOUR = 5;
 const COOLDOWN_WINDOW_MS = 60 * 60 * 1e3;
 const requestCounts = /* @__PURE__ */ new Map();
-const genAI = new GoogleGenerativeAI("AIzaSyDffYOVGEpjqkOgNzCl4tJjip-2lnvaFr8");
+const apiKey = "AIzaSyDffYOVGEpjqkOgNzCl4tJjip-2lnvaFr8";
+const genAI = new GoogleGenerativeAI(apiKey) ;
 function extractContentText(result) {
   if (result?.response?.text && typeof result.response.text === "string") {
     return result.response.text.trim();
@@ -18,6 +19,12 @@ function extractContentText(result) {
 }
 const POST = async ({ request }) => {
   try {
+    if (!genAI) {
+      return new Response(
+        JSON.stringify({ error: "GEMINI_API_KEY belum diset di Vercel." }),
+        { status: 500, headers: { "Content-Type": "application/json" } }
+      );
+    }
     const formData = await request.formData();
     const botField = formData.get("bot-field");
     if (botField) {

@@ -4,6 +4,8 @@ import { VideoSchema } from "../../content/config";
 import VideoLayout from "../../layouts/VideoLayout.astro";
 import createSlug from "../../lib/createSlug";
 
+export const prerender = true;
+
 export async function getStaticPaths() {
   const videoEntries = await getCollection("video");
   return videoEntries.map((entry) => ({

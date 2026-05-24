@@ -8,7 +8,8 @@ const COOLDOWN_WINDOW_MS = 60 * 60 * 1000; // 1 jam
 const requestCounts = new Map<string, { count: number; resetTime: number }>();
 
 // ✅ init Gemini client
-const genAI = new GoogleGenerativeAI(import.meta.env.GEMINI_API_KEY);
+const apiKey = import.meta.env.GEMINI_API_KEY;
+const genAI = apiKey ? new GoogleGenerativeAI(apiKey) : null;
 
 // --- Helper: Ekstrak teks dengan aman (Anti-TypeError) ---
 function extractContentText(result: any): string {
@@ -34,6 +35,13 @@ function extractContentText(result: any): string {
 
 export const POST: APIRoute = async ({ request }) => {
     try {
+        if (!genAI) {
+            return new Response(
+                JSON.stringify({ error: "GEMINI_API_KEY belum diset di Vercel." }),
+                { status: 500, headers: { "Content-Type": "application/json" } }
+            );
+        }
+
         const formData = await request.formData();
 
         // --- 1. HONEYPOT & RATE LIMITING LOGIC ---

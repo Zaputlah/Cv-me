@@ -2,6 +2,8 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { ustadzList } from "../../data/ustadzList.js";
 
+export const prerender = true;
+
 const { id } = Astro.params;
 const ustadz = ustadzList.find((u) => u.id === id);
 
