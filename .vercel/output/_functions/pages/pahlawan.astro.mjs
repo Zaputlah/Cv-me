@@ -1,7 +1,6 @@
 /* empty css                                      */
-import { c as createComponent, r as renderComponent, a as renderTemplate, b as addAttribute, m as maybeRenderHead } from '../chunks/astro/server_DJ5VsFU4.mjs';
-import 'kleur/colors';
-import { $ as $$BaseLayout } from '../chunks/BaseLayout_C8pmW2BQ.mjs';
+import { c as createComponent, r as renderComponent, a as renderTemplate, d as addAttribute, m as maybeRenderHead } from '../chunks/astro/server_BRzQfmCI.mjs';
+import { $ as $$BaseLayout } from '../chunks/BaseLayout_CKft6Hqk.mjs';
 export { renderers } from '../renderers.mjs';
 
 var __freeze = Object.freeze;
@@ -23,9 +22,9 @@ const $$Pahlawan = createComponent(async ($$result, $$props, $$slots) => {
       });
     });
   <\/script> `])), maybeRenderHead(), pahlawanData.map((pahlawan, index) => renderTemplate`<div class="pahlawan-item bg-white rounded-2xl border border-gray-200 shadow-md hover:shadow-lg hover:-translate-y-1 transform transition duration-300 overflow-hidden flex flex-col"${addAttribute(`${pahlawan.name.toLowerCase()} ${pahlawan.birth_year} ${pahlawan.description.toLowerCase()}`, "data-keywords")}> <div class="p-5 flex-1 flex flex-col justify-between"> <div> <h3 class="text-xl font-semibold text-blue-800 mb-2">${index + 1}. ${pahlawan.name}</h3> <p class="text-sm text-gray-700 italic mb-3">"${pahlawan.description}"</p> </div> <div class="text-sm text-gray-500 mt-2 border-t pt-2"> <p><span class="font-medium text-gray-600">Asal:</span> ${pahlawan.place_of_origin || "Tidak diketahui"}</p> <p><span class="font-medium text-gray-600">Lahir:</span> ${pahlawan.birth_year} — <span class="font-medium text-gray-600">Wafat:</span> ${pahlawan.death_year || "?"}</p> </div> </div> </div>`)) })}`;
-}, "D:/my-cv/Cv-me/src/pages/pahlawan.astro", void 0);
+}, "C:/cvme/Cv-me/src/pages/pahlawan.astro", void 0);
 
-const $$file = "D:/my-cv/Cv-me/src/pages/pahlawan.astro";
+const $$file = "C:/cvme/Cv-me/src/pages/pahlawan.astro";
 const $$url = "/pahlawan";
 
 const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({

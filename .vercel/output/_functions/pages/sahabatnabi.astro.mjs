@@ -1,7 +1,6 @@
 /* empty css                                      */
-import { c as createComponent, r as renderComponent, a as renderTemplate, b as addAttribute, m as maybeRenderHead } from '../chunks/astro/server_DJ5VsFU4.mjs';
-import 'kleur/colors';
-import { $ as $$BaseLayout } from '../chunks/BaseLayout_C8pmW2BQ.mjs';
+import { c as createComponent, r as renderComponent, a as renderTemplate, m as maybeRenderHead, b as renderScript, d as addAttribute } from '../chunks/astro/server_BRzQfmCI.mjs';
+import { $ as $$BaseLayout } from '../chunks/BaseLayout_CKft6Hqk.mjs';
 export { renderers } from '../renderers.mjs';
 
 const sahabatData = [
@@ -207,26 +206,24 @@ const sahabatData = [
 	}
 ];
 
-var __freeze = Object.freeze;
-var __defProp = Object.defineProperty;
-var __template = (cooked, raw) => __freeze(__defProp(cooked, "raw", { value: __freeze(cooked.slice()) }));
-var _a;
 const $$Sahabatnabi = createComponent(($$result, $$props, $$slots) => {
-  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": "Sahabat Nabi", "sideBarActiveItemID": "sahabatnabi" }, { "default": ($$result2) => renderTemplate(_a || (_a = __template([" ", '<div class="text-left mb-6 px-4"> <h2 class="text-4xl font-extrabold text-blue-700 mb-2">Para Sahabat Nabi</h2> <p class="text-gray-600 mb-4 text-lg">Pelajari para sahabat Rasulullah SAW dan keutamaan mereka dalam Islam.</p> <input type="text" id="searchInput" placeholder="Cari berdasarkan nama atau kelebihan..." class="w-full sm:w-1/2 border border-gray-300 px-4 py-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400 shadow-md transition duration-200"> </div> <div id="sahabatList" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4 mb-12"> ', ` </div> <script type="module" is:client>
-    const input = document.getElementById('searchInput');
-    const items = document.querySelectorAll('.sahabat-item');
+  const totalKelebihan = sahabatData.reduce(
+    (total, item) => total + item.kelebihan.length,
+    0
+  );
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": "Sahabat Nabi", "sideBarActiveItemID": "sahabatnabi" }, { "default": ($$result2) => renderTemplate` ${maybeRenderHead()}<section class="space-y-8 pb-10"> <div class="space-y-4"> <p class="text-sm font-semibold uppercase tracking-wider text-blue-700">
+Edukasi Islami
+</p> <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between"> <div> <h1 class="text-4xl font-bold leading-tight text-gray-950 md:text-5xl">
+Sahabat Nabi
+</h1> <p class="mt-3 max-w-2xl text-base leading-7 text-gray-600">
+Kenali para sahabat Rasulullah SAW melalui ringkasan keutamaan,
+            peran, dan teladan yang bisa dipelajari.
+</p> </div> </div> </div> <div class="grid gap-3 border-y border-gray-200 py-5 sm:grid-cols-3"> <div> <p class="text-2xl font-bold text-gray-950">${sahabatData.length}</p> <p class="mt-1 text-sm text-gray-500">Sahabat</p> </div> <div> <p class="text-2xl font-bold text-gray-950">${totalKelebihan}</p> <p class="mt-1 text-sm text-gray-500">Ringkasan keutamaan</p> </div> <div> <p class="text-2xl font-bold text-gray-950">Akhlak</p> <p class="mt-1 text-sm text-gray-500">Ilmu, keberanian, amanah</p> </div> </div> <div class="rounded-xl border border-gray-200 bg-white p-4 shadow-sm"> <label for="searchInput" class="sr-only">Cari sahabat Nabi</label> <div class="flex items-center gap-3 rounded-lg border border-gray-200 bg-gray-50 px-4 py-3"> <i class="fa-solid fa-magnifying-glass text-gray-400"></i> <input type="text" id="searchInput" placeholder="Cari nama sahabat atau keutamaan..." class="w-full bg-transparent text-sm text-gray-800 outline-none placeholder:text-gray-400"> </div> </div> </section> <section class="pb-12"> <div id="sahabatList" class="grid gap-4 sm:grid-cols-2 xl:grid-cols-3"> ${sahabatData.map((item) => renderTemplate`<article class="sahabat-item rounded-xl border border-gray-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-lg"${addAttribute(`${item.nama.toLowerCase()} ${item.kelebihan.join(" ").toLowerCase()}`, "data-keywords")}> <div class="flex items-start gap-3"> <div class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-blue-50 text-sm font-bold text-blue-700"> ${item.id} </div> <div> <h2 class="text-xl font-bold text-gray-950">${item.nama}</h2> <p class="mt-1 text-xs font-semibold uppercase tracking-wider text-gray-400">
+Sahabat Rasulullah
+</p> </div> </div> <ul class="mt-4 space-y-2"> ${item.kelebihan.map((kelebihan) => renderTemplate`<li class="flex gap-2 text-sm leading-6 text-gray-600"> <i class="fa-solid fa-check mt-1 text-xs text-blue-600"></i> <span>${kelebihan}</span> </li>`)} </ul> </article>`)} </div> <div id="emptyState" class="hidden rounded-xl border border-gray-200 bg-white p-8 text-center shadow-sm"> <p class="font-semibold text-gray-900">Data tidak ditemukan</p> <p class="mt-1 text-sm text-gray-500">Coba gunakan kata kunci lain.</p> </div> </section> ${renderScript($$result2, "C:/cvme/Cv-me/src/pages/sahabatnabi.astro?astro&type=script&index=0&lang.ts")} ` })}`;
+}, "C:/cvme/Cv-me/src/pages/sahabatnabi.astro", void 0);
 
-    input.addEventListener('input', () => {
-      const search = input.value.toLowerCase();
-      items.forEach((item) => {
-        const keywords = item.getAttribute('data-keywords');
-        item.style.display = keywords.includes(search) ? 'block' : 'none';
-      });
-    });
-  <\/script> `])), maybeRenderHead(), sahabatData.map((item) => renderTemplate`<div class="sahabat-item bg-white rounded-2xl border border-gray-200 shadow-md hover:shadow-lg hover:-translate-y-1 transform transition duration-300 overflow-hidden flex flex-col"${addAttribute(`${item.nama.toLowerCase()} ${item.kelebihan.join(" ").toLowerCase()}`, "data-keywords")}> <div class="p-5 flex-1 flex flex-col justify-between"> <div> <h3 class="text-xl font-semibold text-blue-800 mb-2">${item.nama}</h3> <ul class="list-disc pl-5 text-gray-700 text-sm space-y-1"> ${item.kelebihan.map((k, index) => renderTemplate`<li>${k}</li>`)} </ul> </div> </div> </div>`)) })}`;
-}, "D:/my-cv/Cv-me/src/pages/sahabatnabi.astro", void 0);
-
-const $$file = "D:/my-cv/Cv-me/src/pages/sahabatnabi.astro";
+const $$file = "C:/cvme/Cv-me/src/pages/sahabatnabi.astro";
 const $$url = "/sahabatnabi";
 
 const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({

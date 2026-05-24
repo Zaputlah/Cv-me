@@ -1,89 +1,46 @@
-<!-- Gradient Mask -->
-<div class="block sticky pointer-events-none bottom-10 bg-base-200 justify-center h-12 [mask-image:linear-gradient(transparent,#000000)]"></div>
+---
+const socials = [
+  {
+    href: "https://github.com/zaputlah",
+    label: "GitHub",
+    icon: "fa-brands fa-github",
+  },
+  {
+    href: "https://instagram.com/zaputlah",
+    label: "Instagram",
+    icon: "fa-brands fa-instagram",
+  },
+  {
+    href: "https://www.linkedin.com/in/reza-putra-fadilah-87800316b/",
+    label: "LinkedIn",
+    icon: "fa-brands fa-linkedin-in",
+  },
+  {
+    href: "https://www.youtube.com/channel/UCJCeWHXjQhH8qRmycEayMwQ",
+    label: "YouTube",
+    icon: "fa-brands fa-youtube",
+  },
+];
+---
 
-<!-- Social Icons -->
-<div class="social-icons px-4 pb-5 pt-1 flex justify-center sticky bottom-0 bg-base-200">
-  <!-- GitHub -->
-  <a href="https://github.com/zaputlah" target="_blank" class="mx-3" aria-label="Github" title="Github">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 
-      3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 
-      0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61
-      -.546-1.387-1.333-1.757-1.333-1.757-1.089-.744.083-.729.083-.729 
-      1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.809 1.304 
-      3.495.997.108-.776.418-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 
-      0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 
-      0 0 1.005-.322 3.3 1.23a11.5 11.5 0 0 1 3-.405c1.02.005 
-      2.045.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23 
-      .645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 
-      1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 
-      1.096.81 2.215 0 1.6-.015 2.885-.015 3.28 0 
-      .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297 
-      24 5.67 18.627.297 12 .297z"/>
-    </svg>
-  </a>
-
-  <!-- Instagram -->
-  <a href="https://instagram.com/zaputlah" target="_blank" class="mx-3" aria-label="Instagram" title="Instagram">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 448 512" fill="currentColor">
-      <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 
-      114.9s51.3 114.9 114.9 114.9 114.9-51.3 
-      114.9-114.9S287.6 141 224.1 141zm0 
-      189.6c-41.2 0-74.7-33.5-74.7-74.7s33.5-74.7 
-      74.7-74.7 74.7 33.5 74.7 74.7-33.5 
-      74.7-74.7 74.7zm146.4-194.3c0 
-      14.9-12 26.9-26.9 26.9-14.9 0-26.9-12-26.9-26.9s12-26.9 
-      26.9-26.9 26.9 12 26.9 26.9zm76.1 
-      27.2c-1.7-35.3-9.9-66.7-36.2-93C383.3 
-      7.9 351.9-.3 316.6 1.4c-35.3 1.7-138.6 
-      1.7-173.9 0C107.4-.3 76 .9 49.7 
-      27.2 23.4 53.5 15.2 84.9 16.9 
-      120.2c1.7 35.3 1.7 138.6 0 173.9-1.7 
-      35.3 7.9 66.7 34.2 93 26.3 26.3 57.7 
-      35.9 93 34.2 35.3-1.7 138.6-1.7 
-      173.9 0 35.3 1.7 66.7-7.9 
-      93-34.2 26.3-26.3 35.9-57.7 
-      34.2-93-1.7-35.3-1.7-138.6 
-      0-173.9zM398.8 388c-7.8 
-      19.6-22.9 34.7-42.6 42.6-29.5 
-      11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 
-      9-132.1c7.8-19.6 22.9-34.7 
-      42.6-42.6 29.5-11.7 99.5-9 
-      132.1-9s102.7-2.6 132.1 
-      9c19.6 7.8 34.7 22.9 42.6 
-      42.6 11.7 29.5 9 99.5 9 
-      132.1s2.7 102.7-9 132.1z"/>
-    </svg>
-  </a>
-
-  <!-- LinkedIn -->
-  <a href="https://www.linkedin.com/in/reza-putra-fadilah-87800316b/" target="_blank" class="mx-3" aria-label="Linkedin" title="Linkedin">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 448 512" fill="currentColor">
-      <path d="M100.28 448H7.4V148.9h92.88zm-46.44-341C24.14 
-      107 0 82.86 0 53.5S24.14 0 53.84 
-      0s53.44 24.14 53.44 53.5-24.14 
-      53.5-53.44 53.5zM447.9 
-      448h-92.4V302.4c0-34.7-.7-79.3-48.3-79.3-48.3 
-      0-55.7 37.7-55.7 76.6V448h-92.6V148.9h88.9v40.8h1.3c12.4-23.4 
-      42.7-48.3 87.8-48.3 94 0 111.3 61.9 111.3 
-      142.3V448z"/>
-    </svg>
-  </a>
-
-  <!-- YouTube -->
-  <a href="https://www.youtube.com/channel/UCJCeWHXjQhH8qRmycEayMwQ" target="_blank" class="mx-3" aria-label="Youtube" title="Youtube">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 576 512" fill="currentColor">
-      <path d="M549.655 124.083c-6.281-23.65-24.779-42.13-48.408-48.434C458.236 
-      64 288 64 288 64s-170.236 0-213.247 
-      11.649c-23.629 6.304-42.127 24.784-48.408 
-      48.434C16.003 167.111 16 256.005 16 
-      256.005s-.003 88.906 10.345 131.922c6.281 
-      23.65 24.779 42.13 48.408 48.434C117.764 
-      448.005 288 448.005 288 448.005s170.236 
-      0 213.247-11.649c23.629-6.304 42.127-24.784 
-      48.408-48.434C559.997 344.911 560 
-      256.005 560 256.005s-.003-88.906-10.345-131.922zM232 
-      336.005V176.005l142.857 80z"/>
-    </svg>
-  </a>
-</div>
+<footer class="border-t border-gray-100 bg-white px-5 py-4">
+  <p class="mb-3 text-center text-[11px] font-bold uppercase tracking-wider text-gray-400">
+    Social
+  </p>
+  <div class="flex items-center justify-center gap-2">
+    {
+      socials.map((social) => (
+        <a
+          href={social.href}
+          target="_blank"
+          rel="noreferrer"
+          aria-label={social.label}
+          title={social.label}
+          class="grid h-10 w-10 place-items-center rounded-xl border border-gray-200 text-gray-500 transition hover:border-gray-300 hover:bg-gray-50 hover:text-gray-950"
+        >
+          <i class={`${social.icon} text-lg`}></i>
+        </a>
+      ))
+    }
+  </div>
+</footer>

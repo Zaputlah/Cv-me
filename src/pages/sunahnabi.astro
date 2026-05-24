@@ -4,44 +4,109 @@ import sunahData from "../data/sunahnabi.json";
 ---
 
 <BaseLayout title="Sunnah Nabi" sideBarActiveItemID="sunahnabi">
-  <div class="text-left mb-6 px-4">
-    <h2 class="text-4xl font-extrabold text-blue-700 mb-2">Sunnah Nabi Muhammad SAW</h2>
-    <p class="text-gray-600 mb-4 text-lg">Pelajari sunnah-sunnah Rasulullah SAW beserta keutamaannya dalam kehidupan sehari-hari.</p>
-    <input
-      type="text"
-      id="searchInput"
-      placeholder="Cari berdasarkan nama sunnah, keutamaan, atau dalil..."
-      class="w-full sm:w-1/2 border border-gray-300 px-4 py-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400 shadow-md transition duration-200"
-    />
-  </div>
-
-  <div id="sunahList" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4 mb-12">
-    {sunahData.map((item) => (
-      <div
-        class="sunah-item bg-white rounded-2xl border border-gray-200 shadow-md hover:shadow-lg hover:-translate-y-1 transform transition duration-300 overflow-hidden flex flex-col"
-        data-keywords={`${item.sunnah.toLowerCase()} ${item.keutamaan.toLowerCase()} ${item.dalil.toLowerCase()}`}
-      >
-        <div class="p-5 flex-1 flex flex-col justify-between">
-          <div>
-            <h3 class="text-xl font-semibold text-blue-800 mb-2">{item.sunnah}</h3>
-            <p class="text-sm text-gray-600 mb-2"><span class="font-semibold">Keutamaan:</span> {item.keutamaan}</p>
-            <p class="text-sm text-gray-500 italic">"{item.dalil}"</p>
-          </div>
-        </div>
+  <section class="space-y-8 pb-10">
+    <div class="space-y-4">
+      <p class="text-sm font-semibold uppercase tracking-wider text-blue-700">
+        Edukasi Islami
+      </p>
+      <div>
+        <h1 class="text-4xl font-bold leading-tight text-gray-950 md:text-5xl">
+          Sunnah Nabi
+        </h1>
+        <p class="mt-3 max-w-2xl text-base leading-7 text-gray-600">
+          Kumpulan sunnah Rasulullah SAW beserta keutamaan dan dalil ringkas
+          untuk diamalkan dalam kehidupan sehari-hari.
+        </p>
       </div>
-    ))}
-  </div>
+    </div>
 
-  <script type="module" is:client>
-    const input = document.getElementById('searchInput');
-    const items = document.querySelectorAll('.sunah-item');
+    <div class="grid gap-3 border-y border-gray-200 py-5 sm:grid-cols-3">
+      <div>
+        <p class="text-2xl font-bold text-gray-950">{sunahData.length}</p>
+        <p class="mt-1 text-sm text-gray-500">Sunnah</p>
+      </div>
+      <div>
+        <p class="text-2xl font-bold text-gray-950">Dalil</p>
+        <p class="mt-1 text-sm text-gray-500">Al-Quran dan Hadis</p>
+      </div>
+      <div>
+        <p class="text-2xl font-bold text-gray-950">Amalan</p>
+        <p class="mt-1 text-sm text-gray-500">Harian dan ibadah</p>
+      </div>
+    </div>
 
-    input.addEventListener('input', () => {
-      const search = input.value.toLowerCase();
+    <div class="rounded-xl border border-gray-200 bg-white p-4 shadow-sm">
+      <label for="searchInput" class="sr-only">Cari sunnah Nabi</label>
+      <div class="flex items-center gap-3 rounded-lg border border-gray-200 bg-gray-50 px-4 py-3">
+        <i class="fa-solid fa-magnifying-glass text-gray-400"></i>
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Cari nama sunnah, keutamaan, atau dalil..."
+          class="w-full bg-transparent text-sm text-gray-800 outline-none placeholder:text-gray-400"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="pb-12">
+    <div id="sunahList" class="grid gap-4 md:grid-cols-2">
+      {
+        sunahData.map((item) => (
+          <article
+            class="sunah-item rounded-xl border border-gray-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-lg"
+            data-keywords={`${item.sunnah.toLowerCase()} ${item.keutamaan.toLowerCase()} ${item.dalil.toLowerCase()}`}
+          >
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <p class="text-xs font-bold uppercase tracking-wider text-blue-700">
+                  Sunnah #{item.id}
+                </p>
+                <h2 class="mt-1 text-xl font-bold text-gray-950">{item.sunnah}</h2>
+              </div>
+              <div class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-blue-50 text-blue-700">
+                <i class="fa-solid fa-star-and-crescent"></i>
+              </div>
+            </div>
+
+            <div class="mt-4 rounded-lg bg-gray-50 p-4">
+              <p class="text-xs font-bold uppercase tracking-wider text-gray-400">
+                Keutamaan
+              </p>
+              <p class="mt-2 text-sm leading-6 text-gray-700">{item.keutamaan}</p>
+            </div>
+
+            <blockquote class="mt-4 border-l-4 border-blue-200 pl-4 text-sm italic leading-6 text-gray-600">
+              {item.dalil}
+            </blockquote>
+          </article>
+        ))
+      }
+    </div>
+
+    <div id="emptyState" class="hidden rounded-xl border border-gray-200 bg-white p-8 text-center shadow-sm">
+      <p class="font-semibold text-gray-900">Data tidak ditemukan</p>
+      <p class="mt-1 text-sm text-gray-500">Coba gunakan kata kunci lain.</p>
+    </div>
+  </section>
+
+  <script>
+    const input = document.getElementById("searchInput");
+    const items = Array.from(document.querySelectorAll(".sunah-item"));
+    const emptyState = document.getElementById("emptyState");
+
+    input?.addEventListener("input", () => {
+      const search = input.value.toLowerCase().trim();
+      let visibleCount = 0;
+
       items.forEach((item) => {
-        const keywords = item.getAttribute('data-keywords');
-        item.style.display = keywords.includes(search) ? 'block' : 'none';
+        const keywords = item.getAttribute("data-keywords") || "";
+        const isVisible = keywords.includes(search);
+        item.classList.toggle("hidden", !isVisible);
+        if (isVisible) visibleCount += 1;
       });
+
+      emptyState?.classList.toggle("hidden", visibleCount > 0);
     });
   </script>
 </BaseLayout>

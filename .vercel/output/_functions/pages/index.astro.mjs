@@ -1,42 +1,75 @@
 /* empty css                                      */
-import { c as createComponent, r as renderComponent, f as renderScript, a as renderTemplate, m as maybeRenderHead } from '../chunks/astro/server_DJ5VsFU4.mjs';
-import 'kleur/colors';
-import { $ as $$BaseLayout } from '../chunks/BaseLayout_C8pmW2BQ.mjs';
-import { $ as $$HorizontalCard } from '../chunks/HorizontalCard_C6SMnulO.mjs';
-import { g as getCollection } from '../chunks/_astro_content_udLUpVe5.mjs';
+import { c as createComponent, r as renderComponent, b as renderScript, a as renderTemplate, m as maybeRenderHead, d as addAttribute } from '../chunks/astro/server_BRzQfmCI.mjs';
+import { $ as $$BaseLayout } from '../chunks/BaseLayout_CKft6Hqk.mjs';
 export { renderers } from '../renderers.mjs';
 
-const $$Index = createComponent(async ($$result, $$props, $$slots) => {
-  const posts = (await getCollection("blog")).sort(
-    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-  );
-  posts.slice(0, 3);
-  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "sideBarActiveItemID": "home" }, { "default": async ($$result2) => renderTemplate` ${maybeRenderHead()}<div class="pb-12 mt-5"> <div class="text-xl py-1">Hai 👋</div> <div class="text-5xl font-bold">I'm Reza putra fadilah</div> <div class="text-3xl py-3 font-bold"> <span id="typingText" class="typing-animation"></span> </div> <div class="py-2"> <text class="text-lg">
-Software Developer with extensive experience in building web and enterprise
-    applications as a Web Developer, Software Developer, Java Developer, and
-    Full Stack Developer. Skilled in both frontend and backend development with
-    strong expertise in <b>Java, PHP, AngularJS, Spring Boot, and CodeIgniter</b>, 
-    and hands-on experience with <b>Flutter</b> and <b>.NET</b>. Proficient in 
-    designing scalable and secure systems, API integration, and database management 
-    using <b>MySQL, SQL Server, and Navicat</b>. Experienced in deploying and managing 
-    applications on <b>WildFly</b> server. Adept at version control and collaboration 
-    using <b>Git, GitHub, Bitbucket, and GitLab</b>, and familiar with both
-<b>Agile</b> and <b>Waterfall</b> methodologies. Committed to clean code practices, 
-    CI/CD pipelines, and delivering high-quality, maintainable software solutions.
-</text> </div> <!-- <div class="mt-8">
-      <a
-        class="btn"
-        href="https://www.linkedin.com/in/reza-putra-fadilah-87800316b/"
-        target="_blank">Let's connect!</a
-      >
-    </div> --> <div class="mt-8 flex flex-col gap-4 sm:flex-row"> <!-- LinkedIn Button --> <a class="btn bg-blue-600 text-white px-4 py-2 rounded flex items-center gap-2 hover:bg-blue-700 transition" href="https://www.linkedin.com/in/reza-putra-fadilah-87800316b/" target="_blank"> <i class="fab fa-linkedin text-xl"></i>
-Connect on LinkedIn
-</a> <!-- WhatsApp Button --> <a class="btn bg-green-500 text-white px-4 py-2 rounded flex items-center gap-2 hover:bg-green-600 transition" href="https://wa.me/6285811043930" target="_blank"> <i class="fab fa-whatsapp text-xl"></i>
-Chat on WhatsApp
-</a> </div> </div> <div> <div class="text-3xl w-full font-bold mb-2">My projects</div> </div> ${renderComponent($$result2, "HorizontalCard", $$HorizontalCard, { "title": "Hospital", "img": "/Hospital.png", "desc": "Website rumah sakit sederhana yang dibuat untuk menyediakan informasi yang ada di dalam rumah sakit tersebut", "url": "https://hospital-zaputlah.vercel.app/", "customTag": "#Reactjs #Fontawesome #Jwt #Reactstrap #Css #Axios", "badge": "NEW" })} <div class="divider my-0"></div> ${renderComponent($$result2, "HorizontalCard", $$HorizontalCard, { "title": "CRUD 1", "img": "/crud1.png", "desc": "Crud sederhana yang bisa melakukan create read ubah delete tapi sebelum melakukan crud di wajibkan untuk login terlebih dahulu", "customTag": "#Reactjs #Redux #Jwt #Bootsrap #Axios", "url": "https://crud-react-redux-tau.vercel.app/" })} <div class="divider my-0"></div> ${renderComponent($$result2, "HorizontalCard", $$HorizontalCard, { "title": "Qoute 1", "img": "/qoute1.png", "desc": "Kumpulan kata kata Bijak dari Orang orang yang ada di luar negeri", "customTag": "#Reactjs #Api #Axios #Css", "url": "https://qoute-chi.vercel.app/" })} <div class="divider my-0"></div> <div class="container relative"> <a class="inline-block px-4 py-2 mt-2 bg-black text-white rounded hover:bg-gray-400 absolute top-0 right-0" href="/projects">Selengkapnya</a> </div> ` })} ${renderScript($$result, "D:/my-cv/Cv-me/src/pages/index.astro?astro&type=script&index=0&lang.ts")}`;
-}, "D:/my-cv/Cv-me/src/pages/index.astro", void 0);
+const $$Index = createComponent(($$result, $$props, $$slots) => {
+  const profileSummary = "Fullstack Developer with hands-on experience in building web-based applications, enterprise systems, and mobile apps. Proficient in RESTful APIs, relational databases, system integration, and development using Java, Node.js, Angular, .NET, Dart, and Flutter. Experienced in authentication, data processing, debugging, UAT, and collaboration with QA teams.";
+  const techStacks = [
+    "Java",
+    "Spring Boot",
+    "Node.js",
+    "Angular",
+    ".NET",
+    "Dart",
+    "Flutter",
+    "PHP",
+    "CodeIgniter",
+    "SQL Server"
+  ];
+  const featuredProjects = [
+    {
+      title: "Hospital",
+      img: "/Hospital.png",
+      type: "Healthcare Website",
+      desc: "Website rumah sakit sederhana untuk menampilkan informasi layanan, profil, dan kebutuhan dasar rumah sakit.",
+      url: "https://hospital-zaputlah.vercel.app/",
+      tags: ["React", "JWT", "Axios", "CSS"],
+      badge: "NEW"
+    },
+    {
+      title: "CRUD 1",
+      img: "/crud1.png",
+      type: "Dashboard App",
+      desc: "Aplikasi CRUD dengan proses login sebelum pengguna dapat membuat, membaca, mengubah, dan menghapus data.",
+      url: "https://crud-react-redux-tau.vercel.app/",
+      tags: ["React", "Redux", "JWT", "Bootstrap"]
+    },
+    {
+      title: "Quote 1",
+      img: "/qoute1.png",
+      type: "API Integration",
+      desc: "Aplikasi kumpulan quote dari API eksternal dengan tampilan sederhana dan mudah dibaca.",
+      url: "https://qoute-chi.vercel.app/",
+      tags: ["React", "API", "Axios", "CSS"]
+    }
+  ];
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "sideBarActiveItemID": "home" }, { "default": ($$result2) => renderTemplate` ${maybeRenderHead()}<section class="space-y-8 pb-12"> <div class="space-y-5"> <p class="text-sm font-semibold uppercase tracking-wider text-blue-700">
+Portfolio
+</p> <div class="space-y-3"> <h1 class="text-4xl font-bold leading-tight text-gray-950 md:text-5xl">
+Hai, saya Reza Putra Fadilah
+</h1> <p class="min-h-10 text-2xl font-semibold text-gray-700 md:text-3xl"> <span id="typingText"></span> <span class="ml-1 inline-block h-7 w-[2px] translate-y-1 bg-blue-600"></span> </p> </div> <p class="max-w-3xl text-base leading-8 text-gray-600 md:text-lg"> ${profileSummary} </p> <div class="flex flex-wrap gap-2"> ${techStacks.map((stack) => renderTemplate`<span class="rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm font-medium text-gray-700 shadow-sm"> ${stack} </span>`)} </div> <div class="flex flex-col gap-3 sm:flex-row sm:flex-wrap"> <a class="inline-flex items-center justify-center gap-2 rounded-lg bg-gray-950 px-4 py-3 text-sm font-semibold text-white transition hover:bg-gray-800" href="/pdf/Reza_putra_fadilah_FlowCV_Resume_2026-05-02.pdf" download> <i class="fa-solid fa-file-arrow-down"></i>
+Download CV
+</a> <a class="inline-flex items-center justify-center gap-2 rounded-lg bg-blue-600 px-4 py-3 text-sm font-semibold text-white transition hover:bg-blue-700" href="https://www.linkedin.com/in/reza-putra-fadilah-87800316b/" target="_blank" rel="noreferrer"> <i class="fa-brands fa-linkedin-in"></i>
+LinkedIn
+</a> <a class="inline-flex items-center justify-center gap-2 rounded-lg bg-green-600 px-4 py-3 text-sm font-semibold text-white transition hover:bg-green-700" href="https://wa.me/6285811043930" target="_blank" rel="noreferrer"> <i class="fa-brands fa-whatsapp"></i>
+WhatsApp
+</a> <a class="inline-flex items-center justify-center gap-2 rounded-lg border border-gray-200 bg-white px-4 py-3 text-sm font-semibold text-gray-800 transition hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700" href="/tanya-cv"> <i class="fa-solid fa-robot"></i>
+Tanya CV AI
+</a> </div> </div> <div class="grid gap-3 border-y border-gray-200 py-5 sm:grid-cols-2 lg:grid-cols-4"> <div> <p class="text-2xl font-bold text-gray-950">Frontend</p> <p class="mt-1 text-sm text-gray-500">Angular, Vue, Nuxt, React</p> </div> <div> <p class="text-2xl font-bold text-gray-950">Backend</p> <p class="mt-1 text-sm text-gray-500">Java, Spring Boot, .NET, PHP</p> </div> <div> <p class="text-2xl font-bold text-gray-950">Mobile</p> <p class="mt-1 text-sm text-gray-500">Dart, Flutter</p> </div> <div> <p class="text-2xl font-bold text-gray-950">Database</p> <p class="mt-1 text-sm text-gray-500">SQL Server, MySQL, Navicat</p> </div> </div> </section> <section class="space-y-4 pb-8"> <div class="flex items-end justify-between gap-4"> <div> <p class="text-sm font-semibold uppercase tracking-wider text-blue-700">
+Selected Work
+</p> <h2 class="mt-1 text-3xl font-bold text-gray-950">My Projects</h2> <p class="mt-2 max-w-xl text-sm leading-6 text-gray-500">
+Beberapa project yang menampilkan pengalaman saya dalam membangun
+          aplikasi web, integrasi API, autentikasi, dan interface yang mudah
+          dipakai.
+</p> </div> <a class="inline-flex shrink-0 items-center gap-2 rounded-lg border border-gray-200 px-3 py-2 text-sm font-semibold text-gray-700 transition hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700" href="/projects">
+Lihat semua
+<i class="fa-solid fa-arrow-right"></i> </a> </div> <div class="grid gap-4 md:grid-cols-3"> ${featuredProjects.map((project) => renderTemplate`<article class="group overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-lg"> <a${addAttribute(project.url, "href")} target="_blank" rel="noreferrer" class="flex h-full flex-col"> <div class="relative h-44 overflow-hidden bg-gray-100"> <img${addAttribute(project.img, "src")}${addAttribute(project.title, "alt")} class="h-full w-full object-cover object-top transition duration-300 group-hover:scale-105" loading="lazy"> <div class="absolute left-3 top-3 rounded-full bg-white/95 px-3 py-1 text-xs font-semibold text-gray-800 shadow-sm"> ${project.type} </div> <div class="absolute right-3 top-3 rounded-full bg-emerald-500 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide text-white shadow-sm">
+Live
+</div> </div> <div class="flex flex-1 flex-col p-4"> <div class="flex items-start justify-between gap-3"> <h3 class="text-xl font-bold text-gray-950">${project.title}</h3> ${project.badge && renderTemplate`<span class="rounded-full bg-blue-50 px-2 py-1 text-[11px] font-bold text-blue-700"> ${project.badge} </span>`} </div> <p class="mt-3 min-h-[4.5rem] overflow-hidden text-sm leading-6 text-gray-600 [display:-webkit-box] [-webkit-box-orient:vertical] [-webkit-line-clamp:3]"> ${project.desc} </p> <div class="mt-4 flex flex-wrap gap-2"> ${project.tags.map((tag) => renderTemplate`<span class="rounded-md bg-gray-100 px-2.5 py-1.5 text-xs font-semibold text-gray-600"> ${tag} </span>`)} </div> <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-4 text-sm font-semibold text-blue-700"> <span>View project</span> <span class="grid h-8 w-8 place-items-center rounded-lg bg-blue-50 transition group-hover:bg-blue-600 group-hover:text-white"> <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i> </span> </div> </div> </a> </article>`)} </div> </section> ` })} ${renderScript($$result, "C:/cvme/Cv-me/src/pages/index.astro?astro&type=script&index=0&lang.ts")}`;
+}, "C:/cvme/Cv-me/src/pages/index.astro", void 0);
 
-const $$file = "D:/my-cv/Cv-me/src/pages/index.astro";
+const $$file = "C:/cvme/Cv-me/src/pages/index.astro";
 const $$url = "";
 
 const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({

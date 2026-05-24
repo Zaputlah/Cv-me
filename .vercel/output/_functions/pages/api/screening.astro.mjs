@@ -9,20 +9,24 @@ const requestCounts = /* @__PURE__ */ new Map();
 const MAX_TEXT_LENGTH = 1e4;
 const MAX_JOB_DESCRIPTION = 2e3;
 const require = createRequire(import.meta.url);
-const pdfExtract = require("pdf-extraction");
-const genAI = new GoogleGenerativeAI("AIzaSyDffYOVGEpjqkOgNzCl4tJjip-2lnvaFr8");
+let pdfParser;
+if (process.env.NODE_ENV === "development") {
+  pdfParser = require("pdf-extraction");
+} else {
+  pdfParser = require("pdf-parse");
+}
+const apiKey = "AIzaSyDffYOVGEpjqkOgNzCl4tJjip-2lnvaFr8";
+const genAI = new GoogleGenerativeAI(apiKey);
 const POST = async ({ request }) => {
   try {
     const formData = await request.formData();
     const botField = formData.get("bot-field");
     if (botField) {
-      console.log("🚫 Bot detected: Honeypot field filled.");
-      return new Response(
-        JSON.stringify({ error: "Permintaan diblokir oleh filter keamanan." }),
-        { status: 403 }
-      );
+      return new Response(JSON.stringify({ error: "Bot detected" }), {
+        status: 403
+      });
     }
-    const userIp = request.headers.get("x-forwarded-for") || request.headers.get("client-ip") || "unknown";
+    const userIp = request.headers.get("x-forwarded-for") || "unknown";
     let countEntry = requestCounts.get(userIp);
     const now = Date.now();
     if (countEntry && countEntry.resetTime < now) {
@@ -32,10 +36,9 @@ const POST = async ({ request }) => {
       const minutesLeft = Math.ceil((countEntry.resetTime - now) / 6e4);
       return new Response(
         JSON.stringify({
-          error: `❌ Batasan harian terlampaui (Demo Portofolio). Coba lagi dalam ${minutesLeft} menit.`
+          error: `Batasan harian terlampaui. Coba lagi dalam ${minutesLeft} menit.`
         }),
         { status: 429 }
-        // Too Many Requests
       );
     }
     const newCountEntry = {
@@ -43,7 +46,6 @@ const POST = async ({ request }) => {
       resetTime: countEntry?.resetTime || now + COOLDOWN_WINDOW_MS
     };
     requestCounts.set(userIp, newCountEntry);
-    console.log(`Rate Limit Status: ${userIp} - ${newCountEntry.count}/${MAX_REQUESTS_PER_HOUR}`);
     const file = formData.get("cvFile");
     let jobDescription = formData.get("jobDescription");
     if (!file || !jobDescription) {
@@ -52,61 +54,70 @@ const POST = async ({ request }) => {
         { status: 400 }
       );
     }
-    let cvText = "";
     const buffer = Buffer.from(await file.arrayBuffer());
+    let cvText = "";
     if (file.name.endsWith(".pdf")) {
-      const data = await pdfExtract(buffer);
-      cvText = data.text;
+      if (process.env.NODE_ENV === "development") {
+        const data = await pdfParser(buffer);
+        cvText = data.text;
+      } else {
+        const data = await pdfParser(buffer);
+        cvText = data.text;
+      }
     } else if (file.name.endsWith(".docx")) {
-      const result2 = await mammoth.extractRawText({ buffer });
-      cvText = result2.value;
+      const result = await mammoth.extractRawText({ buffer });
+      cvText = result.value;
     } else {
       return new Response(
-        JSON.stringify({
-          error: "Format file tidak didukung (hanya .pdf / .docx)"
-        }),
+        JSON.stringify({ error: "Format file tidak didukung" }),
         { status: 400 }
       );
     }
-    if (cvText.length > MAX_TEXT_LENGTH) {
+    if (cvText.length > MAX_TEXT_LENGTH)
       cvText = cvText.slice(0, MAX_TEXT_LENGTH);
-      console.warn("⚠️ CV text truncated.");
-    }
-    if (jobDescription.length > MAX_JOB_DESCRIPTION) {
+    if (jobDescription.length > MAX_JOB_DESCRIPTION)
       jobDescription = jobDescription.slice(0, MAX_JOB_DESCRIPTION);
-      console.warn("⚠️ Job Description truncated.");
-    }
-    console.log("✅ CV Extracted Text:", cvText.slice(0, 100) + "...");
     const prompt = `
-    Anda adalah seorang Senior Recruiter. Tugas Anda adalah menganalisis CV dan membandingkannya dengan Job Description (JD).
-    Output harus disajikan dengan ringkas, menggunakan format poin (list), dan tidak lebih dari 250 kata untuk menghemat token.
+Anda adalah Senior Recruiter. Analisis CV dan bandingkan dengan Job Description.
+Output ringkas, format list, max 250 kata.
 
-    CV:
+CV:
 
 ${cvText}
 
 
-    JD:
+JD:
 ${jobDescription}
 
 
 
-    **Struktur Output:**
-    1. **Ringkasan Profil:** (Maks 3 kalimat, fokus pada pengalaman dan spesialisasi).
-    2. **Kecocokan:** Tiga skill atau pengalaman dari CV yang SANGAT cocok dengan JD.
-    3. **Gap:** Satu area atau skill yang HILANG di CV namun dibutuhkan JD.
-    4. **Skor Kecocokan:** [Skor 0-100]% (Berikan justifikasi 1 kalimat).
-    `;
-    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
-    const result = await model.generateContent(prompt);
-    const resultText = result.response.text();
-    return new Response(
-      JSON.stringify({ result: resultText }),
-      { status: 200, headers: { "Content-Type": "application/json" } }
-    );
+1. Ringkasan Profil (max 3 kalimat)
+2. Kecocokan (3 skill/experience)
+3. Gap (1 skill hilang)
+4. Skor Kecocokan [0-100]% (1 kalimat justification)
+`;
+    let resultText = "";
+    try {
+      const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
+      const result = await model.generateContent(prompt);
+      resultText = result.response.text();
+    } catch (apiErr) {
+      console.error("❌ Gemini API Error:", apiErr);
+      return new Response(
+        JSON.stringify({ error: "Failed to call Gemini API" }),
+        { status: 500 }
+      );
+    }
+    return new Response(JSON.stringify({ result: resultText }), {
+      status: 200,
+      headers: { "Content-Type": "application/json" }
+    });
   } catch (err) {
     console.error("❌ Screening Error:", err);
-    return new Response(JSON.stringify({ error: "Internal Server Error." }), { status: 500 });
+    return new Response(
+      JSON.stringify({ error: err.message || "Internal Server Error" }),
+      { status: 500 }
+    );
   }
 };
 

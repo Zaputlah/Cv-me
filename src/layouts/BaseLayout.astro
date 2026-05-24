@@ -3,6 +3,7 @@ import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import SideBar from "../components/SideBar.astro";
+import SiteControls from "../components/SiteControls.astro";
 import { ViewTransitions } from "astro:transitions";
 
 
@@ -19,9 +20,18 @@ const {
 ---
 
 <!doctype html>
-<html lang="en" data-theme="lofi">
+<html lang="id" data-theme="lofi">
   <head>
     <BaseHead title={title} description={description} image={image} , ogType={ogType} />
+    <script is:inline>
+      try {
+        const theme = localStorage.getItem("cvme-theme") || "lofi";
+        document.documentElement.setAttribute("data-theme", theme === "dark" ? "dark" : "lofi");
+        document.documentElement.classList.toggle("dark", theme === "dark");
+      } catch (error) {
+        document.documentElement.setAttribute("data-theme", "lofi");
+      }
+    </script>
     {TRANSITION_API && <ViewTransitions />}
     <link
   rel="stylesheet"
@@ -31,6 +41,7 @@ const {
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
+    <SiteControls />
     <div class="bg-base-100 drawer lg:drawer-open">
       <input id="my-drawer" type="checkbox" class="drawer-toggle" />
       <div class="drawer-content bg-base-100">

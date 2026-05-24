@@ -1,7 +1,6 @@
 /* empty css                                      */
-import { c as createComponent, r as renderComponent, a as renderTemplate, m as maybeRenderHead, f as renderScript } from '../chunks/astro/server_DJ5VsFU4.mjs';
-import 'kleur/colors';
-import { $ as $$BaseLayout } from '../chunks/BaseLayout_C8pmW2BQ.mjs';
+import { c as createComponent, r as renderComponent, a as renderTemplate, m as maybeRenderHead, b as renderScript } from '../chunks/astro/server_BRzQfmCI.mjs';
+import { $ as $$BaseLayout } from '../chunks/BaseLayout_CKft6Hqk.mjs';
 export { renderers } from '../renderers.mjs';
 
 const $$TanyaAI = createComponent(async ($$result, $$props, $$slots) => {
@@ -9,10 +8,10 @@ const $$TanyaAI = createComponent(async ($$result, $$props, $$slots) => {
 Tanyakan apapun, dan AI akan memberikan jawaban akurat beserta sumber terpercaya.
 </p> <!-- Form Card --> <form id="searchForm" class="w-full max-w-3xl bg-white rounded-3xl shadow-2xl p-8 space-y-6"> <div> <label class="block font-semibold text-gray-700 mb-2">Pertanyaan Anda:</label> <textarea id="query" name="query" rows="4" placeholder="Contoh: Apa itu quantum computing?" required class="w-full p-4 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-700 text-lg resize-none transition"></textarea> </div> <div class="text-center"> <button type="submit" class="inline-flex items-center gap-2 px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-2xl shadow-lg hover:shadow-xl transition">
 🔍 Cari Jawaban
-</button> </div> </form> <!-- Result Section --> <div id="result" class="mt-10 w-full max-w-3xl space-y-4"></div> </div> ${renderScript($$result2, "D:/my-cv/Cv-me/src/pages/tanyaAI.astro?astro&type=script&index=0&lang.ts")} ` })}`;
-}, "D:/my-cv/Cv-me/src/pages/tanyaAI.astro", void 0);
+</button> </div> </form> <!-- Result Section --> <div id="result" class="mt-10 w-full max-w-3xl space-y-4"></div> </div> ${renderScript($$result2, "C:/cvme/Cv-me/src/pages/tanyaAI.astro?astro&type=script&index=0&lang.ts")} ` })}`;
+}, "C:/cvme/Cv-me/src/pages/tanyaAI.astro", void 0);
 
-const $$file = "D:/my-cv/Cv-me/src/pages/tanyaAI.astro";
+const $$file = "C:/cvme/Cv-me/src/pages/tanyaAI.astro";
 const $$url = "/tanyaAI";
 
 const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({

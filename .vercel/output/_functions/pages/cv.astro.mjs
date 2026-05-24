@@ -1,38 +1,126 @@
 /* empty css                                      */
-import { c as createComponent, d as createAstro, m as maybeRenderHead, e as renderSlot, a as renderTemplate, r as renderComponent } from '../chunks/astro/server_DJ5VsFU4.mjs';
-import 'kleur/colors';
-import { $ as $$BaseLayout } from '../chunks/BaseLayout_C8pmW2BQ.mjs';
-import 'clsx';
+import { c as createComponent, e as createAstro, r as renderComponent, a as renderTemplate, m as maybeRenderHead } from '../chunks/astro/server_BRzQfmCI.mjs';
+import { $ as $$BaseLayout } from '../chunks/BaseLayout_CKft6Hqk.mjs';
 export { renderers } from '../renderers.mjs';
-
-const $$Astro$1 = createAstro();
-const $$TimeLine = createComponent(($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$1, $$props, $$slots);
-  Astro2.self = $$TimeLine;
-  const { title, subtitle, subtitle2 } = Astro2.props;
-  return renderTemplate`${maybeRenderHead()}<div class="flex"> <div class="education__time"> <span class="w-4 h-4 bg-primary block rounded-full mt-1"></span> <span class="education__line bg-primary block h-full w-[2px] translate-x-[7px]"></span> </div> <div class="experience__data bd-grid px-5"> <h3 class="font-semibold mb-1">${title}</h3> <span class="font-light text-sm">${subtitle}</span> <p class="my-2 text-justify"> ${renderSlot($$result, $$slots["default"])} </p> </div> </div>`;
-}, "D:/my-cv/Cv-me/src/components/cv/TimeLine.astro", void 0);
 
 const $$Astro = createAstro();
 const $$Cv = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
   Astro2.self = $$Cv;
-  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": "Resume", "sideBarActiveItemID": "cv" }, { "default": ($$result2) => renderTemplate`  ${maybeRenderHead()}<section class="mb-10 p-6 rounded-2xl bg-gradient-to-r from-blue-50 to-white shadow"> <h2 class="text-3xl font-bold mb-3">👤 Profile</h2> <p class="text-justify leading-relaxed">
-Software Developer with extensive experience in building web and enterprise
-    applications as a Web Developer, Software Developer, Java Developer, and
-    Full Stack Developer. Skilled in both frontend and backend development with
-    strong expertise in <b>Java, PHP, AngularJS, Spring Boot, and CodeIgniter</b>, 
-    and hands-on experience with <b>Flutter</b> and <b>.NET</b>. Proficient in 
-    designing scalable and secure systems, API integration, and database management 
-    using <b>MySQL, SQL Server, and Navicat</b>. Experienced in deploying and managing 
-    applications on <b>WildFly</b> server. Adept at version control and collaboration 
-    using <b>Git, GitHub, Bitbucket, and GitLab</b>, and familiar with both
-<b>Agile</b> and <b>Waterfall</b> methodologies. Committed to clean code practices, 
-    CI/CD pipelines, and delivering high-quality, maintainable software solutions.
-</p> </section>  <section class="mb-10 p-6 rounded-2xl bg-gradient-to-r from-purple-50 to-white shadow"> <h2 class="text-3xl font-bold mb-6">🎓 Education</h2> <div class="grid gap-4"> ${renderComponent($$result2, "TimeLineElement", $$TimeLine, { "title": "D3 Manajemen Informatika", "subtitle": "Universitas Bina Sarana Informatika" })} ${renderComponent($$result2, "TimeLineElement", $$TimeLine, { "title": "S1 Sistem Informasi", "subtitle": "STMIK Nusa Mandiri" })} </div> </section>  <section class="mb-10 p-6 rounded-2xl bg-gradient-to-r from-yellow-50 to-white shadow"> <h2 class="text-3xl font-bold mb-6">💼 Experience</h2> <div class="grid gap-6"> ${renderComponent($$result2, "TimeLineElement", $$TimeLine, { "title": "PT Rafesh", "subtitle": "Magang Mahasiswa" }, { "default": ($$result3) => renderTemplate` <b class="block mt-3 mb-1">Tools & Technologies:</b> <ul class="list-disc list-inside space-y-1"> <li>Ms. Excel, Ms. Word, Photoshop, Kertas & Pulpen</li> </ul> ` })} ${renderComponent($$result2, "TimeLineElement", $$TimeLine, { "title": "PT Hasjrat Multifinance", "subtitle": "Web Developer" }, { "default": ($$result3) => renderTemplate` <b class="block mt-3 mb-1">Tools & Technologies:</b> <ul class="list-disc list-inside space-y-1"> <li>Eclipse, Navicat, iReport</li> <li>Java, Spring Boot, Bootstrap, CSS, Html, JavaScript</li> </ul> ` })} ${renderComponent($$result2, "TimeLineElement", $$TimeLine, { "title": "Freelance", "subtitle": "IT Support" })} ${renderComponent($$result2, "TimeLineElement", $$TimeLine, { "title": "PT Metropolitan Retailmart", "subtitle": "MSR Developer" }, { "default": ($$result3) => renderTemplate` <b class="block mt-3 mb-1">Tools & Technologies:</b> <ul class="list-disc list-inside space-y-1"> <li>VS Code, Postman, Solr, Git</li> <li>Golang, PHP, CodeIgniter, JavaScript, HTML5, Bootstrap, Razor</li> </ul> ` })} ${renderComponent($$result2, "TimeLineElement", $$TimeLine, { "title": "PT Summit Global Teknologi", "subtitle": "Frontend Engineer" }, { "default": ($$result3) => renderTemplate` <b class="block mt-3 mb-1">Tools & Technologies:</b> <ul class="list-disc list-inside space-y-1"> <li>IntelliJ IDEA, Figma, Adobe XD, Git</li> <li>ChatGPT, Claude.ai, Magic Scroll </li> <li>IntelliJ IDEA, Vue.js, Nuxt, HTML5, CSS</li> </ul> ` })} ${renderComponent($$result2, "TimeLineElement", $$TimeLine, { "title": "PT Optimasmartindo Industri", "subtitle": "Staff IT" }, { "default": ($$result3) => renderTemplate` <b class="block mt-3 mb-1">Tools & Technologies:</b> <ul class="list-disc list-inside space-y-1"> <li>Canva, TikTok, Shopee, Tokopedia, Instagram, YouTube</li> <li>C#, Ms. Office, Bootstrap</li> <li>CCTV</li> </ul> ` })} ${renderComponent($$result2, "TimeLineElement", $$TimeLine, { "title": "Bpjs Kesehatan", "subtitle": "Programmer fullstack" }, { "default": ($$result3) => renderTemplate` <b class="block mt-3 mb-1">Tools & Technologies:</b> <ul class="list-disc list-inside space-y-1"> <li>VS Code, Visual Studio, Postman, Git, Bitbucket</li> <li>Java, JavaScript, AngularJS, SpringBoot, .NET, SQL Server, Bootstrap, CSS, HTML</li> </ul> ` })} </div> </section>  <section class="mb-10 p-6 rounded-2xl bg-gradient-to-r from-green-50 to-white shadow"> <h2 class="text-3xl font-bold mb-4">📜 Certifications</h2> <ul class="list-disc list-inside space-y-2"> <li>Desain Grafis</li> <li>CCNA (Cisco Certified Network Associate)</li> <li>3-in-1: Networking, Python, Automation</li> <li>Fullstack Web Development</li> <li>UI/UX Design</li> </ul> </section>  <section class="mb-10 p-6 rounded-2xl bg-gradient-to-r from-cyan-50 to-white shadow"> <h2 class="text-3xl font-bold mb-4">🛠️ Skills</h2> <ul class="list-disc md:columns-5 columns-2 list-inside space-y-1"> <li>JavaScript</li> <li>PHP</li> <li>HTML5</li> <li>CSS</li> <li>CodeIgniter</li> <li>Laravel</li> <li>Tailwind</li> <li>Nuxt.js</li> <li>Astro.js</li> <li>Vue.js</li> <li>React.js</li> <li>Java</li> <li>Flutter</li> <li>.NET</li> </ul> </section> ` })}`;
-}, "D:/my-cv/Cv-me/src/pages/cv.astro", void 0);
+  const profileSummary = "Fullstack Developer with hands-on experience in building web-based applications, enterprise systems, and mobile apps across frontend and backend. Proficient in developing RESTful APIs, designing relational databases, and integrating systems using Java, Node.js, Angular, .NET, Dart, and Flutter. Experienced in authentication, data processing, system integration, debugging, testing (UAT), and collaboration with QA teams.";
+  const highlights = [
+    "RESTful API development",
+    "Frontend and backend development",
+    "Database design and integration",
+    "Mobile development with Dart and Flutter"
+  ];
+  const education = [
+    {
+      degree: "D3 Manajemen Informatika",
+      school: "Universitas Bina Sarana Informatika"
+    },
+    {
+      degree: "S1 Sistem Informasi",
+      school: "STMIK Nusa Mandiri"
+    }
+  ];
+  const experiences = [
+    {
+      company: "BPJS Kesehatan",
+      role: "Programmer Fullstack",
+      tools: ["Android Studio", "VS Code", "Postman", "Swagger", "SQL Server", "Bitbucket", "GitLab", "Eclipse"],
+      tech: ["AngularJS", "TypeScript", ".NET", "Java"]
+    },
+    {
+      company: "PT Optimasmartindo Industri",
+      role: "Staff IT",
+      tools: ["Canva", "TikTok", "Shopee", "Tokopedia", "Instagram", "YouTube", "Ms. Office", "CCTV"],
+      tech: ["C#", "Bootstrap"]
+    },
+    {
+      company: "PT Summit Global Teknologi",
+      role: "Frontend Engineer",
+      tools: ["IntelliJ IDEA", "Figma", "Adobe XD", "Git", "ChatGPT", "Claude.ai", "Magic Scroll"],
+      tech: ["Vue.js", "Nuxt", "HTML5", "CSS"]
+    },
+    {
+      company: "PT Metropolitan Retailmart",
+      role: "MSR Developer",
+      tools: ["VS Code", "Postman", "Solr", "Git"],
+      tech: ["Golang", "PHP", "CodeIgniter", "JavaScript", "HTML5", "Bootstrap", "Razor"]
+    },
+    {
+      company: "Freelance",
+      role: "IT Support",
+      tools: [],
+      tech: []
+    },
+    {
+      company: "PT Hasjrat Multifinance",
+      role: "Web Developer",
+      tools: ["Eclipse", "Navicat", "iReport"],
+      tech: ["Java", "Spring Boot", "Bootstrap", "CSS", "HTML", "JavaScript"]
+    },
+    {
+      company: "PT Rafesh",
+      role: "Magang Mahasiswa",
+      tools: ["Ms. Excel", "Ms. Word", "Photoshop"],
+      tech: []
+    }
+  ];
+  const certifications = [
+    "Desain Grafis",
+    "CCNA (Cisco Certified Network Associate)",
+    "3-in-1: Networking, Python, Automation",
+    "Fullstack Web Development",
+    "UI/UX Design"
+  ];
+  const skillGroups = [
+    {
+      title: "Frontend",
+      skills: ["JavaScript", "TypeScript", "HTML5", "CSS", "Tailwind", "Angular", "AngularJS", "Vue.js", "Nuxt.js", "React.js", "Astro.js"]
+    },
+    {
+      title: "Backend",
+      skills: ["Java", "Spring Boot", "PHP", "CodeIgniter", "Laravel", ".NET", "Golang", "C#"]
+    },
+    {
+      title: "Mobile",
+      skills: ["Dart", "Flutter"]
+    },
+    {
+      title: "Database & Tools",
+      skills: ["SQL Server", "MySQL", "Navicat", "Git", "GitLab", "Bitbucket", "VS Code", "Android Studio", "Postman", "Swagger", "Eclipse", "Figma"]
+    }
+  ];
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "title": "Resume", "sideBarActiveItemID": "cv" }, { "default": ($$result2) => renderTemplate` ${maybeRenderHead()}<section class="space-y-8 pb-10"> <div class="space-y-4"> <p class="text-sm font-semibold uppercase tracking-wider text-blue-700">
+Resume
+</p> <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between"> <div> <h1 class="text-4xl font-bold leading-tight text-gray-950 md:text-5xl">
+Reza Putra Fadilah
+</h1> <p class="mt-2 text-2xl font-semibold text-gray-700">
+Fullstack Developer
+</p> </div> <div class="flex flex-col gap-3 sm:flex-row"> <a class="inline-flex items-center justify-center gap-2 rounded-lg bg-gray-950 px-4 py-3 text-sm font-semibold text-white transition hover:bg-gray-800" href="/pdf/Reza_putra_fadilah_FlowCV_Resume_2026-05-02.pdf" download> <i class="fa-solid fa-file-arrow-down"></i>
+Download CV
+</a> <a class="inline-flex items-center justify-center gap-2 rounded-lg border border-gray-200 bg-white px-4 py-3 text-sm font-semibold text-gray-800 transition hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700" href="/tanya-cv"> <i class="fa-solid fa-robot"></i>
+Tanya CV AI
+</a> </div> </div> </div> <section class="rounded-xl border border-gray-200 bg-white p-5 shadow-sm"> <div class="flex items-start gap-4"> <div class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-blue-50 text-blue-700"> <i class="fa-solid fa-user"></i> </div> <div> <h2 class="text-2xl font-bold text-gray-950">Profile</h2> <p class="mt-3 text-base leading-8 text-gray-600"> ${profileSummary} </p> </div> </div> </section> <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4"> ${highlights.map((highlight) => renderTemplate`<div class="rounded-xl border border-gray-200 bg-white p-4 shadow-sm"> <p class="text-sm font-semibold text-gray-900">${highlight}</p> </div>`)} </div> </section> <section class="space-y-4 pb-10"> <div> <p class="text-sm font-semibold uppercase tracking-wider text-blue-700">
+Work History
+</p> <h2 class="mt-1 text-3xl font-bold text-gray-950">Experience</h2> </div> <div class="space-y-4"> ${experiences.map((experience) => renderTemplate`<article class="rounded-xl border border-gray-200 bg-white p-5 shadow-sm"> <div class="flex flex-col gap-3 md:flex-row md:items-start md:justify-between"> <div> <h3 class="text-xl font-bold text-gray-950">${experience.company}</h3> <p class="mt-1 text-sm font-semibold text-blue-700">${experience.role}</p> </div> <span class="w-fit rounded-full bg-gray-100 px-3 py-1 text-xs font-semibold text-gray-600">
+Experience
+</span> </div> ${(experience.tools.length > 0 || experience.tech.length > 0) && renderTemplate`<div class="mt-4 grid gap-4 md:grid-cols-2"> ${experience.tools.length > 0 && renderTemplate`<div> <p class="text-xs font-bold uppercase tracking-wider text-gray-400">
+Tools
+</p> <div class="mt-2 flex flex-wrap gap-2"> ${experience.tools.map((tool) => renderTemplate`<span class="rounded-md bg-gray-100 px-2.5 py-1.5 text-xs font-semibold text-gray-600"> ${tool} </span>`)} </div> </div>`} ${experience.tech.length > 0 && renderTemplate`<div> <p class="text-xs font-bold uppercase tracking-wider text-gray-400">
+Technologies
+</p> <div class="mt-2 flex flex-wrap gap-2"> ${experience.tech.map((tech) => renderTemplate`<span class="rounded-md bg-blue-50 px-2.5 py-1.5 text-xs font-semibold text-blue-700"> ${tech} </span>`)} </div> </div>`} </div>`} </article>`)} </div> </section> <section class="grid gap-6 pb-10 lg:grid-cols-[1fr_1.2fr]"> <div class="rounded-xl border border-gray-200 bg-white p-5 shadow-sm"> <p class="text-sm font-semibold uppercase tracking-wider text-blue-700">
+Education
+</p> <h2 class="mt-1 text-3xl font-bold text-gray-950">Education</h2> <div class="mt-5 space-y-4"> ${education.map((item) => renderTemplate`<div class="rounded-lg border border-gray-100 bg-gray-50 p-4"> <h3 class="font-bold text-gray-950">${item.degree}</h3> <p class="mt-1 text-sm text-gray-600">${item.school}</p> </div>`)} </div> </div> <div class="rounded-xl border border-gray-200 bg-white p-5 shadow-sm"> <p class="text-sm font-semibold uppercase tracking-wider text-blue-700">
+Certifications
+</p> <h2 class="mt-1 text-3xl font-bold text-gray-950">Certifications</h2> <div class="mt-5 grid gap-2 sm:grid-cols-2"> ${certifications.map((certification) => renderTemplate`<div class="rounded-lg border border-gray-100 bg-gray-50 px-4 py-3 text-sm font-semibold text-gray-700"> ${certification} </div>`)} </div> </div> </section> <section class="space-y-4 pb-12"> <div> <p class="text-sm font-semibold uppercase tracking-wider text-blue-700">
+Capabilities
+</p> <h2 class="mt-1 text-3xl font-bold text-gray-950">Skills</h2> </div> <div class="grid gap-4 md:grid-cols-2"> ${skillGroups.map((group) => renderTemplate`<div class="rounded-xl border border-gray-200 bg-white p-5 shadow-sm"> <h3 class="text-lg font-bold text-gray-950">${group.title}</h3> <div class="mt-4 flex flex-wrap gap-2"> ${group.skills.map((skill) => renderTemplate`<span class="rounded-md bg-gray-100 px-2.5 py-1.5 text-xs font-semibold text-gray-600"> ${skill} </span>`)} </div> </div>`)} </div> </section> ` })}`;
+}, "C:/cvme/Cv-me/src/pages/cv.astro", void 0);
 
-const $$file = "D:/my-cv/Cv-me/src/pages/cv.astro";
+const $$file = "C:/cvme/Cv-me/src/pages/cv.astro";
 const $$url = "/cv";
 
 const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({

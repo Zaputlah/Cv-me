@@ -1,0 +1,174 @@
+<div
+  class="site-controls notranslate fixed right-3 top-3 z-[60] flex items-center gap-2 rounded-xl border border-gray-200 bg-white/95 p-1.5 text-gray-800 shadow-lg backdrop-blur"
+  translate="no"
+>
+  <div class="flex rounded-lg bg-gray-100 p-1" aria-label="Language selector">
+    <button
+      type="button"
+      class="site-lang-btn rounded-md px-2.5 py-1.5 text-xs font-bold transition"
+      data-lang="id"
+      aria-label="Bahasa Indonesia"
+    >
+      ID
+    </button>
+    <button
+      type="button"
+      class="site-lang-btn rounded-md px-2.5 py-1.5 text-xs font-bold transition"
+      data-lang="en"
+      aria-label="English"
+    >
+      EN
+    </button>
+  </div>
+
+  <button
+    type="button"
+    class="site-theme-btn grid h-8 w-8 place-items-center rounded-lg border border-gray-200 bg-white text-gray-700 transition hover:bg-gray-100"
+    aria-label="Toggle dark mode"
+  >
+    <i class="site-theme-icon fa-solid fa-moon text-sm"></i>
+  </button>
+</div>
+
+<div id="google_translate_element" class="google-translate-host notranslate" translate="no"></div>
+
+<script is:inline>
+  (function () {
+    const THEME_KEY = "cvme-theme";
+    const LANG_KEY = "cvme-language";
+    const DEFAULT_THEME = "lofi";
+    const DARK_THEME = "dark";
+
+    function getStoredTheme() {
+      return localStorage.getItem(THEME_KEY) || DEFAULT_THEME;
+    }
+
+    function setTheme(theme) {
+      const nextTheme = theme === DARK_THEME ? DARK_THEME : DEFAULT_THEME;
+      document.documentElement.setAttribute("data-theme", nextTheme);
+      document.documentElement.classList.toggle("dark", nextTheme === DARK_THEME);
+      localStorage.setItem(THEME_KEY, nextTheme);
+      updateThemeButton(nextTheme);
+    }
+
+    function updateThemeButton(theme) {
+      const icon = document.querySelector(".site-theme-icon");
+      const button = document.querySelector(".site-theme-btn");
+      if (!icon || !button) return;
+
+      icon.className =
+        theme === DARK_THEME
+          ? "site-theme-icon fa-solid fa-sun text-sm"
+          : "site-theme-icon fa-solid fa-moon text-sm";
+      button.setAttribute(
+        "aria-label",
+        theme === DARK_THEME ? "Switch to light mode" : "Switch to dark mode"
+      );
+    }
+
+    function setCookie(name, value) {
+      const maxAge = 60 * 60 * 24 * 365;
+      document.cookie = `${name}=${value}; path=/; max-age=${maxAge}; SameSite=Lax`;
+
+      const host = window.location.hostname;
+      if (host.includes(".")) {
+        document.cookie = `${name}=${value}; path=/; domain=.${host}; max-age=${maxAge}; SameSite=Lax`;
+      }
+    }
+
+    function removeCookie(name) {
+      document.cookie = `${name}=; path=/; max-age=0; SameSite=Lax`;
+
+      const host = window.location.hostname;
+      if (host.includes(".")) {
+        document.cookie = `${name}=; path=/; domain=.${host}; max-age=0; SameSite=Lax`;
+      }
+    }
+
+    function setLanguageCookie(lang) {
+      if (lang === "en") {
+        setCookie("googtrans", "/id/en");
+        return;
+      }
+
+      removeCookie("googtrans");
+    }
+
+    function updateLanguageButtons(lang) {
+      document.querySelectorAll(".site-lang-btn").forEach((button) => {
+        const isActive = button.getAttribute("data-lang") === lang;
+        button.classList.toggle("bg-white", isActive);
+        button.classList.toggle("text-blue-700", isActive);
+        button.classList.toggle("shadow-sm", isActive);
+        button.classList.toggle("text-gray-500", !isActive);
+      });
+    }
+
+    function setLanguage(lang, reloadPage) {
+      const nextLang = lang === "en" ? "en" : "id";
+      localStorage.setItem(LANG_KEY, nextLang);
+      document.documentElement.setAttribute("lang", nextLang);
+      setLanguageCookie(nextLang);
+      updateLanguageButtons(nextLang);
+
+      const combo = document.querySelector(".goog-te-combo");
+      if (combo && nextLang === "en") {
+        combo.value = nextLang;
+        combo.dispatchEvent(new Event("change"));
+      }
+
+      if (reloadPage) {
+        window.setTimeout(() => window.location.reload(), 250);
+      }
+    }
+
+    window.googleTranslateElementInit = function () {
+      if (!window.google || !window.google.translate) return;
+
+      new window.google.translate.TranslateElement(
+        {
+          pageLanguage: "id",
+          includedLanguages: "id,en",
+          autoDisplay: false,
+          layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE,
+        },
+        "google_translate_element"
+      );
+
+      const storedLanguage = localStorage.getItem(LANG_KEY);
+      if (storedLanguage) {
+        window.setTimeout(() => setLanguage(storedLanguage, false), 500);
+      }
+    };
+
+    function initControls() {
+      setTheme(getStoredTheme());
+      updateLanguageButtons(localStorage.getItem(LANG_KEY) || "id");
+
+      document.querySelectorAll(".site-lang-btn").forEach((button) => {
+        if (button.dataset.bound === "true") return;
+        button.dataset.bound = "true";
+        button.addEventListener("click", () => {
+          setLanguage(button.getAttribute("data-lang") || "id", true);
+        });
+      });
+
+      const themeButton = document.querySelector(".site-theme-btn");
+      if (themeButton && themeButton.dataset.bound !== "true") {
+        themeButton.dataset.bound = "true";
+        themeButton.addEventListener("click", () => {
+          setTheme(getStoredTheme() === DARK_THEME ? DEFAULT_THEME : DARK_THEME);
+        });
+      }
+    }
+
+    initControls();
+    document.addEventListener("DOMContentLoaded", initControls);
+    document.addEventListener("astro:page-load", initControls);
+  })();
+</script>
+
+<script
+  is:inline
+  src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+></script>

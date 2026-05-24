@@ -1,7 +1,6 @@
 /* empty css                                         */
-import { c as createComponent, d as createAstro, r as renderComponent, a as renderTemplate, m as maybeRenderHead, F as Fragment, b as addAttribute } from '../../chunks/astro/server_DJ5VsFU4.mjs';
-import 'kleur/colors';
-import { $ as $$BaseLayout } from '../../chunks/BaseLayout_C8pmW2BQ.mjs';
+import { c as createComponent, e as createAstro, r as renderComponent, a as renderTemplate, m as maybeRenderHead, F as Fragment, d as addAttribute } from '../../chunks/astro/server_BRzQfmCI.mjs';
+import { $ as $$BaseLayout } from '../../chunks/BaseLayout_CKft6Hqk.mjs';
 import { u as ustadzList } from '../../chunks/ustadzList_n-Xsrgjv.mjs';
 export { renderers } from '../../renderers.mjs';
 
@@ -171,9 +170,9 @@ const $$id = createComponent(async ($$result, $$props, $$slots) => {
 
   fetchVideos();
 <\/script> `])), ustadz.name, ustadz.description, addAttribute(JSON.stringify(ustadz.playlistId), "data-playlists")) })}` : renderTemplate`<h1 class="text-center text-2xl mt-10">Ustadz Tidak Ditemukan</h1>`} </div> ` })}`;
-}, "D:/my-cv/Cv-me/src/pages/ustadz/[id].astro", void 0);
+}, "C:/cvme/Cv-me/src/pages/ustadz/[id].astro", void 0);
 
-const $$file = "D:/my-cv/Cv-me/src/pages/ustadz/[id].astro";
+const $$file = "C:/cvme/Cv-me/src/pages/ustadz/[id].astro";
 const $$url = "/ustadz/[id]";
 
 const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({

@@ -1,7 +1,6 @@
 /* empty css                                      */
-import { c as createComponent, r as renderComponent, a as renderTemplate, b as addAttribute, m as maybeRenderHead } from '../chunks/astro/server_DJ5VsFU4.mjs';
-import 'kleur/colors';
-import { $ as $$BaseLayout } from '../chunks/BaseLayout_C8pmW2BQ.mjs';
+import { c as createComponent, r as renderComponent, a as renderTemplate, d as addAttribute, m as maybeRenderHead } from '../chunks/astro/server_BRzQfmCI.mjs';
+import { $ as $$BaseLayout } from '../chunks/BaseLayout_CKft6Hqk.mjs';
 export { renderers } from '../renderers.mjs';
 
 const sejarahData = [
@@ -350,9 +349,9 @@ const $$Sejarah = createComponent(($$result, $$props, $$slots) => {
       });
     });
   <\/script> `])), maybeRenderHead(), sejarahData.map((item) => renderTemplate`<div class="sejarah-item bg-white rounded-2xl border border-gray-200 shadow-md hover:shadow-lg hover:-translate-y-1 transform transition duration-300 overflow-hidden flex flex-col"${addAttribute(`${item.periode.toLowerCase()} ${item.tahun.toLowerCase()} ${item.peristiwa.toLowerCase()} ${item.tokoh.join(" ").toLowerCase()}`, "data-keywords")}> <div class="p-5 flex-1 flex flex-col justify-between"> <div> <h3 class="text-xl font-semibold text-blue-800 mb-2">${item.periode}</h3> <p class="text-sm text-gray-500 mb-2">${item.tahun}</p> <p class="text-gray-700 text-sm italic mb-3">"${item.peristiwa}"</p> </div> <div class="text-sm text-gray-500 mt-2 border-t pt-2"> <p><span class="font-medium text-gray-600">Tokoh terkait:</span> ${item.tokoh.join(", ")}</p> </div> </div> </div>`)) })}`;
-}, "D:/my-cv/Cv-me/src/pages/sejarah.astro", void 0);
+}, "C:/cvme/Cv-me/src/pages/sejarah.astro", void 0);
 
-const $$file = "D:/my-cv/Cv-me/src/pages/sejarah.astro";
+const $$file = "C:/cvme/Cv-me/src/pages/sejarah.astro";
 const $$url = "/sejarah";
 
 const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({

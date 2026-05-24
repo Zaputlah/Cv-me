@@ -1,9 +1,8 @@
 /* empty css                                               */
-import { c as createComponent, d as createAstro, r as renderComponent, a as renderTemplate, m as maybeRenderHead, F as Fragment, b as addAttribute } from '../../../../chunks/astro/server_DJ5VsFU4.mjs';
-import 'kleur/colors';
-import { $ as $$BaseLayout } from '../../../../chunks/BaseLayout_C8pmW2BQ.mjs';
-import { $ as $$HorizontalCard } from '../../../../chunks/HorizontalCard_C6SMnulO.mjs';
-import { g as getCollection } from '../../../../chunks/_astro_content_udLUpVe5.mjs';
+import { c as createComponent, e as createAstro, r as renderComponent, a as renderTemplate, m as maybeRenderHead, F as Fragment, d as addAttribute } from '../../../../chunks/astro/server_BRzQfmCI.mjs';
+import { $ as $$BaseLayout } from '../../../../chunks/BaseLayout_CKft6Hqk.mjs';
+import { $ as $$HorizontalCard } from '../../../../chunks/HorizontalCard_KpQD3rxn.mjs';
+import { g as getCollection } from '../../../../chunks/_astro_content_D_yKlq8T.mjs';
 import { c as createSlug } from '../../../../chunks/createSlug_D-iatWqU.mjs';
 export { renderers } from '../../../../renderers.mjs';
 
@@ -32,9 +31,9 @@ const $$ = createComponent(async ($$result, $$props, $$slots) => {
 Recent posts
 </a>` : renderTemplate`<div></div>`} ${page.url.next ? renderTemplate`<a${addAttribute(page.url.next, "href")} class="btn btn-ghost my-10 mx-5">
 Older Posts${" "} <svg class="h-6 w-6 fill-current md:h-8 md:w-8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"> ${" "} <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path> </svg> </a>` : renderTemplate`<div></div>`} </div> ` })}`;
-}, "D:/my-cv/Cv-me/src/pages/video/tag/[tag]/[...page].astro", void 0);
+}, "C:/cvme/Cv-me/src/pages/video/tag/[tag]/[...page].astro", void 0);
 
-const $$file = "D:/my-cv/Cv-me/src/pages/video/tag/[tag]/[...page].astro";
+const $$file = "C:/cvme/Cv-me/src/pages/video/tag/[tag]/[...page].astro";
 const $$url = "/video/tag/[tag]/[...page]";
 
 const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({

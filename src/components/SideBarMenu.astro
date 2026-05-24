@@ -1,45 +1,90 @@
 ---
 const { sideBarActiveItemID } = Astro.props;
-const activeClass = "bg-base-300";
+
+const navGroups = [
+  {
+    title: "Utama",
+    items: [
+      { id: "home", href: "/", label: "Home", icon: "fa-solid fa-house" },
+      { id: "projects", href: "/projects", label: "Projects", icon: "fa-solid fa-folder-open" },
+      { id: "cv", href: "/cv", label: "CV", icon: "fa-solid fa-file-lines" },
+      {
+        id: "contact",
+        href: "mailto:reza.rr889@gmail.com",
+        label: "Contact",
+        icon: "fa-solid fa-envelope",
+        external: true,
+      },
+    ],
+  },
+  {
+    title: "AI",
+    items: [
+      { id: "screeningCv", href: "/screeningCv", label: "Screening CV", icon: "fa-solid fa-magnifying-glass-chart" },
+      { id: "tanyaCv", href: "/tanya-cv", label: "Tanya CV AI", icon: "fa-solid fa-robot" },
+      { id: "Tanya AI", href: "/tanyaAI", label: "Tanya AI", icon: "fa-solid fa-wand-magic-sparkles" },
+    ],
+  },
+  {
+    title: "Edukasi Islami",
+    items: [
+      { id: "sahabatnabi", href: "/sahabatnabi", label: "Sahabat Nabi", icon: "fa-solid fa-users" },
+      { id: "sunahnabi", href: "/sunahnabi", label: "Sunah Nabi", icon: "fa-solid fa-book-open" },
+      { id: "kuisSunnah", href: "/kuis-sunnah", label: "Kuis Sunnah", icon: "fa-solid fa-circle-question" },
+      { id: "quran", href: "/quran", label: "Al Quran", icon: "fa-solid fa-book-quran" },
+      { id: "audioquran", href: "/audioquran", label: "Audio Al Quran", icon: "fa-solid fa-headphones" },
+    ],
+  },
+  {
+    title: "Sejarah Indonesia",
+    items: [
+      { id: "pahlawan", href: "/pahlawan", label: "Pahlawan Nasional", icon: "fa-solid fa-landmark-flag" },
+      { id: "sejarah", href: "/sejarah", label: "Sejarah", icon: "fa-solid fa-timeline" },
+    ],
+  },
+];
+
+const linkBaseClass =
+  "group flex min-h-11 items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium transition";
+const inactiveClass = "text-gray-600 hover:bg-gray-100 hover:text-gray-950";
+const activeClass = "bg-gray-900 text-white shadow-sm hover:bg-gray-900";
 ---
 
-<ul class="menu grow shrink menu-md overflow-y-auto">
-  <!-- Umum -->
-  <li><a class="py-3 text-base" id="home" href="/">Home</a></li>
-  <li><a class="py-3 text-base" id="projects" href="/projects">Projects</a></li>
-  <li><a class="py-3 text-base" id="cv" href="/cv">CV</a></li>
-  <li>
-    <a class="py-3 text-base" href="mailto:reza.rr889@gmail.com" target="_blank" referrerpolicy="no-referrer-when-downgrade">Contact</a>
-  </li>
-  <!-- Konten Islam -->
-  <li class="menu-title">
-    <span>AI</span>
-  </li>
-  <li><a class="py-3 text-base" id="screeningCv" href="/screeningCv">Screening CV</a></li>
-  <li><a class="py-3 text-base" id="Tanya AI" href="/tanyaAI">Tanya AI</a></li>
-  <!-- Konten Islam -->
-  <li class="menu-title">
-    <span>Edukasi Islami</span>
-  </li>
-  <!-- <li><a class="py-3 text-base" id="blog" href="/blog/">Blog</a></li> -->
-  <li><a class="py-3 text-base" id="sahabatnabi" href="/sahabatnabi">Sahabat Nabi</a></li>
-  <li><a class="py-3 text-base" id="sunahnabi" href="/sunahnabi">Sunah Nabi</a></li>
-  <li><a class="py-3 text-base" id="quran" href="/quran">Al Qur'an</a></li>
-  <li><a class="py-3 text-base" id="audioquran" href="/audioquran">Audio Al Qur'an</a></li>
-  <!-- <li><a class="py-3 text-base" id="video" href="/video/">Video</a></li> -->
-  <li class="menu-title">
-    <span>Edukasi Sejarah indonesia</span>
-  </li>
-  <li><a class="py-3 text-base" id="pahlawan" href="/pahlawan">Pahlawan Nasional</a></li>
-  <li><a class="py-3 text-base" id="sejarah" href="/sejarah">Sejarah</a></li>
-</ul>
-
-<script
-  define:vars={{
-    sideBarActiveItemID: sideBarActiveItemID,
-    activeClass: activeClass,
-  }}
->
-  const activeItemElem = document.getElementById(sideBarActiveItemID);
-  activeItemElem && activeItemElem.classList.add(activeClass);
-</script>
+<nav class="min-h-0 flex-1 overflow-y-auto px-3 py-4">
+  {
+    navGroups.map((group) => (
+      <section class="mb-5 last:mb-0">
+        <p class="mb-2 px-3 text-[11px] font-bold uppercase tracking-wider text-gray-400">
+          {group.title}
+        </p>
+        <ul class="space-y-1">
+          {group.items.map((item) => {
+            const isActive = sideBarActiveItemID === item.id;
+            return (
+              <li>
+                <a
+                  id={item.id}
+                  href={item.href}
+                  target={item.external ? "_blank" : undefined}
+                  rel={item.external ? "noreferrer" : undefined}
+                  referrerpolicy={item.external ? "no-referrer-when-downgrade" : undefined}
+                  aria-current={isActive ? "page" : undefined}
+                  class={`${linkBaseClass} ${isActive ? activeClass : inactiveClass}`}
+                >
+                  <span
+                    class={`grid h-8 w-8 shrink-0 place-items-center rounded-lg ${
+                      isActive ? "bg-white/15 text-white" : "bg-gray-100 text-gray-500 group-hover:bg-white group-hover:text-gray-900"
+                    }`}
+                  >
+                    <i class={`${item.icon} text-sm`}></i>
+                  </span>
+                  <span class="truncate">{item.label}</span>
+                </a>
+              </li>
+            );
+          })}
+        </ul>
+      </section>
+    ))
+  }
+</nav>

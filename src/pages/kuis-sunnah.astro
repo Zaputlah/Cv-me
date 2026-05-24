@@ -1,0 +1,341 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const quizQuestions = [
+  {
+    question: "Sunnah apa yang dianjurkan pada sebagian malam untuk mendekatkan diri kepada Allah?",
+    options: ["Shalat Dhuha", "Shalat Tahajud", "Shalat Rawatib", "Shalat Istikharah"],
+    answer: 1,
+    explanation:
+      "Shalat Tahajud dikerjakan pada malam hari setelah tidur. Amalan ini menjadi ibadah tambahan yang sangat dianjurkan.",
+    dalil:
+      "QS. Al-Isra: 79 menyebutkan anjuran bertahajud sebagai ibadah tambahan dan harapan diangkat ke tempat terpuji.",
+  },
+  {
+    question: "Sunnah apa yang dikenal memiliki keutamaan mencukupi sedekah persendian?",
+    options: ["Shalat Dhuha", "Puasa Ayyamul Bidh", "Membaca Al-Kahfi", "Berzikir pagi"],
+    answer: 0,
+    explanation:
+      "Shalat Dhuha termasuk sunnah harian yang ringan tetapi memiliki keutamaan besar.",
+    dalil:
+      "HR. Muslim/Tirmidzi menjelaskan bahwa dua rakaat Dhuha dapat mencukupi sedekah setiap persendian.",
+  },
+  {
+    question: "Apa keutamaan senyum kepada sesama Muslim?",
+    options: ["Bernilai sedekah", "Menghapus kewajiban shalat", "Menggantikan puasa", "Wajib dilakukan setiap salam"],
+    answer: 0,
+    explanation:
+      "Senyum adalah adab sederhana yang bernilai ibadah ketika dilakukan dengan niat baik.",
+    dalil:
+      "HR. Tirmidzi menyebutkan bahwa senyum kepada saudara adalah sedekah.",
+  },
+  {
+    question: "Ketika makan, tangan mana yang dianjurkan dalam sunnah Nabi?",
+    options: ["Tangan kiri", "Tangan kanan", "Bergantian", "Tidak ada adab khusus"],
+    answer: 1,
+    explanation:
+      "Makan dan minum dengan tangan kanan termasuk adab yang diajarkan Rasulullah SAW.",
+    dalil:
+      "HR. Muslim memerintahkan agar seorang Muslim makan dan minum dengan tangan kanan.",
+  },
+  {
+    question: "Hari apa yang disunnahkan untuk berpuasa karena amal diperiksa pada hari tersebut?",
+    options: ["Selasa dan Rabu", "Jumat dan Sabtu", "Senin dan Kamis", "Sabtu dan Ahad"],
+    answer: 2,
+    explanation:
+      "Puasa Senin dan Kamis merupakan sunnah yang berkaitan dengan waktu diangkatnya amal.",
+    dalil:
+      "HR. Tirmidzi menjelaskan bahwa amal diangkat pada Senin dan Kamis, dan Nabi menyukai saat itu dalam keadaan berpuasa.",
+  },
+  {
+    question: "Apa sunnah yang dianjurkan ketika bertemu sesama Muslim?",
+    options: ["Mengucap salam", "Menundukkan kepala saja", "Diam", "Langsung pergi"],
+    answer: 0,
+    explanation:
+      "Mengucapkan salam menyebarkan doa keselamatan dan memperkuat kasih sayang sesama Muslim.",
+    dalil:
+      "HR. Muslim menganjurkan menyebarkan salam sebagai sebab tumbuhnya kasih sayang dan iman.",
+  },
+  {
+    question: "Sunnah tidur yang dicontohkan Nabi adalah...",
+    options: ["Tidur tengkurap", "Tidur miring ke kanan", "Tidur sambil duduk", "Tidur setelah subuh"],
+    answer: 1,
+    explanation:
+      "Tidur miring ke kanan termasuk adab tidur yang diajarkan dalam sunnah.",
+    dalil:
+      "HR. Bukhari meriwayatkan bahwa Nabi tidur dengan berbaring ke sisi kanan.",
+  },
+  {
+    question: "Apa yang dianjurkan dibaca ketika memulai perkara penting?",
+    options: ["Basmalah", "Takbir tujuh kali", "Talbiyah", "Azan"],
+    answer: 0,
+    explanation:
+      "Membaca basmalah mengingatkan seorang Muslim agar memulai aktivitas dengan menyebut nama Allah.",
+    dalil:
+      "Riwayat Abu Dawud menyebutkan perkara penting yang tidak dimulai dengan nama Allah terputus keberkahannya.",
+  },
+  {
+    question: "Apa keutamaan menjaga shalat sunnah rawatib?",
+    options: ["Dibangunkan rumah di surga", "Wajib masuk masjid", "Menggantikan zakat", "Menghapus semua kewajiban"],
+    answer: 0,
+    explanation:
+      "Shalat rawatib adalah shalat sunnah yang mengiringi shalat wajib dan memiliki pahala besar.",
+    dalil:
+      "HR. Muslim menyebutkan orang yang menjaga 12 rakaat rawatib akan dibangunkan rumah di surga.",
+  },
+  {
+    question: "Sunnah apa yang dianjurkan sebelum shalat untuk menjaga kebersihan mulut?",
+    options: ["Bersiwak", "Berkumur air garam", "Minum madu", "Berwangi-wangian saja"],
+    answer: 0,
+    explanation:
+      "Bersiwak adalah sunnah yang sangat dianjurkan, terutama ketika hendak shalat.",
+    dalil:
+      "HR. Bukhari menyebutkan Nabi ingin memerintahkan siwak setiap hendak shalat bila tidak memberatkan umat.",
+  },
+];
+---
+
+<BaseLayout title="Kuis Sunnah Nabi" sideBarActiveItemID="kuisSunnah">
+  <section class="space-y-8 pb-10">
+    <div class="space-y-4">
+      <p class="text-sm font-semibold uppercase tracking-wider text-blue-700">
+        Game Islami
+      </p>
+      <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+        <div>
+          <h1 class="text-4xl font-bold leading-tight text-gray-950 md:text-5xl">
+            Kuis Sunnah Nabi
+          </h1>
+          <p class="mt-3 max-w-2xl text-base leading-7 text-gray-600">
+            Uji wawasan tentang sunnah harian. Setelah memilih jawaban, soal
+            akan langsung berpindah. Hasil benar/salah, pembahasan, dan dalil
+            muncul lengkap di akhir kuis.
+          </p>
+        </div>
+        <a
+          href="/sunahnabi"
+          class="inline-flex w-fit items-center gap-2 rounded-lg border border-gray-200 bg-white px-4 py-3 text-sm font-semibold text-gray-800 transition hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700"
+        >
+          <i class="fa-solid fa-book-open"></i>
+          Lihat Sunnah
+        </a>
+      </div>
+    </div>
+
+    <div class="grid gap-3 border-y border-gray-200 py-5 sm:grid-cols-3">
+      <div>
+        <p class="text-2xl font-bold text-gray-950">{quizQuestions.length}</p>
+        <p class="mt-1 text-sm text-gray-500">Soal</p>
+      </div>
+      <div>
+        <p class="text-2xl font-bold text-gray-950">Dalil</p>
+        <p class="mt-1 text-sm text-gray-500">Setiap jawaban</p>
+      </div>
+      <div>
+        <p class="text-2xl font-bold text-gray-950">Review akhir</p>
+        <p class="mt-1 text-sm text-gray-500">Jawaban dan dalil</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="pb-12">
+    <div class="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
+      <div class="flex flex-col gap-4 border-b border-gray-100 pb-4 sm:flex-row sm:items-center sm:justify-between">
+        <div>
+          <p id="questionCounter" class="text-sm font-semibold uppercase tracking-wider text-blue-700">
+            Soal 1
+          </p>
+          <h2 id="questionText" class="mt-2 text-2xl font-bold leading-snug text-gray-950"></h2>
+        </div>
+        <div class="rounded-xl bg-gray-100 px-4 py-3 text-sm font-bold text-gray-800">
+          Terjawab: <span id="progressText">0</span>
+        </div>
+      </div>
+
+      <div id="options" class="mt-5 grid gap-3"></div>
+
+      <div id="quizStatus" class="mt-5 rounded-xl border border-blue-100 bg-blue-50 p-4 text-sm font-semibold text-blue-700">
+        Pilih salah satu jawaban untuk lanjut ke soal berikutnya.
+      </div>
+
+      <div class="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-between">
+        <button
+          id="restartButton"
+          type="button"
+          class="inline-flex items-center justify-center gap-2 rounded-lg border border-gray-200 bg-white px-4 py-3 text-sm font-semibold text-gray-800 transition hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700"
+        >
+          <i class="fa-solid fa-rotate-right"></i>
+          Ulangi
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <script define:vars={{ quizQuestions }}>
+    let currentQuestion = 0;
+    let score = 0;
+    let answered = false;
+    let answers = [];
+
+    const questionCounter = document.getElementById("questionCounter");
+    const questionText = document.getElementById("questionText");
+    const progressText = document.getElementById("progressText");
+    const optionsContainer = document.getElementById("options");
+    const quizStatus = document.getElementById("quizStatus");
+    const restartButton = document.getElementById("restartButton");
+
+    function escapeHtml(value) {
+      return String(value)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    function renderQuestion() {
+      answered = false;
+      const question = quizQuestions[currentQuestion];
+
+      questionCounter.textContent = `Soal ${currentQuestion + 1} dari ${quizQuestions.length}`;
+      questionText.textContent = question.question;
+      progressText.textContent = `${answers.length}/${quizQuestions.length}`;
+      quizStatus.className =
+        "mt-5 rounded-xl border border-blue-100 bg-blue-50 p-4 text-sm font-semibold text-blue-700";
+      quizStatus.textContent = "Pilih salah satu jawaban untuk lanjut ke soal berikutnya.";
+
+      optionsContainer.innerHTML = "";
+      question.options.forEach((option, index) => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className =
+          "quiz-option rounded-xl border border-gray-200 bg-white p-4 text-left text-sm font-semibold text-gray-800 transition hover:border-blue-200 hover:bg-blue-50";
+        button.textContent = option;
+        button.addEventListener("click", () => selectAnswer(index));
+        optionsContainer.appendChild(button);
+      });
+    }
+
+    function selectAnswer(selectedIndex) {
+      if (answered) return;
+
+      answered = true;
+      const question = quizQuestions[currentQuestion];
+      const optionButtons = Array.from(document.querySelectorAll(".quiz-option"));
+      const isCorrect = selectedIndex === question.answer;
+
+      if (isCorrect) score += 10;
+      answers.push({
+        questionIndex: currentQuestion,
+        selectedIndex,
+        isCorrect,
+      });
+      progressText.textContent = `${answers.length}/${quizQuestions.length}`;
+      quizStatus.className =
+        "mt-5 rounded-xl border border-gray-200 bg-gray-50 p-4 text-sm font-semibold text-gray-700";
+      quizStatus.textContent =
+        currentQuestion === quizQuestions.length - 1
+          ? "Jawaban disimpan. Menyiapkan hasil akhir..."
+          : "Jawaban disimpan. Lanjut ke soal berikutnya...";
+
+      optionButtons.forEach((button, index) => {
+        button.disabled = true;
+        button.classList.remove("hover:border-blue-200", "hover:bg-blue-50");
+
+        if (index === selectedIndex) {
+          button.className =
+            "quiz-option rounded-xl border border-blue-200 bg-blue-50 p-4 text-left text-sm font-semibold text-blue-700";
+        }
+      });
+
+      window.setTimeout(() => {
+        if (currentQuestion === quizQuestions.length - 1) {
+          renderResult();
+          return;
+        }
+
+        currentQuestion += 1;
+        renderQuestion();
+      }, 350);
+    }
+
+    function renderResult() {
+      const maxScore = quizQuestions.length * 10;
+      const percentage = Math.round((score / maxScore) * 100);
+      const correctCount = answers.filter((answer) => answer.isCorrect).length;
+      let message = "Terus belajar sunnah sedikit demi sedikit.";
+
+      if (percentage >= 90) message = "MasyaAllah, pemahamanmu sangat baik.";
+      else if (percentage >= 70) message = "Bagus, tinggal menguatkan beberapa dalil.";
+      else if (percentage >= 50) message = "Cukup baik, coba ulangi lagi agar makin hafal.";
+
+      questionCounter.textContent = "Hasil Kuis";
+      questionText.textContent = `${correctCount} benar dari ${quizQuestions.length} soal`;
+      progressText.textContent = `${answers.length}/${quizQuestions.length}`;
+      quizStatus.className =
+        "mt-5 rounded-xl border border-blue-100 bg-blue-50 p-4 text-sm font-semibold text-blue-700";
+      quizStatus.textContent = "Review jawaban, pembahasan, dan dalil ada di bawah ini.";
+
+      const reviewHtml = answers
+        .map((answer, index) => {
+          const question = quizQuestions[answer.questionIndex];
+          const selectedAnswer = question.options[answer.selectedIndex];
+          const correctAnswer = question.options[question.answer];
+          const statusClass = answer.isCorrect
+            ? "border-green-200 bg-green-50 text-green-700"
+            : "border-red-200 bg-red-50 text-red-700";
+          const statusText = answer.isCorrect ? "Benar" : "Salah";
+
+          return `
+            <article class="rounded-xl border border-gray-200 bg-white p-4">
+              <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                <div>
+                  <p class="text-xs font-bold uppercase tracking-wider text-gray-400">Soal ${index + 1}</p>
+                  <h3 class="mt-1 font-bold leading-6 text-gray-950">${escapeHtml(question.question)}</h3>
+                </div>
+                <span class="w-fit rounded-full border px-3 py-1 text-xs font-bold ${statusClass}">
+                  ${statusText}
+                </span>
+              </div>
+              <div class="mt-4 grid gap-3 md:grid-cols-2">
+                <div class="rounded-lg bg-gray-50 p-3">
+                  <p class="text-xs font-bold uppercase tracking-wider text-gray-400">Jawaban kamu</p>
+                  <p class="mt-2 text-sm font-semibold text-gray-700">${escapeHtml(selectedAnswer)}</p>
+                </div>
+                <div class="rounded-lg bg-blue-50 p-3">
+                  <p class="text-xs font-bold uppercase tracking-wider text-blue-700">Jawaban benar</p>
+                  <p class="mt-2 text-sm font-semibold text-gray-700">${escapeHtml(correctAnswer)}</p>
+                </div>
+              </div>
+              <p class="mt-4 text-sm leading-6 text-gray-600">${escapeHtml(question.explanation)}</p>
+              <div class="mt-3 rounded-lg border border-gray-100 bg-gray-50 p-3">
+                <p class="text-xs font-bold uppercase tracking-wider text-gray-400">Dalil</p>
+                <p class="mt-2 text-sm leading-6 text-gray-600">${escapeHtml(question.dalil)}</p>
+              </div>
+            </article>
+          `;
+        })
+        .join("");
+
+      optionsContainer.innerHTML = `
+        <div class="rounded-xl border border-blue-200 bg-blue-50 p-5">
+          <p class="text-sm font-bold uppercase tracking-wider text-blue-700">Skor Akhir</p>
+          <p class="mt-2 text-4xl font-bold text-blue-700">${score} / ${maxScore}</p>
+          <p class="mt-2 text-sm leading-6 text-gray-700">${percentage}% - ${message}</p>
+        </div>
+        <div class="mt-5 space-y-4">
+          ${reviewHtml}
+        </div>
+      `;
+    }
+
+    restartButton.addEventListener("click", () => {
+      currentQuestion = 0;
+      score = 0;
+      answers = [];
+      renderQuestion();
+    });
+
+    renderQuestion();
+  </script>
+</BaseLayout>
