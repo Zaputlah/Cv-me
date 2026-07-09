@@ -37,7 +37,7 @@ export const cvProfile = {
   name: "Reza Putra Fadilah",
   title: "Full Stack Developer",
   email: "reza.rr889@gmail.com",
-  phone: "0858 1104 3930",
+  // phone: "0858 1104 3930",
   location: "Bekasi, Indonesia",
   downloadUrl: "/pdf/Reza_putra_fadilah_FlowCV_Resume_2026-05-02.pdf",
   links: [
