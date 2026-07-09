@@ -6,37 +6,32 @@ const socials = [
     icon: "fa-brands fa-github",
   },
   {
-    href: "https://instagram.com/zaputlah",
-    label: "Instagram",
-    icon: "fa-brands fa-instagram",
-  },
-  {
     href: "https://www.linkedin.com/in/reza-putra-fadilah-87800316b/",
     label: "LinkedIn",
     icon: "fa-brands fa-linkedin-in",
   },
   {
-    href: "https://www.youtube.com/channel/UCJCeWHXjQhH8qRmycEayMwQ",
-    label: "YouTube",
-    icon: "fa-brands fa-youtube",
+    href: "mailto:reza.rr889@gmail.com",
+    label: "Email",
+    icon: "fa-solid fa-envelope",
   },
 ];
 ---
 
 <footer class="border-t border-gray-100 bg-white px-5 py-4">
   <p class="mb-3 text-center text-[11px] font-bold uppercase tracking-wider text-gray-400">
-    Social
+    Professional Links
   </p>
   <div class="flex items-center justify-center gap-2">
     {
       socials.map((social) => (
         <a
           href={social.href}
-          target="_blank"
-          rel="noreferrer"
+          target={social.href.startsWith("http") ? "_blank" : undefined}
+          rel={social.href.startsWith("http") ? "noreferrer" : undefined}
           aria-label={social.label}
           title={social.label}
-          class="grid h-10 w-10 place-items-center rounded-xl border border-gray-200 text-gray-500 transition hover:border-gray-300 hover:bg-gray-50 hover:text-gray-950"
+          class="grid h-10 w-10 place-items-center rounded-lg border border-gray-200 text-gray-500 transition hover:border-gray-300 hover:bg-gray-50 hover:text-gray-950"
         >
           <i class={`${social.icon} text-lg`}></i>
         </a>

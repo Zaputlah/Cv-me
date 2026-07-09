@@ -1,250 +1,188 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { cvProfile } from "../data/cvProfile";
 
 export const prerender = true;
 
-const profileSummary =
-  "Fullstack Developer with hands-on experience in building web-based applications, enterprise systems, and mobile apps. Proficient in RESTful APIs, relational databases, system integration, and development using Java, Node.js, Angular, .NET, Dart, and Flutter. Experienced in authentication, data processing, debugging, UAT, and collaboration with QA teams.";
-
-const techStacks = [
-  "Java",
-  "Spring Boot",
-  "Node.js",
-  "Angular",
-  ".NET",
-  "Dart",
-  "Flutter",
-  "PHP",
-  "CodeIgniter",
-  "SQL Server",
-];
-
-const featuredProjects = [
-  {
-    title: "Hospital",
-    img: "/Hospital.png",
-    type: "Healthcare Website",
-    desc: "Website rumah sakit sederhana untuk menampilkan informasi layanan, profil, dan kebutuhan dasar rumah sakit.",
-    url: "https://hospital-zaputlah.vercel.app/",
-    tags: ["React", "JWT", "Axios", "CSS"],
-    badge: "NEW",
-  },
-  {
-    title: "CRUD 1",
-    img: "/crud1.png",
-    type: "Dashboard App",
-    desc: "Aplikasi CRUD dengan proses login sebelum pengguna dapat membuat, membaca, mengubah, dan menghapus data.",
-    url: "https://crud-react-redux-tau.vercel.app/",
-    tags: ["React", "Redux", "JWT", "Bootstrap"],
-  },
-  {
-    title: "Quote 1",
-    img: "/qoute1.png",
-    type: "API Integration",
-    desc: "Aplikasi kumpulan quote dari API eksternal dengan tampilan sederhana dan mudah dibaca.",
-    url: "https://qoute-chi.vercel.app/",
-    tags: ["React", "API", "Axios", "CSS"],
-  },
-];
+const recentExperiences = cvProfile.experiences.slice(0, 3);
+const primarySkillGroups = cvProfile.skillGroups.filter((group) =>
+  ["Frontend", "Backend", "Database", "Mobile"].includes(group.title)
+);
 ---
 
-<BaseLayout sideBarActiveItemID="home">
-  <section class="space-y-8 pb-12">
-    <div class="space-y-5">
-      <p class="text-sm font-semibold uppercase tracking-wider text-blue-700">
-        Portfolio
-      </p>
+<BaseLayout title={`${cvProfile.name} - ${cvProfile.title}`} sideBarActiveItemID="home">
+  <section class="mx-auto w-full max-w-6xl space-y-8 pb-12">
+    <article class="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
+      <div class="grid gap-8 p-6 sm:p-8 lg:grid-cols-[minmax(0,1fr)_minmax(260px,320px)] lg:p-10">
+        <div class="min-w-0">
+          <p class="text-sm font-semibold uppercase tracking-wider text-blue-700">
+            Professional Overview
+          </p>
+          <h1 class="mt-5 max-w-3xl text-4xl font-bold leading-[0.98] tracking-tight text-gray-950 sm:text-5xl lg:text-6xl">
+            {cvProfile.name}
+          </h1>
+          <p class="mt-4 text-2xl font-semibold text-gray-700">
+            {cvProfile.title}
+          </p>
+          <p class="mt-7 max-w-4xl text-base leading-8 text-gray-600 lg:text-lg lg:leading-9">
+            {cvProfile.summary}
+          </p>
+        </div>
 
-      <div class="space-y-3">
-        <h1 class="text-4xl font-bold leading-tight text-gray-950 md:text-5xl">
-          Hai, saya Reza Putra Fadilah
-        </h1>
-        <p class="min-h-10 text-2xl font-semibold text-gray-700 md:text-3xl">
-          <span id="typingText"></span>
-          <span class="ml-1 inline-block h-7 w-[2px] translate-y-1 bg-blue-600"></span>
-        </p>
+        <aside class="grid content-start gap-3 text-sm text-gray-700 sm:grid-cols-3 lg:grid-cols-1">
+          <a
+            class="flex min-w-0 items-center gap-3 rounded-xl border border-gray-100 bg-white px-4 py-3 transition hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700"
+            href={`mailto:${cvProfile.email}`}
+            aria-label={`Email ${cvProfile.email}`}
+          >
+            <i class="fa-solid fa-envelope w-5 shrink-0 text-gray-400"></i>
+            <span class="min-w-0 break-all">{cvProfile.email}</span>
+          </a>
+          <span class="flex min-w-0 items-center gap-3 rounded-xl border border-gray-100 bg-white px-4 py-3">
+            <i class="fa-solid fa-location-dot w-5 shrink-0 text-gray-400"></i>
+            <span class="min-w-0">{cvProfile.location}</span>
+          </span>
+          <a
+            class="flex min-w-0 items-center gap-3 rounded-xl border border-gray-100 bg-white px-4 py-3 transition hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700"
+            href={cvProfile.links[0].href}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Open LinkedIn profile"
+          >
+            <i class="fa-brands fa-linkedin-in w-5 shrink-0 text-gray-400"></i>
+            <span class="min-w-0">LinkedIn Profile</span>
+          </a>
+        </aside>
       </div>
 
-      <p class="max-w-3xl text-base leading-8 text-gray-600 md:text-lg">
-        {profileSummary}
-      </p>
-
-      <div class="flex flex-wrap gap-2">
-        {
-          techStacks.map((stack) => (
-            <span class="rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm font-medium text-gray-700 shadow-sm">
-              {stack}
-            </span>
-          ))
-        }
-      </div>
-
-      <div class="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+      <div class="flex flex-col gap-3 border-t border-gray-200 px-6 py-5 sm:flex-row sm:flex-wrap sm:px-8 lg:px-10">
         <a
           class="inline-flex items-center justify-center gap-2 rounded-lg bg-gray-950 px-4 py-3 text-sm font-semibold text-white transition hover:bg-gray-800"
-          href="/pdf/Reza_putra_fadilah_FlowCV_Resume_2026-05-02.pdf"
-          download
+          href="/cv"
         >
-          <i class="fa-solid fa-file-arrow-down"></i>
-          Download CV
-        </a>
-        <a
-          class="inline-flex items-center justify-center gap-2 rounded-lg bg-blue-600 px-4 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
-          href="https://www.linkedin.com/in/reza-putra-fadilah-87800316b/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <i class="fa-brands fa-linkedin-in"></i>
-          LinkedIn
-        </a>
-        <a
-          class="inline-flex items-center justify-center gap-2 rounded-lg bg-green-600 px-4 py-3 text-sm font-semibold text-white transition hover:bg-green-700"
-          href="https://wa.me/6285811043930"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <i class="fa-brands fa-whatsapp"></i>
-          WhatsApp
+          <i class="fa-solid fa-file-lines"></i>
+          View CV
         </a>
         <a
           class="inline-flex items-center justify-center gap-2 rounded-lg border border-gray-200 bg-white px-4 py-3 text-sm font-semibold text-gray-800 transition hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700"
-          href="/tanya-cv"
+          href={cvProfile.downloadUrl}
+          download
         >
-          <i class="fa-solid fa-robot"></i>
-          Tanya CV AI
+          <i class="fa-solid fa-file-arrow-down"></i>
+          Download PDF
+        </a>
+        <a
+          class="inline-flex items-center justify-center gap-2 rounded-lg border border-gray-200 bg-white px-4 py-3 text-sm font-semibold text-gray-800 transition hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700"
+          href="/projects"
+        >
+          <i class="fa-solid fa-folder-open"></i>
+          Projects
         </a>
       </div>
-    </div>
+    </article>
 
-    <div class="grid gap-3 border-y border-gray-200 py-5 sm:grid-cols-2 lg:grid-cols-4">
-      <div>
-        <p class="text-2xl font-bold text-gray-950">Frontend</p>
-        <p class="mt-1 text-sm text-gray-500">Angular, Vue, Nuxt, React</p>
-      </div>
-      <div>
-        <p class="text-2xl font-bold text-gray-950">Backend</p>
-        <p class="mt-1 text-sm text-gray-500">Java, Spring Boot, .NET, PHP</p>
-      </div>
-      <div>
-        <p class="text-2xl font-bold text-gray-950">Mobile</p>
-        <p class="mt-1 text-sm text-gray-500">Dart, Flutter</p>
-      </div>
-      <div>
-        <p class="text-2xl font-bold text-gray-950">Database</p>
-        <p class="mt-1 text-sm text-gray-500">SQL Server, MySQL, Navicat</p>
-      </div>
-    </div>
-  </section>
+    <section class="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+      <div class="border border-gray-200 bg-white p-6 shadow-sm">
+        <div class="border-b border-gray-200 pb-3">
+          <p class="text-sm font-semibold uppercase tracking-wider text-blue-700">
+            Experience
+          </p>
+          <h2 class="mt-1 text-2xl font-bold text-gray-950">
+            Recent Roles
+          </h2>
+        </div>
 
-  <section class="space-y-4 pb-8">
-    <div class="flex items-end justify-between gap-4">
-      <div>
-        <p class="text-sm font-semibold uppercase tracking-wider text-blue-700">
-          Selected Work
-        </p>
-        <h2 class="mt-1 text-3xl font-bold text-gray-950">My Projects</h2>
-        <p class="mt-2 max-w-xl text-sm leading-6 text-gray-500">
-          Beberapa project yang menampilkan pengalaman saya dalam membangun
-          aplikasi web, integrasi API, autentikasi, dan interface yang mudah
-          dipakai.
-        </p>
-      </div>
-      <a
-        class="inline-flex shrink-0 items-center gap-2 rounded-lg border border-gray-200 px-3 py-2 text-sm font-semibold text-gray-700 transition hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700"
-        href="/projects"
-      >
-        Lihat semua
-        <i class="fa-solid fa-arrow-right"></i>
-      </a>
-    </div>
-
-    <div class="grid gap-4 md:grid-cols-3">
-      {
-        featuredProjects.map((project) => (
-          <article class="group overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-lg">
-            <a href={project.url} target="_blank" rel="noreferrer" class="flex h-full flex-col">
-              <div class="relative h-44 overflow-hidden bg-gray-100">
-                <img
-                  src={project.img}
-                  alt={project.title}
-                  class="h-full w-full object-cover object-top transition duration-300 group-hover:scale-105"
-                  loading="lazy"
-                />
-                <div class="absolute left-3 top-3 rounded-full bg-white/95 px-3 py-1 text-xs font-semibold text-gray-800 shadow-sm">
-                  {project.type}
+        <div class="mt-5 space-y-5">
+          {
+            recentExperiences.map((experience) => (
+              <article class="border-l-2 border-gray-200 pl-4">
+                <div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
+                  <h3 class="font-bold text-gray-950">{experience.role}</h3>
+                  <p class="text-sm font-semibold text-gray-500">{experience.period}</p>
                 </div>
-                <div class="absolute right-3 top-3 rounded-full bg-emerald-500 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide text-white shadow-sm">
-                  Live
-                </div>
-              </div>
-              <div class="flex flex-1 flex-col p-4">
-                <div class="flex items-start justify-between gap-3">
-                  <h3 class="text-xl font-bold text-gray-950">{project.title}</h3>
-                  {project.badge && (
-                    <span class="rounded-full bg-blue-50 px-2 py-1 text-[11px] font-bold text-blue-700">
-                      {project.badge}
-                    </span>
-                  )}
-                </div>
-                <p class="mt-3 min-h-[4.5rem] overflow-hidden text-sm leading-6 text-gray-600 [display:-webkit-box] [-webkit-box-orient:vertical] [-webkit-line-clamp:3]">
-                  {project.desc}
+                <p class="mt-1 text-sm font-semibold text-blue-700">
+                  {experience.company}
                 </p>
-                <div class="mt-4 flex flex-wrap gap-2">
-                  {project.tags.map((tag) => (
-                    <span class="rounded-md bg-gray-100 px-2.5 py-1.5 text-xs font-semibold text-gray-600">
-                      {tag}
-                    </span>
-                  ))}
+                <p class="mt-2 text-sm leading-6 text-gray-600">
+                  {experience.highlights[0]}
+                </p>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+
+      <aside class="space-y-6">
+        <section class="border border-gray-200 bg-white p-6 shadow-sm">
+          <p class="text-sm font-semibold uppercase tracking-wider text-blue-700">
+            Core Focus
+          </p>
+          <ul class="mt-4 space-y-2 text-sm leading-6 text-gray-700">
+            {
+              cvProfile.coreCompetencies.slice(0, 6).map((item) => (
+                <li class="flex gap-2">
+                  <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-600"></span>
+                  <span>{item}</span>
+                </li>
+              ))
+            }
+          </ul>
+        </section>
+
+        <section class="border border-gray-200 bg-white p-6 shadow-sm">
+          <p class="text-sm font-semibold uppercase tracking-wider text-blue-700">
+            Skills
+          </p>
+          <div class="mt-4 space-y-4">
+            {
+              primarySkillGroups.map((group) => (
+                <div>
+                  <h3 class="text-sm font-bold text-gray-950">{group.title}</h3>
+                  <p class="mt-1 text-sm leading-6 text-gray-600">
+                    {group.skills.slice(0, 6).join(", ")}
+                  </p>
                 </div>
-                <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-4 text-sm font-semibold text-blue-700">
-                  <span>View project</span>
-                  <span class="grid h-8 w-8 place-items-center rounded-lg bg-blue-50 transition group-hover:bg-blue-600 group-hover:text-white">
-                    <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
-                  </span>
-                </div>
-              </div>
-            </a>
-          </article>
-        ))
-      }
-    </div>
+              ))
+            }
+          </div>
+        </section>
+      </aside>
+    </section>
+
+    <section class="border border-gray-200 bg-white p-6 shadow-sm">
+      <div class="flex flex-col gap-3 border-b border-gray-200 pb-4 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-wider text-blue-700">
+            Selected Work
+          </p>
+          <h2 class="mt-1 text-2xl font-bold text-gray-950">
+            Professional Projects
+          </h2>
+        </div>
+        <a
+          class="inline-flex w-fit items-center gap-2 text-sm font-semibold text-blue-700 hover:text-blue-900"
+          href="/projects"
+        >
+          View all
+          <i class="fa-solid fa-arrow-right text-xs"></i>
+        </a>
+      </div>
+
+      <div class="mt-5 grid gap-5 md:grid-cols-3">
+        {
+          cvProfile.selectedProjects.map((project) => (
+            <article>
+              <h3 class="font-bold text-gray-950">{project.title}</h3>
+              <p class="mt-2 text-sm leading-6 text-gray-600">
+                {project.description}
+              </p>
+              <p class="mt-3 text-xs font-semibold uppercase tracking-wide text-gray-500">
+                {project.technologies.join(", ")}
+              </p>
+            </article>
+          ))
+        }
+      </div>
+    </section>
   </section>
 </BaseLayout>
-
-<script>
-  const words = [
-    "Fullstack Developer",
-    "Frontend Developer",
-    "Backend Developer",
-    "Mobile Developer",
-  ];
-  let wordIndex = 0;
-  let charIndex = 0;
-  let isDeleting = false;
-  const typingSpeed = 100;
-  const delayBeforeNextWord = 1500;
-
-  function type() {
-    const typingText = document.getElementById("typingText");
-    if (!typingText) return;
-
-    const currentWord = words[wordIndex];
-    charIndex = isDeleting ? charIndex - 1 : charIndex + 1;
-    typingText.textContent = currentWord.substring(0, charIndex);
-
-    let delay = isDeleting ? typingSpeed / 2 : typingSpeed;
-
-    if (!isDeleting && charIndex === currentWord.length) {
-      delay = delayBeforeNextWord;
-      isDeleting = true;
-    } else if (isDeleting && charIndex === 0) {
-      isDeleting = false;
-      wordIndex = (wordIndex + 1) % words.length;
-      delay = 500;
-    }
-
-    setTimeout(type, delay);
-  }
-
-  document.addEventListener("DOMContentLoaded", type);
-</script>
