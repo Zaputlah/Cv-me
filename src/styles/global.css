@@ -51,31 +51,6 @@
     opacity: 1;
 }
 
-.google-translate-host {
-    position: fixed;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    opacity: 0;
-    pointer-events: none;
-}
-
-.goog-te-banner-frame,
-.goog-te-balloon-frame,
-.goog-te-gadget-icon,
-.goog-logo-link {
-    display: none !important;
-}
-
-.goog-te-gadget {
-    height: 0 !important;
-    overflow: hidden !important;
-}
-
-body {
-    top: 0 !important;
-}
-
 html[data-theme="dark"] {
     color-scheme: dark;
 }
